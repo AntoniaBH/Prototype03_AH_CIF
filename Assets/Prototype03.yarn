@@ -1,7 +1,6 @@
 ﻿title:Start
 tags:
 ---
-<<declare $player_name = "You">> 
 
 
 **Another session, another story waiting to unfold. Each journey is unique, yet they all share the weight of unspoken struggles.**
@@ -33,11 +32,11 @@ The sound of footsteps echoes faintly, growing louder. The rhythm is hesitant, t
 A pause. Then, the door clicks open softly, revealing your secretary—a calm, composed figure whose presence feels like a bridge between the world outside and the sanctuary within.
 Secretary:"Your next appointment is here. Would you like me to let them in?"
 ->Yes.
-    {$player_name}:"Yes, please let them in."
+    You:"Yes, please let them in."
     The secretary nods and steps aside, holding the door open. You hear the faint shuffle of someone entering. Hesitant footsteps. The client steps into view, their hands fidgeting nervously as they take in the room.
     <<jump FirstMeeting>>
 ->Not yet.
-    {$player_name}:"Just give me a moment; I want to prepare."
+    You:"Just give me a moment; I want to prepare."
     The secretary offers a polite nod and retreats. The room falls silent again. You sit back, letting a moment of reflection wash over you. Familiar faces flash through your mind—clients who came in nervous, desperate, angry. Some left lighter. Others did not come back.
     **Therapy is a journey, but not everyone is ready to walk it. I wonder—will they be?**
     <<jump FirstMeeting>>
@@ -47,15 +46,25 @@ title: FirstMeeting
 ---
 The secretary gestures for the client to step inside.
 The figure in the doorway is hesitant, their movements stiff with unease. Their eyes dart around the room before settling on you. You rise, extending a warm greeting.
-{$player_name}:"Hello, It is nice to meet you. Please, take a seat."
+You:"Hello, It is nice to meet you. Please, take a seat."
 The client nods and walks to the chair opposite your desk, sitting down slowly. Their hands rest awkwardly in their lap, their shoulders hunched as if bracing for something.
 The air hangs heavy for a moment. Then, you glance at your notes, silently rehearsing the sessions structure in your mind.
 **Who are they? Why are they here? What is it they are running from—or toward?**
 The session is about to begin.
 As you reach for the clipboard resting neatly on your desk. Your pen hovers over the paper, ready to capture the threads of the story about to unfold.
-{$player_name}:"Before we begin, let me introduce myself."
-<<set $player_name = input()>>
-{$player_name}:“You can call me {$player_name}. I am here to help you navigate whatever brought you here today.”
-
+You:"Before we begin, let me introduce myself."
+<<set $name = "" >>
+<<set $getName = true>>
+<<if $getName>>
+    "Please enter your name below: {inputfield}"
+<<endif>>
+=== inputfield ===
+* [Submit]
+    <<if $name != "">>
+        "Thank you, {name}. Let’s begin."
+        <<set $getName = false>>
+    <<else>>
+        "It looks like you didn't enter a name."
+    <<endif>>
+dwa
 ===
-
