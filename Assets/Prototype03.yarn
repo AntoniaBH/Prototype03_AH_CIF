@@ -1,8 +1,6 @@
 ﻿title:Start
 tags:
 ---
-
-
 **Another session, another story waiting to unfold. Each journey is unique, yet they all share the weight of unspoken struggles.**
 You are seated at your desk, surrounded by an air of stillness interrupted only by the faint ticking of a clock. The office is a refuge of muted colors—soft greys, warm beige walls, and the deep mahogany of wooden furniture. The afternoon light filters through half-closed blinds, casting striped patterns across the room.
 A faint breeze stirs a plant in the corner, its leaves trembling as if echoing the uncertainty of those who sit here. Your desk is meticulously arranged, yet every object tells a story.
@@ -12,18 +10,19 @@ A faint breeze stirs a plant in the corner, its leaves trembling as if echoing t
 title:Desk
 ---
 ->Stress Ball.
-    Your fingers graze the well-worn surface of the stress ball. It is helped many tense moments over the years—yours and your clients. A memory stirs: late nights, unfinished notes, and the silent prayer to make a difference.
-    **I hope they are ready to dig deep today. Change does not come easily.**
-    <<jump Desk>>
+	With your fingers you graze the well-worn surface of the stress ball. It is helped many tense moments over the years—yours and your clients. 
+	A memory stirs: late nights, unfinished notes, and the silent prayer to make a difference.
+	**I hope they are ready to dig deep today. Change does not come easily.**
+	<<jump Desk>>
 ->Appointment Book.
-    You flip through the pages, a habit born from equal parts diligence and curiosity. Names and times fill the pages, but each scribble carries weight. How many lives have been changed—or left unchanged—by the decisions made here?
-    <<jump Desk>>
+	You flip through the pages, a habit born from equal parts diligence and curiosity. Names and times fill the pages, but each scribble carries weight. How many lives have been changed—or left unchanged—by the decisions made here?
+	<<jump Desk>>
 ->Framed Picture.
-    The photograph shows a serene lake, reflecting the clouds above it. A reminder of a simpler time, before you found your calling. The frame is slightly tilted—when did that happen? A faint smile crosses your face.
-    **Maybe today, I will fix it.**
-    <<jump Desk>>
-->Move on
-    <<jump Footsteps>>
+	The photograph shows a serene lake, reflecting the clouds above it. A reminder of a simpler time, before you found your calling. The frame is slightly tilted—when did that happen? A faint smile crosses your face.
+	*Maybe today, I will fix it.**
+	<<jump Desk>>
+->Move on.
+	<<jump Footsteps>>
 ===
 
 title:Footsteps
@@ -32,18 +31,25 @@ The sound of footsteps echoes faintly, growing louder. The rhythm is hesitant, t
 A pause. Then, the door clicks open softly, revealing your secretary—a calm, composed figure whose presence feels like a bridge between the world outside and the sanctuary within.
 Secretary:"Your next appointment is here. Would you like me to let them in?"
 ->Yes.
-    You:"Yes, please let them in."
-    The secretary nods and steps aside, holding the door open. You hear the faint shuffle of someone entering. Hesitant footsteps. The client steps into view, their hands fidgeting nervously as they take in the room.
-    <<jump FirstMeeting>>
+	You:"Yes, please let them in."
+	The secretary nods and steps aside, holding the door open. You hear the faint shuffle of someone entering. Hesitant footsteps. The client steps into view, their hands fidgeting nervously as they take in the room.
+	<<jump FirstMeeting>>
 ->Not yet.
-    You:"Just give me a moment; I want to prepare."
-    The secretary offers a polite nod and retreats. The room falls silent again. You sit back, letting a moment of reflection wash over you. Familiar faces flash through your mind—clients who came in nervous, desperate, angry. Some left lighter. Others did not come back.
-    **Therapy is a journey, but not everyone is ready to walk it. I wonder—will they be?**
-    <<jump FirstMeeting>>
+	You:"Just give me a moment; I want to prepare."
+	The secretary offers a polite nod and retreats. The room falls silent again. You sit back, letting a moment of reflection wash over you. Familiar faces flash through your mind—clients who came in nervous, desperate, angry. Some left lighter. Others did not come back.
+	**Therapy is a journey, but not everyone is ready to walk it. I wonder—will they be?**
+	<<jump FirstMeeting>>
 ===
 
-title: FirstMeeting
+title:FirstMeeting
 ---
+<<declare $SkillEmpathy = 0>>
+<<declare $SkillPrecisionQuestioning = 0>>
+<<declare $SkillGroundingTechniques = 0>>
+<<declare $SkillObservation = 0>>
+<<declare $SkillReflectiveListening = 0>>
+<<declare $SkillAnalyticalInsight = 0>>
+
 The secretary gestures for the client to step inside.
 The figure in the doorway is hesitant, their movements stiff with unease. Their eyes dart around the room before settling on you. You rise, extending a warm greeting.
 You:"Hello, It is nice to meet you. Please, take a seat."
@@ -51,20 +57,138 @@ The client nods and walks to the chair opposite your desk, sitting down slowly. 
 The air hangs heavy for a moment. Then, you glance at your notes, silently rehearsing the sessions structure in your mind.
 **Who are they? Why are they here? What is it they are running from—or toward?**
 The session is about to begin.
-As you reach for the clipboard resting neatly on your desk. Your pen hovers over the paper, ready to capture the threads of the story about to unfold.
-You:"Before we begin, let me introduce myself."
-<<set $name = "" >>
-<<set $getName = true>>
-<<if $getName>>
-    "Please enter your name below: {inputfield}"
-<<endif>>
-=== inputfield ===
-* [Submit]
-    <<if $name != "">>
-        "Thank you, {name}. Let’s begin."
-        <<set $getName = false>>
-    <<else>>
-        "It looks like you didn't enter a name."
-    <<endif>>
-dwa
+You lower yourself back into your chair, adjusting its position slightly. The familiar creak of the leather cushion accompanies you as you reach for the clipboard on your desk.
+The smooth, cool surface of the clipboard meets your fingers as you lift it. On its face, a concise summary of the person sitting across from you.
+
+*clipboard pops-up*
+
+**A life encapsulated in bullet points. Yet, the depths of their struggles remain unwritten here.**
+You glance up briefly, meeting the client’s anxious gaze. Their fingers twist together in their lap, a subtle indicator of tension. You return your attention to the clipboard, committing the essentials to memory before setting it aside.
+
+*clipboard pops-up again with a different page*
+
+The faint shimmer of the window dissolves as you return your focus to the present. The client watches you expectantly, their posture slightly more rigid now. You offer a reassuring smile before introducing yourself.
+You:"I’ll start by saying how much I appreciate you taking this first step. This space is yours to share whatever feels right. Let’s take it at your pace."
+The client nods, though their shoulders remain tight. You lean forward slightly, softening your tone.
+You:"To begin, I’d like to understand how you’re feeling right now. Therapy works best when we explore both what’s challenging and what’s important to you."
+<<jump InquiryAboutClientsWellBeing>>
+===
+
+title:InquiryAboutClientsWellBeing
+---
+**The first step is always delicate—like testing the temperature of water before diving in. I need to gauge where they are emotionally, but not in a way that feels intrusive. A misstep here could make them feel exposed, and that’s the last thing I want.**
+**Their posture is closed off, their gaze darting to the window. There’s tension there—anxiety, maybe? Or is it something heavier? I’ll need to tread lightly but intentionally. Questions that are too broad might overwhelm them; too narrow, and I risk missing the bigger picture.**
+**This is about giving them permission to start. I need to ask in a way that lets them know there’s no right or wrong answer—just honesty, as much as they’re ready to give. Whether it’s their feelings, their struggles, or even just how they’ve been coping day to day, it’s all part of the picture.**
+**Time to open the door, just a little, and see what they’re ready to share.**
+
+->Emotional Assessment.
+	You:“Can you describe how you've been feeling recently, maybe some specific moments or situations that triggered these feelings?”
+	The client hesitates, glancing at their hands.
+	Client: "It’s… been hard. Some days, it feels like I’m just going through the motions. But then, out of nowhere, it hits me—this weight I can’t shake off."
+	**They’re clearly overwhelmed but struggling to articulate the specifics. This might require more focused questions later to uncover those trigger points**
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<<jump SettingTheToneOfTheSession>>
+->Mental State Check.
+	You:“I know this must be tough. How have you been feeling lately? Anything that’s been weighing heavily on your mind?”
+	The client exhales shakily, their voice trembling.
+	Client: "I just… feel stuck. Like I’m trying to climb out of this hole, but the walls are too steep. And every time I think I’ve found a foothold, I slip"
+	**A vivid metaphor. They’re trapped in their struggle, but metaphors can be a bridge to deeper understanding. Building trust will help us explore this further**
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<<jump SettingTheToneOfTheSession>>
+->Emotional and Physical Assessment.
+	You:"Can you describe how you’ve been feeling physically and emotionally?"
+	Client: "Physically? I… don’t think about that much. I mean, I guess I’ve been tired. Always tired. And emotionally… I feel like I’m on autopilot. Numb, mostly"
+	**That disconnect between physical and emotional awareness might be part of the problem. It’s worth revisiting later to help them reconnect with their body.**
+	<<set $SkillObservation = $SkillObservation +1>>
+	<<jump SettingTheToneOfTheSession>>
+->Mindfullness Pause.
+	You:"Let’s take a moment to breathe together before we begin."
+	The client blinks, uncertain at first, but follows your lead as you inhale and exhale deeply. Their shoulders visibly relax after a moment of silence.
+	Client: "That… helps, I think. I don’t know why, but it does."
+	**A small step toward easing their tension. We’ve created a calmer starting point, though it may take time for them to open up fully.**
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<<jump SettingTheToneOfTheSession>>
+->Stress Exploration.
+	You:"I hear you’ve been under stress. Let’s dive into that a bit more."
+	The client’s lips press into a thin line as they pause.
+	Client: "Stress doesn’t even begin to cover it. It’s like I’m carrying a boulder, and no matter what I do, I can’t put it down."
+	**They’re expressing their stress vividly. This imagery might be useful to explore their coping mechanisms or the root cause.**
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>	
+	<<jump SettingTheToneOfTheSession>>
+->Cognitive Reflection.
+	You:“It’s important to get an accurate picture of how you’ve been managing. Can you think of any patterns or events that might have contributed to how you feel today?”
+	The client frowns, their brow furrowing as they think.
+	Client: "Patterns? I guess… I keep coming back to the same thing. Every time something gets too hard, I just… shut down or reach for something to numb it. It’s like a cycle I can’t break."
+	**This is a significant admission. Their awareness of the cycle is a valuable starting point—we can use this as a foundation for understanding and change.**
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<<jump SettingTheToneOfTheSession>>
+===
+
+title:SettingTheToneOfTheSession
+---
+You study the client briefly—the subtle tremor in their fingers, the way their gaze flickers between the floor and the window. They’re nervous, guarded. It’s a posture you’ve seen before: a body that speaks of burdens, even when the mouth won’t.
+**This is the first step. They’re here, and that’s something. But if I rush, if I push too hard, I risk losing them before we even begin. The tone I set now will shape this entire process. They need to know they’re safe, that this space is theirs.**
+Your hand hovers over the clipboard, but you resist the urge to write just yet. First impressions aren’t made on paper—they’re forged in the quiet moments between words.
+You clear your throat gently, offering a small, reassuring smile.
+**They’re settling in, but there’s still hesitation—a quiet resistance lingering beneath the surface. It’s not unusual. Vulnerability doesn’t come easy, especially when you’ve spent years building walls to survive.**
+**But where do I go from here? Push too soon, and they’ll retreat. Stay too safe, and we’ll stall before we’ve even begun. I need to strike the right balance, something that lets them feel seen without feeling exposed.**
+**Maybe a gentle question, something that feels manageable but meaningful. Or perhaps it’s time to shift gears slightly—introduce the idea that this isn’t about perfection or answers, but exploration. They need to understand that there’s no wrong way to start this conversation.**
+**And then there’s their body language. Those hands, fidgeting with their sleeve—that’s telling me something. Anxiety? Restlessness? Maybe we address that, give them space to name it without judgment.**
+**The first step isn’t about finding solutions. It’s about showing them they can be safe here, even if it’s uncomfortable at first.**
+
+->Atmosphere Calibration.
+	You: “Before we dive into the session, I’d like to ask, are there any boundaries or things you’d prefer to avoid talking about today?”
+	The client pauses, fidgeting slightly.
+	Client: "I… I think I’d rather not talk about my family right now. It’s just… too much."
+	You nod thoughtfully and jot a quick note on your clipboard.
+	**The hesitation is telling. Their family may be a significant source of pain—or a wall they’re not ready to climb just yet. I’ll respect that boundary but keep it in mind for later sessions.**
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<<jump ExplorationOfTheClientsGoals>>
+->Session Environment Setup.
+	You: “I want you to know this space is yours, and you can share what you’re comfortable with. You’re in control here.”
+	The client blinks, their tense posture softening slightly.
+	Client: "Thanks… I think I need to hear that. I guess I’ve always felt like I had to say what people wanted to hear, you know?"
+	You offer a small smile and lean forward slightly.
+	**Reassuring them of control was the right step. It’s clear they’ve been conditioned to suppress their true feelings. We’ll need to work on breaking that pattern.**
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<<jump ExplorationOfTheClientsGoals>>
+->Safety Measures Establishment.
+	You: “You seem a bit nervous. Would you like a moment to adjust or something to help you feel more at ease?”
+	The client looks at you with a flicker of surprise before nodding slowly.
+	Client: "Maybe… just a second. This is a bit overwhelming."
+	You lean back, giving them space, and quietly adjust the position of your clipboard to avoid drawing attention to their unease.
+	**Their nerves are understandable—this is a vulnerable step for anyone. Small gestures of understanding can make all the difference in building trust.**
+	<<set $SkillObservation = $SkillObservation +1>>
+	<<jump ExplorationOfTheClientsGoals>>
+->Comfort Zone Creation.
+	You: "This is a safe space for you. We’ll take it one step at a time."
+	The client lets out a breath they didn’t seem to realize they were holding.
+	Client: "Safe space… I guess I haven’t had one of those in a long time."
+	You press your pen against the paper but refrain from writing, keeping your full attention on the client.
+	**"That sigh was loaded with unspoken history. They’re carrying more than they’re ready to share, but acknowledging the lack of safety is a step toward reclaiming it."**
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<<jump ExplorationOfTheClientsGoals>>
+->Mood Alignment.
+	You: "You’ll guide this process as much as I do—we’re in this together."
+	The client tilts their head, as though weighing your words.
+	Client: "Together… I like that. I’m tired of feeling like I have to handle everything on my own."
+	You shift in your chair slightly, mirroring their posture to create a sense of rapport.
+	**Acknowledging their need for collaboration validates their struggle. Framing therapy as a partnership might help them feel less isolated**
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<<jump ExplorationOfTheClientsGoals>>
+->Tone Adjustment.
+	You: “I can see that you’re a bit apprehensive. Let’s focus on the most important thing for you right now so we can ease into this process.”
+	The client bites their lip, then nods with a faint smile.
+	Client: "That sounds good. I think… I just need to feel like I’m not drowning anymore."
+	You write a quick note, underlining the word drowning twice.
+	**They’re signaling that they’re overwhelmed—perhaps even desperate. Anchoring the session around this immediate need might help create a foothold for progress**
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<<jump ExplorationOfTheClientsGoals>>
+===
+
+title: ExplorationOfTheClientsGoals
+---
+
+wda
+
 ===
