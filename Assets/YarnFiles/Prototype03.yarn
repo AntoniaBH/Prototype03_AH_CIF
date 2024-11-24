@@ -1,0 +1,41 @@
+﻿title:Start
+---
+Inner Thoughts:Another Session, another story waiting to unfold. Each journey is unique, yet they all share the weight of unspoken struggles.
+You are seated at your desk, surrounded by an air of stillness interrupted only by the faint ticking of a clock. The office is a refuge of muted colors—soft greys, warm beige walls, and the deep mahogany of wooden furniture. The afternoon light filters through half-closed blinds, casting striped patterns across the room.
+A faint breeze stirs a plant in the corner, its leaves trembling as if echoing the uncertainty of those who sit here. Your desk is meticulously arranged, yet every object tells a story.
+<<jump Desk>>
+===
+
+title:Desk
+---
+->Stress Ball.
+	With your fingers you graze the well-worn surface of the stress ball. It is helped many tense moments over the years—yours and your clients. 
+	A memory stirs: late nights, unfinished notes, and the silent prayer to make a difference.
+	Inner Thoughts:I hope they are ready to dig deep today. Change does not come easily.
+	<<jump Desk>>
+->Appointment Book.
+	You flip through the pages, a habit born from equal parts diligence and curiosity. Names and times fill the pages, but each scribble carries weight. How many lives have been changed—or left unchanged—by the decisions made here?
+	<<jump Desk>>
+->Framed Picture.
+	The photograph shows a serene lake, reflecting the clouds above it. A reminder of a simpler time, before you found your calling. The frame is slightly tilted—when did that happen? A faint smile crosses your face.
+	Inner Thoughts:Maybe today, I will fix it.
+	<<jump Desk>>
+->Move on.
+	<<jump Footsteps>>
+===
+
+title:Footsteps
+---
+The sound of footsteps echoes faintly, growing louder. The rhythm is hesitant, the soft shuffle of shoes against polished wood. They stop just outside the door.
+A pause. Then, the door clicks open softly, revealing your secretary—a calm, composed figure whose presence feels like a bridge between the world outside and the sanctuary within.
+Secretary:"Your next appointment is here. Would you like me to let them in?"
+->Yes.
+	You:"Yes, please let them in."
+	The secretary nods and steps aside, holding the door open. You hear the faint shuffle of someone entering. Hesitant footsteps. The client steps into view, their hands fidgeting nervously as they take in the room.
+	<<jump FirstMeeting>>
+->Not yet.
+	You:"Just give me a moment; I want to prepare."
+	The secretary offers a polite nod and retreats. The room falls silent again. You sit back, letting a moment of reflection wash over you. Familiar faces flash through your mind—clients who came in nervous, desperate, angry. Some left lighter. Others did not come back.
+	Inner Thoughts:Therapy is a journey, but not everyone is ready to walk it. I wonder—will they be?
+	<<jump FirstMeeting>>
+===
