@@ -1,0 +1,396 @@
+﻿title:FirstMeeting
+---
+<<declare $SkillEmpathy = 0>>
+<<declare $SkillPrecisionQuestioning = 0>>
+<<declare $SkillGroundingTechniques = 0>>
+<<declare $SkillObservation = 0>>
+<<declare $SkillReflectiveListening = 0>>
+<<declare $SkillAnalyticalInsight = 0>>
+
+The secretary gestures for the client to step inside.
+The figure in the doorway is hesitant, their movements stiff with unease. Their eyes dart around the room before settling on you. You rise, extending a warm greeting.
+You:"Hello, It is nice to meet you. Please, take a seat."
+The client nods and walks to the chair opposite your desk, sitting down slowly. Their hands rest awkwardly in their lap, their shoulders hunched as if bracing for something.
+The air hangs heavy for a moment. Then, you glance at your notes, silently rehearsing the sessions structure in your mind.
+Inner Thoughts:Who are they? Why are they here? What is it they are running from—or toward?
+The session is about to begin.
+You lower yourself back into your chair, adjusting its position slightly. The familiar creak of the leather cushion accompanies you as you reach for the clipboard on your desk.
+The smooth, cool surface of the clipboard meets your fingers as you lift it. On its face, a concise summary of the person sitting across from you.
+
+*clipboard pops-up*
+
+Inner Thoughts:A life encapsulated in bullet points. Yet, the depths of their struggles remain unwritten here.
+You glance up briefly, meeting the client’s anxious gaze. Their fingers twist together in their lap, a subtle indicator of tension. You return your attention to the clipboard, committing the essentials to memory before setting it aside.
+
+*clipboard pops-up again with a different page*
+
+The faint shimmer of the window dissolves as you return your focus to the present. The client watches you expectantly, their posture slightly more rigid now. You offer a reassuring smile before introducing yourself.
+You:"I want to start by saying how much I appreciate you taking this first step. This space is yours to share whatever feels right. Let’s take it at your pace."
+The client nods, though their shoulders remain tight. You lean forward slightly, softening your tone.
+<<jump InquiryAboutClientsWellBeing>>
+===
+
+title:InquiryAboutClientsWellBeing
+---
+Inner Thoughts:The first step is always delicate—like testing the temperature of water before diving in. I need to gauge where they are emotionally, but not in a way that feels intrusive. A misstep here could make them feel exposed, and that’s the last thing I want.
+Inner Thoughts:Their posture is closed off, their gaze darting to the window. There’s tension there—anxiety, maybe? Or is it something heavier? I’ll need to tread lightly but intentionally. Questions that are too broad might overwhelm them; too narrow, and I risk missing the bigger picture.
+Inner Thoughts:This is about giving them permission to start. I need to ask in a way that lets them know there’s no right or wrong answer—just honesty, as much as they’re ready to give. Whether it’s their feelings, their struggles, or even just how they’ve been coping day to day, it’s all part of the picture.
+Inner Thoughts:Time to open the door, just a little, and see what they’re ready to share.
+->Emotional Assessment.
+	You:“Can you describe how you've been feeling recently, maybe some specific moments or situations that triggered these feelings?”
+	The client hesitates, glancing at their hands.
+	Client: "It’s… been hard. Some days, it feels like I’m just going through the motions. But then, out of nowhere, it hits me—this weight I can’t shake off."
+	Inner Thoughts:They’re clearly overwhelmed but struggling to articulate the specifics. This might require more focused questions later to uncover those trigger points
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<b>Precision Questioning Skill +1!
+	<<jump SettingTheToneOfTheSession>>
+->Mental State Check.
+	You:“I know this must be tough. How have you been feeling lately? Anything that’s been weighing heavily on your mind?”
+	The client exhales shakily, their voice trembling.
+	Client: "I just… feel stuck. Like I’m trying to climb out of this hole, but the walls are too steep. And every time I think I’ve found a foothold, I slip"
+	Inner Thoughts:A vivid metaphor. They’re trapped in their struggle, but metaphors can be a bridge to deeper understanding. Building trust will help us explore this further
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<b>Empathy Skill +1!
+	<<jump SettingTheToneOfTheSession>>
+->Emotional and Physical Assessment.
+	You:"Can you describe how you’ve been feeling physically and emotionally?"
+	Client: "Physically? I… don’t think about that much. I mean, I guess I’ve been tired. Always tired. And emotionally… I feel like I’m on autopilot. Numb, mostly"
+	Inner Thoughts:That disconnect between physical and emotional awareness might be part of the problem. It’s worth revisiting later to help them reconnect with their body.
+	<<set $SkillObservation = $SkillObservation +1>>
+	<b>Observation Skill +1!
+	<<jump SettingTheToneOfTheSession>>
+->Mindfullness Pause.
+	You:"Let’s take a moment to breathe together before we begin."
+	The client blinks, uncertain at first, but follows your lead as you inhale and exhale deeply. Their shoulders visibly relax after a moment of silence.
+	Client: "That… helps, I think. I don’t know why, but it does.
+	Inner Thoughts:A small step toward easing their tension. We’ve created a calmer starting point, though it may take time for them to open up fully.
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<b>Grounding Techniques Skill +1!
+	<<jump SettingTheToneOfTheSession>>
+->Stress Exploration.
+	You:"I hear you’ve been under stress. Let’s dive into that a bit more."
+	The client’s lips press into a thin line as they pause.
+	Client: "Stress doesn’t even begin to cover it. It’s like I’m carrying a boulder, and no matter what I do, I can’t put it down."
+	Inner Thoughts:They’re expressing their stress vividly. This imagery might be useful to explore their coping mechanisms or the root cause.
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<b>Reflective Listening Skill +1!	
+	<<jump SettingTheToneOfTheSession>>
+->Cognitive Reflection.
+	You:“It’s important to get an accurate picture of how you’ve been managing. Can you think of any patterns or events that might have contributed to how you feel today?”
+	The client frowns, their brow furrowing as they think.
+	Client: "Patterns? I guess… I keep coming back to the same thing. Every time something gets too hard, I just… shut down or reach for something to numb it. It’s like a cycle I can’t break."
+	Inner Thoughts:This is a significant admission. Their awareness of the cycle is a valuable starting point—we can use this as a foundation for understanding and change.
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<b>Analytical Insight Skill +1!
+	<<jump SettingTheToneOfTheSession>>
+===
+
+title:SettingTheToneOfTheSession
+---
+Studying the client briefly you notice the subtle tremor in their fingers, the way their gaze flickers between the floor and the window. They’re nervous, guarded. It’s a posture you’ve seen before: a body that speaks of burdens, even when the mouth won’t.
+Inner Thoughts:This is the first step. They’re here, and that’s something. But if I rush, if I push too hard, I risk losing them before we even begin. The tone I set now will shape this entire process. They need to know they’re safe, that this space is theirs.
+Your hand hovers over the clipboard, but you resist the urge to write just yet. First impressions aren’t made on paper—they’re forged in the quiet moments between words.
+You clear your throat gently, offering a small, reassuring smile.
+Inner Thoughts:They’re settling in, but there’s still hesitation—a quiet resistance lingering beneath the surface. It’s not unusual. Vulnerability doesn’t come easy, especially when you’ve spent years building walls to survive.
+Inner Thoughts:But where do I go from here? Push too soon, and they’ll retreat. Stay too safe, and we’ll stall before we’ve even begun. I need to strike the right balance, something that lets them feel seen without feeling exposed.
+Inner Thoughts:Maybe a gentle question, something that feels manageable but meaningful. Or perhaps it’s time to shift gears slightly—introduce the idea that this isn’t about perfection or answers, but exploration. They need to understand that there’s no wrong way to start this conversation.
+Inner Thoughts:And then there’s their body language. Those hands, fidgeting with their sleeve—that’s telling me something. Anxiety? Restlessness? Maybe we address that, give them space to name it without judgment.
+Inner Thoughts:The first step isn’t about finding solutions. It’s about showing them they can be safe here, even if it’s uncomfortable at first.
+->Atmosphere Calibration.
+	You: “Before we dive into the session, I’d like to ask, are there any boundaries or things you’d prefer to avoid talking about today?”
+	The client pauses, fidgeting slightly.
+	Client: "I… I think I’d rather not talk about my family right now. It’s just… too much."
+	You nod thoughtfully and jot a quick note on your clipboard.
+	Inner Thoughts:The hesitation is telling. Their family may be a significant source of pain—or a wall they’re not ready to climb just yet. I’ll respect that boundary but keep it in mind for later sessions.
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<b>Precision Questioning Skill +1! 
+	<<jump ExplorationOfTheClientsGoals>>
+->Session Environment Setup.
+	You: “I want you to know this space is yours, and you can share what you’re comfortable with. You’re in control here.”
+	The client blinks, their tense posture softening slightly.
+	Client: "Thanks… I think I need to hear that. I guess I’ve always felt like I had to say what people wanted to hear, you know?"
+	You offer a small smile and lean forward slightly.
+	Inner Thoughts:Reassuring them of control was the right step. It’s clear they’ve been conditioned to suppress their true feelings. We’ll need to work on breaking that pattern.
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<b>Empathy Skill +1!
+	<<jump ExplorationOfTheClientsGoals>>
+->Safety Measures Establishment.
+	You: “You seem a bit nervous. Would you like a moment to adjust or something to help you feel more at ease?”
+	The client looks at you with a flicker of surprise before nodding slowly.
+	Client: "Maybe… just a second. This is a bit overwhelming."
+	You lean back, giving them space, and quietly adjust the position of your clipboard to avoid drawing attention to their unease.
+	Inner Thoughts:Their nerves are understandable—this is a vulnerable step for anyone. Small gestures of understanding can make all the difference in building trust.
+	<<set $SkillObservation = $SkillObservation +1>>
+	<b>Observation Skill +1!
+	<<jump ExplorationOfTheClientsGoals>>
+->Comfort Zone Creation.
+	You: "This is a safe space for you. We’ll take it one step at a time."
+	The client lets out a breath they didn’t seem to realize they were holding.
+	Client: "Safe space… I guess I haven’t had one of those in a long time."
+	You press your pen against the paper but refrain from writing, keeping your full attention on the client.
+	Inner Thoughts:That sigh was loaded with unspoken history. They’re carrying more than they’re ready to share, but acknowledging the lack of safety is a step toward reclaiming it.
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<b>Grounding Techniques Skill +1!
+	<<jump ExplorationOfTheClientsGoals>>
+->Mood Alignment.
+	You: "You’ll guide this process as much as I do—we’re in this together."
+	The client tilts their head, as though weighing your words.
+	Client: "Together… I like that. I’m tired of feeling like I have to handle everything on my own."
+	You shift in your chair slightly, mirroring their posture to create a sense of rapport.
+	Inner Thoughts:Acknowledging their need for collaboration validates their struggle. Framing therapy as a partnership might help them feel less isolated.
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<b>Reflective Listening Skill +1!
+	<<jump ExplorationOfTheClientsGoals>>
+->Tone Adjustment.
+	You: “I can see that you’re a bit apprehensive. Let’s focus on the most important thing for you right now so we can ease into this process.”
+	The client bites their lip, then nods with a faint smile.
+	Client: "That sounds good. I think… I just need to feel like I’m not drowning anymore."
+	You write a quick note, underlining the word drowning twice.
+	Inner Thoughts:They’re signaling that they’re overwhelmed—perhaps even desperate. Anchoring the session around this immediate need might help create a foothold for progress
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<b>Analytical Insight Skill +1!
+	<<jump ExplorationOfTheClientsGoals>>
+===
+
+title:ExplorationOfTheClientsGoals
+---
+The clipboard rest in your left hand while you tap your pen lighty against the page as you consider your next words.
+Inner Thoughts:What drives them? What brought them here, beyond the immediate pain? Unspoken aspirations lie behind even the darkest struggles. I need to help them find those.
+You take a breath, raising your eyes to meet theirs.
+->Aspirational Discovery.
+	You:“Let’s get clear on what you want to achieve. Are there any specific changes you’re hoping to see in your life after therapy?”
+	The client hesitates, their gaze falling to their lap. Their fingers fidget nervously before they speak.
+	Client:"I... I just want to feel normal again. Like I can get through a day without needing to rely on something to take the edge off."
+	They look up, their expression both vulnerable and determined.
+	Inner Thoughts:A glimpse of clarity, even in their hesitation. That longing for 'normal'—a word so heavy, so subjective. It’s a fragile but promising starting point.
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<b>Precision Questioning Skill +1! 
+	<<jump IdentificationOfImmediateChallenges>>
+->Objective Exploration.
+	You:“What would you like to work on in our time together? How can I best support you during this journey?”
+	The client leans back slightly, their shoulders sagging.
+	Client:"I don’t even know where to start. I guess... figuring out why I keep messing things up. Why it feels like I can’t stop."
+	Their voice grows quieter toward the end, trailing off into an uneasy silence.
+	Inner Thoughts:Uncertainty can be a sign of exhaustion, but also of reflection. They’re searching, and that’s enough for now. I can help them focus.
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<b>Empathy Skill +1!
+	<<jump IdentificationOfImmediateChallenges>>
+->Focus Clarification.
+	You:“If you're uncertain about your goals, would it help to break it down into smaller, more specific areas?” 
+	The client nods slowly, their body language shifting as they sit up straighter.
+	Client:"Maybe. If we could just figure out why I keep... feeling this way? Then maybe the rest would start to make sense."
+	Their voice gains strength as they speak, as though articulating their thoughts brings relief.
+	Inner Thoughts:A spark of motivation—a sign they’re ready to dig deeper. Sometimes, progress begins with the smallest acts of clarity.
+	<<set $SkillObservation = $SkillObservation +1>>
+	<b>Observation Skill +1!
+	<<jump IdentificationOfImmediateChallenges>>
+->Intent Identification.
+	You:“Take a moment to think about one goal you’d like to focus on. What stands out as the most important for you?”
+	The client’s brow furrows, and they let out a sharp exhale.
+	Client:"Important? I don’t know. I mean, everything feels important... but nothing does at the same time. Does that make sense?"
+	They slump forward slightly, their hands gripping their knees.
+	Inner Thoughts:Ambivalence. A common but telling state of mind. The conflict between urgency and emptiness—it’s a window into their struggles.
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<b>Grounding Techniques Skill +1!
+	<<jump IdentificationOfImmediateChallenges>>
+->Goal Navigation.
+	You:“If you are not sure were to start let us talk through that together.”
+	The client looks up, meeting your gaze for a fleeting moment before looking away.
+	Client:"I think... I just need someone to help me sort through it all. It feels like my brain’s a mess, and I don’t even know where to begin."
+	Their voice wavers slightly but carries a trace of relief, as though admitting this out loud lightened their burden.
+	Inner Thoughts:Acknowledgment of overwhelm is its own form of clarity. They don’t need answers yet—just direction. And that, I can provide.
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<b>Reflective Listening Skill +1!
+	<<jump IdentificationOfImmediateChallenges>>
+->Vision Articulation.
+	You:“What patterns have you noticed in your life that you feel therapy could help address? What would real change look like for you?”
+	The client blinks, their expression shifting to one of quiet contemplation.
+	Client:"Patterns? I... I guess I keep running away. From people, from problems. It’s like I can’t let myself stay in one place for too long."
+	Their hands rest still in their lap for the first time, their breathing slowing.
+	Inner Thoughts:A moment of self-awareness—a rare and valuable gift. It’s not just about running away; it’s about what they’re running from. A vital thread to follow.
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<b>Analytical Insight Skill +1!
+	<<jump IdentificationOfImmediateChallenges>>
+===
+
+title:IdentificationOfImmediateChallenges
+---
+The room is quiet, the faint hum of the air conditioning filling the space. You lean back slightly in your chair, studying the client. They sit across from you, their body tense but their expression blank.
+Inner Thoughts:How do I help them open up? It's too early to dive into deep waters, but the surface tension is unmistakable. A subtle nudge, a carefully chosen question—that's all it takes to guide the conversation.
+You shift forward, offering a reassuring smile before speaking.
+->Urgency Evaluation.
+	You:“What’s been the hardest part for you recently? Can you think of any situations or events that have escalated your challenges?”
+	The client furrows their brow, their hands tightening on the arms of the chair.
+	Client:"There was... this argument with my sister. She doesn’t understand what I’m going through, and it just makes everything worse."
+	Their voice cracks slightly, and they glance away, their frustration evident.
+	Inner Thoughts:A moment of vulnerability. The argument is just the tip of the iceberg—it’s the emotions beneath it that matter. Anger, guilt, loneliness? That’s where the work begins.
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<b>Precision Questioning Skill +1! 
+	<<jump EstablishmentOfARapportWithTheClient>>
+->Challenge Assessment.
+	You:“I can tell there’s something heavy on your heart. Is there something urgent you’re struggling with right now that we should focus on first?”
+	The client looks up at you, their eyes wide with surprise. After a pause, they speak softly.
+	Client:"It’s not urgent, I guess, but... it’s hard to shake this feeling that I’m just stuck. Like no matter what I do, nothing’s going to change."
+	Their voice cracks slightly, and they wipe at their eyes quickly, as though embarrassed by their vulnerability.
+	Inner Thoughts:A quiet despair lingers beneath their words. It’s not about urgency; it’s about the weight of hopelessness. This is the kind of pain that erodes progress.
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<b>Empathy Skill +1!
+	<<jump EstablishmentOfARapportWithTheClient>>
+->Issue Highlighting.
+	You:“You seem to be hesitating, like you’re avoiding something. Is there a specific event or topic you’re finding difficult to discuss right now?”
+	The client stiffens slightly, their posture defensive. Their eyes dart to the side before settling on a spot on the floor.
+	Client:"I—I don’t know. Maybe. I just... don’t want to sound stupid or like I’m overreacting. I hate feeling like this, like I can’t handle my own problems."	
+	Their hands grip the fabric of their pants tightly.
+	Inner Thoughts:The fear of judgment. They’ve carried this armor for so long, it’s hard to let it down. But acknowledging it is the first crack in their defenses.
+	<<set $SkillObservation = $SkillObservation +1>>
+	<b>Observation Skill +1!
+	<<jump EstablishmentOfARapportWithTheClient>>
+->Obstacle Recognition.
+	You:“I know it can be hard to talk about difficult things, but it’s okay. Let’s take a pause and do a quick grounding exercise to help you feel calmer.”
+	The client exhales sharply, their shoulders slumping as though relieved by your suggestion.
+	Client:"Okay, yeah. That might help. I’ve just been so... tense all the time."
+	You guide them through a simple breathing exercise, their inhales and exhales gradually evening out.
+	Inner Thoughts:Sometimes, the best way forward is to stand still. A moment of calm can open doors where words fall short.
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<b>Grounding Techniques Skill +1!
+	<<jump EstablishmentOfARapportWithTheClient>>
+->Pressure Identification.
+	You:“It sounds like you’re really overwhelmed with everything that’s been going on. Can you tell me more about what’s affecting you most?”
+	The client’s lips press into a thin line before they let out a humorless laugh.
+	Client:"Everything? I mean, where do I even start? My job, my health, my family... It’s like everything’s falling apart all at once."
+	Their voice rises slightly, a tremor of frustration breaking through.
+	Inner Thoughts:Overwhelm can feel all-encompassing, but it’s also a map. Each thread leads somewhere, and pulling one could start to untangle the rest.
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<b>Reflective Listening Skill +1!
+	<<jump EstablishmentOfARapportWithTheClient>>
+->Barrier Uncovering.
+	You:“It seems like there’s more to this than what’s on the surface. Are there underlying issues that might be contributing to what you’re experiencing right now?”
+	The client’s expression tightens, and they glance at you warily.
+	Client:"Maybe. I mean, it’s not just one thing. It’s... everything from before. Stuff I thought I dealt with, but I guess I didn’t."
+	They lean back slightly, crossing their arms as though trying to shield themselves.
+	Inner Thoughts:Old wounds. The past never stays buried—it festers until it’s acknowledged. This will take care and precision to navigate.
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<b>Analytical Insight Skill +1!
+	<<jump EstablishmentOfARapportWithTheClient>>
+===
+
+title:EstablishmentOfARapportWithTheClient
+---
+As the initial exchanges settle, you sense a subtle shift in the atmosphere. The client’s posture relaxes slightly, though tension still lingers.
+Inner Thoughts:Building trust takes time. Every word, every pause, is an opportunity to show them that this space is safe—that they are safe. To make progress, they need to feel seen and supported.
+You consider your next approach, knowing that how you connect now will be important for the session.
+->Relationship Strengthening.
+	You:“Tell me about how you typically react when things get tough. What kind of support do you usually turn to in difficult times?”
+	The client tilts their head, considering the question. They clasp their hands in their lap, their fingers fidgeting.
+	Client:"I don’t know... I usually just shut people out. It feels easier that way, you know? But I guess that’s part of why I’m here. I don’t want to do that anymore."
+	They glance at you briefly, their eyes carrying a flicker of hope amidst the apprehension.
+	Inner Thoughts:Recognizing avoidance is a step forward. Even the act of sharing this much suggests they’re ready to change, even if it scares them.
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<b>Precision Questioning Skill +1! 
+	<<jump IntroductionOfTheSessionsProcessAndMethods>>
+->Trust Building.
+	You:“It’s clear that you’ve been through a lot, and I truly admire your strength in coming here. You don’t have to go through this alone.”
+	The client’s lips press into a tight line as they look down at the floor. Their shoulders tremble slightly before they take a deep breath.
+	Client:"Thanks... It’s just... hard. I don’t like feeling this way, but hearing that helps."
+	They glance at you, their expression softening slightly, though their guardedness remains.
+	Inner Thoughts:A simple acknowledgment can be powerful. It’s not about fixing everything at once—it’s about letting them know they’re not alone in their struggle.
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<b>Empathy Skill +1!
+	<<jump IntroductionOfTheSessionsProcessAndMethods>>
+->Engagement Enhancement.
+	You:“I can tell this is a lot to take in. If you need a break or a moment to collect your thoughts, just let me know.”
+	The client nods, their shoulders relaxing slightly. They let out a slow breath, their hands no longer fidgeting as much.
+	Client:"That’s... good to know. Thanks. I think I’m okay for now, but it’s nice to have the option."
+	They offer a faint, appreciative smile—a small but significant gesture.
+	Inner Thoughts:Sometimes, just offering space is enough. It’s not always about what’s said, but about what’s allowed to be felt.
+	<<set $SkillObservation = $SkillObservation +1>>
+	<b>Observation Skill +1!
+	<<jump IntroductionOfTheSessionsProcessAndMethods>>
+->Connection Deepening.
+	You:“If you’re feeling anxious right now, remember that you can always ground yourself. We can take a moment together whenever you need.”
+	The client sits back, their breathing noticeably shallow. They nod hesitantly, then take a deep inhale, mimicking the grounding technique you introduced earlier.
+	Client:"Yeah... I’ve been trying to do that more, but it’s harder when I’m alone. It feels a little easier here, though."
+	They look at you briefly, their eyes carrying a mix of vulnerability and trust.
+	Inner Thoughts:Building self-soothing techniques isn’t just about learning them—it’s about experiencing them in a supportive environment first. They’re starting to trust the space, and me.
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<b>Grounding Techniques Skill +1!
+	<<jump IntroductionOfTheSessionsProcessAndMethods>>
+->Bond Formation.
+	You: “I’m hearing that this is very challenging for you. I’m here to listen, and we can work at a pace that feels comfortable.”
+	The client exhales audibly, leaning slightly forward in their chair. Their voice softens.
+	Client:"That’s... a relief. I always feel like I have to rush or prove something. It’s nice to hear I don’t have to do that here."
+	Their hands unclench, resting more naturally in their lap.
+	Inner Thoughts:Relief spreads like ripples when pressure is released. They’ve been running on a treadmill of expectations. Here, they can finally stop and breathe.
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<b>Reflective Listening Skill +1!
+	<<jump IntroductionOfTheSessionsProcessAndMethods>>
+->Fellowship Development.
+	You:“It seems like you’re more open when we focus on specific, clear issues. Let’s figure out a starting point that will make you feel heard.”
+	The client blinks, sitting up straighter. They pause, visibly processing your words.
+	Client:"Yeah, that makes sense. I think starting with something small might help. I don’t want to feel so... overwhelmed."
+	Their tone steadies, and their posture becomes less defensive.
+	Inner Thoughts:Clarity brings comfort. When everything feels too much, narrowing the focus can bring a sense of control.
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<b>Analytical Insight Skill +1!
+	<<jump IntroductionOfTheSessionsProcessAndMethods>>
+===
+
+title:IntroductionOfTheSessionsProcessAndMethods
+---
+The client sits quietly, their gaze shifting between you and the floor. Their shoulders remain tense, though their breathing has slowed.
+Inner Thoughts:Now comes the most important part: helping them feel prepared for what lies ahead. They need to understand not only the tools we’ll use but also why we’re using them. This isn’t just about me guiding them—it’s about empowering them to engage fully in the process.
+->Methodology Introduction.
+	You:“I want to explain the approach we’ll take in the sessions. Are you familiar with therapeutic techniques like memory exploration or visualization?”
+	The client tilts their head slightly, frowning in thought.
+	Client:"Visualization? I guess I’ve heard of it, but I don’t think I’ve ever done it. Memory exploration... does that mean going back to things I don’t want to remember?"
+	They pause, their hands gripping the armrests tightly.
+	Inner Thoughts:They’re uncertain, but that’s expected. Framing the methods as tools, not challenges, will help ease their fear.
+	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
+	<b>Precision Questioning Skill +1! 
+	<<jump StartOfTheSession>>
+->Procedure Overview.
+	You:“This process is all about you, and it’s okay if it feels uncomfortable at times. We’ll work through things together, at your pace.”
+	The client exhales audibly, leaning back slightly in their chair.
+	Client:"Okay. That makes me feel a little better. I don’t like rushing things—it just stresses me out more."
+	They glance at you with a tentative nod, their body language softening.
+	Inner Thoughts:Setting the pace is key. Giving them permission to take their time reduces the pressure and opens the door for deeper exploration.
+	<<set $SkillEmpathy = $SkillEmpathy +1>>
+	<b>Empathy Skill +1!
+	<<jump StartOfTheSession>>
+->Technique Orientation.
+	You:“It’s important that you feel comfortable with the methods I’ll be using. Is there anything you feel uncertain about or want to know more about?”
+	The client’s brow furrows as they think.
+	Client:"I guess I’m not sure what to expect. What if something comes up that I don’t want to deal with? Will I be able to stop?"
+	They look at you, their tone laced with both curiosity and apprehension.
+	Inner Thoughts:Their concern is valid. Reassuring them that they control the pace and depth will be crucial to building trust in the process.
+	<<set $SkillObservation = $SkillObservation +1>>
+	<b>Observation Skill +1!
+	<<jump StartOfTheSession>>
+->Process Explanation.
+	You:“During our sessions, if things get intense, we’ll use grounding exercises. These help to stay present and keep things from getting overwhelming.”
+	The client shifts in their chair, their hands loosening slightly.
+	Client:"That sounds helpful. I’ve had moments before where it felt like... too much. It’s good to know there’s something to help with that."
+	Their voice softens, and they nod in apparent relief.
+	Inner Thoughts:Grounding isn’t just a tool; it’s a lifeline. Knowing they have it as a fallback can help them face difficult moments more courageously
+	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
+	<b>Grounding Techniques Skill +1!
+	<<jump StartOfTheSession>>
+->Framework Presentation.
+	You:“It sounds like you’re open to this process, but I want to make sure you fully understand what we’ll be doing together. What’s on your mind about it?”
+	The client’s eyes dart momentarily before they shrug.
+	Client:"I don’t know... I guess I’m just scared. I want to get better, but what if it doesn’t work? What if I can’t do it?"
+	Their voice wavers, and their hands grip the edge of their seat.
+	Inner Thoughts:Acknowledging their fears helps dismantle them. It’s not about promising success but affirming that the process is worth the effort.
+	<<set $SkillReflectiveListening = $SkillReflectiveListening +1>>
+	<b>Reflective Listening Skill +1!
+	<<jump StartOfTheSession>>
+->Session Structure Clarification.
+	You:“This method is designed to uncover the root of your issues. What do you think might come up for you as we dig into these deeper areas?”
+	The client shifts uncomfortably but meets your gaze briefly.
+	Client:"I’m not sure... maybe stuff from when I was younger. Things I’ve tried to forget but can’t stop thinking about sometimes."
+	They look away, their tone guarded but sincere.
+	Inner Thoughts:Even this small admission is a significant step forward. They’re beginning to confront the idea of facing their past, even if hesitantly
+	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>
+	<b>Analytical Insight Skill +1!
+	<<jump StartOfTheSession>>
+===
