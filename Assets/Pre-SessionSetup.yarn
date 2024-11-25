@@ -9,33 +9,32 @@
 
 The secretary gestures for the client to step inside.
 The figure in the doorway is hesitant, their movements stiff with unease. Their eyes dart around the room before settling on you. You rise, extending a warm greeting.
-You:"Hello, It is nice to meet you. Please, take a seat."
+You: "Hello, It is nice to meet you. Please, take a seat."
 The client nods and walks to the chair opposite your desk, sitting down slowly. Their hands rest awkwardly in their lap, their shoulders hunched as if bracing for something.
 The air hangs heavy for a moment. Then, you glance at your notes, silently rehearsing the sessions structure in your mind.
-Inner Thoughts:Who are they? Why are they here? What is it they are running from—or toward?
+Inner Thoughts: Who are they? Why are they here? What is it they are running from—or toward?
 The session is about to begin.
 You lower yourself back into your chair, adjusting its position slightly. The familiar creak of the leather cushion accompanies you as you reach for the clipboard on your desk.
 The smooth, cool surface of the clipboard meets your fingers as you lift it. On its face, a concise summary of the person sitting across from you.
 
 *clipboard pops-up*
 
-Inner Thoughts:A life encapsulated in bullet points. Yet, the depths of their struggles remain unwritten here.
+Inner Thoughts: A life encapsulated in bullet points. Yet, the depths of their struggles remain unwritten here.
 You glance up briefly, meeting the client’s anxious gaze. Their fingers twist together in their lap, a subtle indicator of tension. You return your attention to the clipboard, committing the essentials to memory before setting it aside.
 
 *clipboard pops-up again with a different page*
 
 The faint shimmer of the window dissolves as you return your focus to the present. The client watches you expectantly, their posture slightly more rigid now. You offer a reassuring smile before introducing yourself.
-You:"I want to start by saying how much I appreciate you taking this first step. This space is yours to share whatever feels right. Let’s take it at your pace."
+You: "I want to start by saying how much I appreciate you taking this first step. This space is yours to share whatever feels right. Let’s take it at your pace."
 The client nods, though their shoulders remain tight. You lean forward slightly, softening your tone.
 <<jump InquiryAboutClientsWellBeing>>
 ===
 
 title:InquiryAboutClientsWellBeing
 ---
-Inner Thoughts:The first step is always delicate—like testing the temperature of water before diving in. I need to gauge where they are emotionally, but not in a way that feels intrusive. A misstep here could make them feel exposed, and that’s the last thing I want.
-Inner Thoughts:Their posture is closed off, their gaze darting to the window. There’s tension there—anxiety, maybe? Or is it something heavier? I’ll need to tread lightly but intentionally. Questions that are too broad might overwhelm them; too narrow, and I risk missing the bigger picture.
-Inner Thoughts:This is about giving them permission to start. I need to ask in a way that lets them know there’s no right or wrong answer—just honesty, as much as they’re ready to give. Whether it’s their feelings, their struggles, or even just how they’ve been coping day to day, it’s all part of the picture.
-Inner Thoughts:Time to open the door, just a little, and see what they’re ready to share.
+Inner Thoughts: The first step is always delicate—like testing the temperature of water before diving in. I need to gauge where they are emotionally, but not in a way that feels intrusive. A misstep here could make them feel exposed, and that’s the last thing I want.
+
+Inner Thoughts: Time to open the door, just a little, and see what they’re ready to share.
 ->Emotional Assessment.
 	You:“Can you describe how you've been feeling recently, maybe some specific moments or situations that triggered these feelings?”
 	The client hesitates, glancing at their hands.

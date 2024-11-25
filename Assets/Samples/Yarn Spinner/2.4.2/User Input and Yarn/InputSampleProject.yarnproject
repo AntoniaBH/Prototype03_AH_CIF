@@ -3,9 +3,7 @@
   "sourceFiles": [
     "**/*.yarn"
   ],
-  "excludeFiles": [
-    "**/*~/*"
-  ],
+  "excludeFiles": [],
   "localisation": {},
   "baseLanguage": "en",
   "compilerOptions": {}
