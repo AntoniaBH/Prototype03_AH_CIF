@@ -35,6 +35,8 @@ Inner Thoughts: Time to open the door, just a little, and see what they’re rea
 	The client hesitates, glancing at their hands.
 	Client: "It’s… been hard. Some days, it feels like I’m just going through the motions. But then, out of nowhere, it hits me—this weight I can’t shake off."
 	Inner Thoughts: They’re clearly overwhelmed but struggling to articulate the specifics. This might require more focused questions later to uncover those trigger points
+	Hearing the emotion in the client’s voice, you lean forward slightly, hands clasped in a thoughtful gesture. 
+	You: “It sounds like this has been weighing heavily on you.”
 	<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +1>>
 	<b>Precision Questioning Skill +1!
 	<<jump SettingTheToneOfTheSession>>
@@ -47,7 +49,7 @@ Inner Thoughts: Time to open the door, just a little, and see what they’re rea
 	<b>Empathy Skill +1!
 	<<jump SettingTheToneOfTheSession>>
 ->Emotional and Physical Assessment.
-	You:"Can you describe how you’ve been feeling physically and emotionally?"
+	You: "Can you describe how you’ve been feeling physically and emotionally?"
 	Client: "Physically? I… don’t think about that much. I mean, I guess I’ve been tired. Always tired. And emotionally… I feel like I’m on autopilot. Numb, mostly"
 	Inner Thoughts: That disconnect between physical and emotional awareness might be part of the problem. It’s worth revisiting later to help them reconnect with their body.
 	<<set $SkillObservation = $SkillObservation +1>>
