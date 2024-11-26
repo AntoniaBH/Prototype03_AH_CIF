@@ -2474,7 +2474,7 @@ PrefabInstance:
     - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: yarnProject
       value: 
-      objectReference: {fileID: 7545569452688597077, guid: f6b2425fa4ef62a48888d4afbba152f4, type: 3}
+      objectReference: {fileID: 7545569452688597077, guid: dd4231198b4f1c545ba4e2b669eb3b5f, type: 3}
     - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
       value: 0
