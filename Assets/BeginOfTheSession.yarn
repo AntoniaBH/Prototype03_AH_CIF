@@ -7,7 +7,7 @@ You jot down brief notes, summarizing the key points from your conversation so f
 You glance up, meeting their gaze with a calm and reassuring tone.
 You: "I’d like to take a moment to explain the approach we’ll be using during our sessions. It’s a bit different from traditional talk therapy, but I think you’ll find it helpful. Let me start with the concept of the <b>Mindscape<b>."
 You continue, voice steady and empathetic.
-You: "The <b>Mindscape<b> is a way for us to explore your inner world. Think of it as a reflection of your thoughts, memories, and emotions—organized into spaces that we can visit and better understand together."
+You: "The Mindscape is a way for us to explore your inner world. Think of it as a reflection of your thoughts, memories, and emotions—organized into spaces that we can visit and better understand together."
 The client raises an eyebrow, their curiosity piqued despite a lingering trace of skepticism.
 Client: "So... like my mind is a map or something?"
 You nod, smiling slightly.
@@ -46,8 +46,238 @@ For a moment, the room is quiet except for the soft sound of their breathing. Th
 Client: “I think I can see it. It’s... clearer than I expected.”
 You: “That’s wonderful. Now that we’ve established your Safe Space, we’re ready to take our first steps into the Mindscape. We’ll start small—exploring one memory space at a time. Remember, you’re in control, and we’ll pause whenever you need.”
 You lean back slightly, letting your words settle. The client’s expression is a mix of apprehension and quiet determination.
+
 *show current skills*
+
 Inner Thoughts: This is the beginning of their journey—a delicate but vital step forward. The Safe Space is their anchor, and the Mindscape will be their path. Now it’s time to help them take that first step into understanding themselves.
+
+<<declare $TheAccidentUnlocked = false>>
+<<declare $AmountTryUnlockTheAccident = 0>>
+<<jump UnlockingTheAccident>>
+===
+
+title: UnlockingTheAccident
+---
+<<if $AmountTryUnlockTheAccident >6>>
+	... text about failing to unlock and client leaving...
+	Resart
+	<<jump Start>>
+<<endif>>
+->Establishing a Safe Space.
+	<<if $TheAccidentUnlocked is true>>
+		... different text ...
+		<<jump TheAccident>>
+	<<else>>
+		<<set $randomValue = random()*100>>
+		<<if $SkillGroundingTechnique >=1>>
+			<<set $randomValue = $randomValue +20>>
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having succesfully unlocked the next space ...
+			<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.5>>
+			<b>Grounding Technique Skill +0.5!
+			<<jump TheAccident>>
+		<<elseif $randomValue >=40>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having succesfully unlocked the next space ...
+			<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.2>>
+			<b>Grounding Technique Skill +0.2!
+			<<jump TheAccident>>
+		<<elseif $randomValue <=40>>
+			... failed text ...
+			<<jump FailedAttempt_1>>
+		<<endif>>
+	<<endif>>
+->Encouraging Reflection on the Present.
+	<<if $TheAccidentUnlocked is true>>
+		... different text ...
+		<<jump TheAccident>>
+	<<else>>
+		<<set $randomValue = random()*100>>
+		<<if $SkillReflectiveListening >=1>>
+			<<set $randomValue = $randomValue +20>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
+			<b>Reflective Listening Skill +0.5!
+			<<jump TheAccident>>
+		<<elseif $randomValue >=40>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+			<b>Reflective Listening Skill +0.2!
+			<<jump TheAccident>>
+		<<elseif $randomValue <=40>>
+			... failed text ...
+			<<jump FailedAttempt_2>>
+		<<endif>>
+	<<endif>>
+->Prompting Memory Recall.
+	<<if $TheAccidentUnlocked is true>>
+		... different text ...
+		<<jump TheAccident>>
+	<<else>>
+		<<set $randomValue = random()*100>>
+		<<if $SkillPrecisionQuestioning >=1>>
+			<<set $randomValue = $randomValue +20>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.5>>
+			<b>Precision Questioning Skill +0.5!
+			<<jump TheAccident>>
+		<<elseif $randomValue >=30>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
+			<b>Precision Questioning Skill +0.2!
+			<<jump TheAccident>>
+		<<elseif $randomValue <=30>>
+			... failed text ...
+			<<jump FailedAttempt_3>>
+		<<endif>>
+	<<endif>>
+->Exploring Coping Mechanisms.
+	<<if $TheAccidentUnlocked is true>>
+		... different text ...
+		<<jump TheAccident>>
+	<<else>>
+		<<set $randomValue = random()*100>>
+		<<if $SkillEmpathy >=1>>
+			<<set $randomValue = $randomValue +20>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+			<b>Empathy Skill +0.5!
+			<<jump TheAccident>>
+		<<elseif $randomValue >=45>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillEmpathy = $SkillEmpathy +0.2>>
+			<b>Empathy Skill +0.2!
+			<<jump TheAccident>>
+		<<elseif $randomValue <=45>>
+			... failed text ...
+			<<jump FailedAttempt_4>>
+		<<endif>>
+	<<endif>>
+->Identifying Triggers.
+	<<if $TheAccidentUnlocked is true>>
+		... different text ...
+		<<jump TheAccident>>
+	<<else>>
+		<<set $randomValue = random()*100>>
+		<<if $SkillObservation >=1>>
+			<<set $randomValue = $randomValue +20>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillObservation = $SkillObservation +0.5>>
+			<b> Observation Skill +0.5!
+			<<jump TheAccident>>
+		<<elseif $randomValue >=50>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillObservation = $SkillObservation +0.2>>
+			<b> Observation Skill +0.2!
+			<<jump TheAccident>>
+		<<elseif $randomValue <=50>>
+			... failed text ...
+			<<jump FailedAttempt_5>>
+		<<endif>>
+	<<endif>>
+->Introducing the Concept of Memory Spaces.
+	<<if $TheAccidentUnlocked is true>>
+		... different text ...
+		<<jump TheAccident>>
+	<<else>>
+		<<set $randomValue = random()*100>>
+		<<if $SkillAnalyticalInsight >=1>>
+			<<set $randomValue = $randomValue +20>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.5>>
+			<b> Analytical Insight Skill +0.5!
+			<<jump TheAccident>>
+		<<elseif $randomValue >=40>>
+			... text ...
+			<<set $TheAccidentUnlocked = true>>
+			... smt about having successfully unlocked the next area ...
+			<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+			<b> Analytical Insight Skill +0.2!
+			<<jump TheAccident>>
+		<<elseif $randomValue <=40>>
+			... failed text ...
+			<<jump FailedAttempt_6>>
+		<<endif>>
+	<<endif>>
+
+===
+
+title: FailedAttempt_1
+---
+
+you failed
+try again
+<<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+<<jump UnlockingTheAccident>>
+
+===
+
+title: FailedAttempt_2
+---
+
+you failed
+try again
+<<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+<<jump UnlockingTheAccident>>
+
+===
+
+title: FailedAttempt_3
+---
+
+you failed
+try again
+<<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+<<jump UnlockingTheAccident>>
+
+===
+
+title: FailedAttempt_4
+---
+
+you failed
+try again
+<<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+<<jump UnlockingTheAccident>>
+
+===
+
+title: FailedAttempt_5
+---
+
+you failed
+try again
+<<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+<<jump UnlockingTheAccident>>
+
+===
+
+title: FailedAttempt_6
+---
+
+you failed
+try again
+<<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+<<jump UnlockingTheAccident>>
 
 ===
 
