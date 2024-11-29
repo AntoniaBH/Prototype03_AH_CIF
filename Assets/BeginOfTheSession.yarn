@@ -1,32 +1,31 @@
 ﻿title: BeginOfTheSession
-tags:
 ---
 The room falls quiet as the client shifts in their chair, glancing around nervously. You sit back for a moment, picking up your notepad and pen.
 Inner Thoughts: This is where the real work begins. The client has already shown courage in coming this far. My role now is to guide them—gently, steadily—into the heart of their Mindscape. Before we begin, I need to ensure they understand the tools at their disposal and how this process can help them find clarity.
 You jot down brief notes, summarizing the key points from your conversation so far. The client’s posture has eased slightly, though their fingers still fidget with the hem of their sleeve.
 You glance up, meeting their gaze with a calm and reassuring tone.
-You: "I’d like to take a moment to explain the approach we’ll be using during our sessions. It’s a bit different from traditional talk therapy, but I think you’ll find it helpful. Let me start with the concept of the <b>Mindscape<b>."
+You: "I’d like to take a moment to explain the approach we’ll be using during our sessions. It’s a bit different from traditional talk therapy, but I think you’ll find it helpful. Let me start with the concept of the <b>Mindscape</b>."
 You continue, voice steady and empathetic.
 You: "The Mindscape is a way for us to explore your inner world. Think of it as a reflection of your thoughts, memories, and emotions—organized into spaces that we can visit and better understand together."
 The client raises an eyebrow, their curiosity piqued despite a lingering trace of skepticism.
 Client: "So... like my mind is a map or something?"
 You nod, smiling slightly.
-You: "Exactly. Each <b>Memory Space<b> represents a segment of your life or an experience that has shaped you. We’ll explore these spaces together, and they’ll help us understand what’s been bothering you beneath the surface."
+You: "Exactly. Each <b>Memory Space</b> represents a segment of your life or an experience that has shaped you. We’ll explore these spaces together, and they’ll help us understand what’s been bothering you beneath the surface."
 You shift your tone to something softer, more grounding.
-You: "As we explore, it’s normal to feel overwhelmed at times. That’s where the <b>Safe Space<b> comes in. It’s a personal sanctuary—a mental refuge where you can go to feel calm and grounded. Think of it as a tool to help manage any anxiety or discomfort during this process."
+You: "As we explore, it’s normal to feel overwhelmed at times. That’s where the <b>Safe Space</b> comes in. It’s a personal sanctuary—a mental refuge where you can go to feel calm and grounded. Think of it as a tool to help manage any anxiety or discomfort during this process."
 The client tilts their head, their hands now resting on their lap.
 Client: "How does that work? Do I just... imagine a place?"
 You lean forward slightly, maintaining an encouraging tone.
 You: "Exactly. It’s a place that feels comforting to you—maybe somewhere from your past, or something entirely imagined. When you feel triggered or anxious, we’ll pause and guide you there. It’s a way to help you regain control and continue the process at your own pace."
 You let the explanation settle for a moment before continuing.
-You: "The combination of these methods allows us to dig deeper into what’s really bothering you while keeping you supported. As we explore your memories, we’ll begin to identify patterns and events that might be contributing to your current challenges. At the same time, the <b>Safe Space<b> ensures we’re always prioritizing your well-being."
+You: "The combination of these methods allows us to dig deeper into what’s really bothering you while keeping you supported. As we explore your memories, we’ll begin to identify patterns and events that might be contributing to your current challenges. At the same time, the Safe Space ensures we’re always prioritizing your well-being."
 The client nods slowly, their shoulders loosening a little more.
 Client: "Okay... I think I get it. It sounds intense, but... maybe it could help me figure things out."
 You meet their cautious optimism with reassurance.
 You: "Do not forget, you’re in control every step of the way. We’ll go at a pace that feels right for you, and if something feels too difficult, we’ll adjust it immediatly."
 Inner Thoughts: They’re beginning to open up to the process. The next step is taking that first journey into their Mindscape, identifying an entry point into their story. Each step forward builds on the trust we’ve established, reinforcing their sense of safety and autonomy.
 You set down your notepad, letting the silence stretch for just a moment longer.
-You: “Let’s start by grounding ourselves. I want you to take a deep breath and focus on the idea of the <b>Mindscape<b>. It’s not something you have to force—it’ll form naturally as we begin to explore your thoughts and feelings.”
+You: “Let’s start by grounding ourselves. I want you to take a deep breath and focus on the idea of the Mindscape. It’s not something you have to force—it’ll form naturally as we begin to explore your thoughts and feelings.”
 You notice the client’s breathing hitch slightly before they exhale. Their fingers have stopped fidgeting now, resting loosely on their lap. You offer a small nod of encouragement.
 You: “The first step in creating your Mindscape is to imagine a doorway. This doorway is your entry point—a connection between your conscious mind and the deeper parts of yourself. It can look like anything you want—a door, a gate, even a path. Whatever feels right to you.”
 The client tilts their head slightly, their eyes narrowing in thought. They seem hesitant but curious
@@ -51,7 +50,6 @@ You lean back slightly, letting your words settle. The client’s expression is 
 
 Inner Thoughts: This is the beginning of their journey—a delicate but vital step forward. The Safe Space is their anchor, and the Mindscape will be their path. Now it’s time to help them take that first step into understanding themselves.
 
-<<declare $TheAccidentUnlocked = false>>
 <<declare $AmountTryUnlockTheAccident = 0>>
 <<jump UnlockingTheAccident>>
 ===
@@ -59,225 +57,286 @@ Inner Thoughts: This is the beginning of their journey—a delicate but vital st
 title: UnlockingTheAccident
 ---
 <<if $AmountTryUnlockTheAccident >6>>
-	... text about failing to unlock and client leaving...
-	Resart
-	<<jump Start>>
+	<<jump FailedUnlockAccident>>
 <<endif>>
-->Establishing a Safe Space.
-	<<if $TheAccidentUnlocked is true>>
-		... different text ...
-		<<jump TheAccident>>
-	<<else>>
-		<<set $randomValue = random()*100>>
-		<<if $SkillGroundingTechnique >=1>>
-			<<set $randomValue = $randomValue +20>>
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having succesfully unlocked the next space ...
-			<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.5>>
-			<b>Grounding Technique Skill +0.5!
-			<<jump TheAccident>>
-		<<elseif $randomValue >=40>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having succesfully unlocked the next space ...
-			<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.2>>
-			<b>Grounding Technique Skill +0.2!
-			<<jump TheAccident>>
-		<<elseif $randomValue <=40>>
-			... failed text ...
-			<<jump FailedAttempt_1>>
-		<<endif>>
+->Establishing a Safe Enviroment.
+	<<set $randomValue = random()*100>>
+	<<if $SkillGroundingTechnique >=1>>
+		<<set $randomValue = $randomValue +20>>
+		You: "Before we dive deeper now, let's take a moment to ensure you feel comfortable. Remember, this is a safe place to explore your thoughts and feelings. Is there anything on your mind that you’d like to share first?"
+		The client takes a deep breath, their body visibly relaxing as they nod.
+		Client: “Thank you. It’s hard sometimes to feel safe, even here. But... I do want to try talking about it.”
+		The client visibly relaxes, their shoulders dropping as they take a deep breath. They glance at you, their gaze softer than before.
+		<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.5>>
+		<b>Grounding Technique Skill +0.5!</b>
+		Inner Thoughts: The grounding technique worked well here—it created the reassurance they needed. Building on this trust will be key.
+		Client: “So, I’ve been feeling really anxious lately, especially when I try to drive again. It’s like... my chest tightens up, and I can’t breathe.”
+		They grip their armrest momentarily before letting it go, their hands moving to rest on their lap. They meet your eyes tentatively, as though testing your reaction.
+		Inner Thoughts: They’re opening up more easily now. Grounding techniques can help them regulate these physical symptoms of anxiety. This is a good opportunity to introduce a calming exercise.
+		You: “That sounds overwhelming, but I’m glad you’re sharing this with me. Would it help if we worked on some breathing techniques together next time to ease those moments?”
+		The client nods, looking slightly reassured.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue >=40>>
+		You: "Before we dive deeper today, let's take a moment to ensure you feel comfortable. Remember, this is a safe place to explore your thoughts and feelings. Is there anything on your mind that you’d like to share first?"
+		The client sits quietly for a moment, their expression conflicted. Eventually, they speak, their voice hesitant but clear.
+		Client: “I don’t know. It’s hard to even think about what to say. But... there’s this feeling I can’t shake. Like I’m stuck in a loop, replaying the accident over and over.”
+		Inner Thoughts: This is a significant step forward. Even sharing that they feel stuck indicates they’re starting to confront the experience, even if it’s painful.
+		You: “It’s okay to feel uncertain—it’s part of the process. Together, we’ll work on finding a way out of that loop.”
+		You give them a supportive nod, and they exhale slowly, as though reassured.
+		<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.2>>
+		<b>Grounding Technique Skill +0.2!</b>
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue <=40>>
+		<<jump FailedAttempt_1>>
 	<<endif>>
 ->Encouraging Reflection on the Present.
-	<<if $TheAccidentUnlocked is true>>
-		... different text ...
-		<<jump TheAccident>>
-	<<else>>
-		<<set $randomValue = random()*100>>
-		<<if $SkillReflectiveListening >=1>>
-			<<set $randomValue = $randomValue +20>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
-			<b>Reflective Listening Skill +0.5!
-			<<jump TheAccident>>
-		<<elseif $randomValue >=40>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
-			<b>Reflective Listening Skill +0.2!
-			<<jump TheAccident>>
-		<<elseif $randomValue <=40>>
-			... failed text ...
-			<<jump FailedAttempt_2>>
-		<<endif>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillReflectiveListening >=1>>
+		<<set $randomValue = $randomValue +20>>
+		You: "I’ve noticed that there are moments when you seem particularly overwhelmed. Can you describe what those moments feel like for you?"
+		The client’s expression softens, and they place a hand on their chest as if to ground themselves.
+		Client: “It feels like... my heart races, and my thoughts spin out of control. I can’t focus. It’s like I’m reliving something but don’t know what it is.”
+		They rub their hands together nervously, as though trying to shake off the sensation.
+		Inner Thoughts: This is a critical moment. They’re describing a panic response. I can use this opening to help them identify patterns and triggers.
+		You: “That sounds overwhelming. It’s good that you’re starting to notice these patterns. Recognizing them is the first step to understanding them.”
+		The client nods slightly, their breathing slowing as they seem to process your words. A memory fragment begins to surface in their mind.
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
+		<b>Reflective Listening Skill +0.5!</b>
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue >=40>>
+		You: "I’ve noticed that there are moments when you seem particularly overwhelmed. Can you describe what those moments feel like for you?"
+		The client shifts uncomfortably in their seat, but after a moment of hesitation, they respond.
+		Client: “I... guess it feels like I’m not in control. My chest tightens, and everything seems too much to handle. I don’t know where it comes from, though.”
+		They glance at you briefly before looking down, their hands fidgeting with the hem of their sleeve.
+		Inner Thoughts: They’re beginning to open up, but their understanding of the experience is still surface-level. I’ll need to help them explore this further.
+		You: “That sounds really tough. Even acknowledging it takes courage. Together, we can figure out where these feelings are coming from.”
+		The client exhales slowly, as though relieved to hear your words.
+		Client: "Okay, thank you."
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+		<b>Reflective Listening Skill +0.2!</b>	
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue <=40>>
+		<<jump FailedAttempt_2>>
 	<<endif>>
 ->Prompting Memory Recall.
-	<<if $TheAccidentUnlocked is true>>
-		... different text ...
-		<<jump TheAccident>>
-	<<else>>
-		<<set $randomValue = random()*100>>
-		<<if $SkillPrecisionQuestioning >=1>>
-			<<set $randomValue = $randomValue +20>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.5>>
-			<b>Precision Questioning Skill +0.5!
-			<<jump TheAccident>>
-		<<elseif $randomValue >=30>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
-			<b>Precision Questioning Skill +0.2!
-			<<jump TheAccident>>
-		<<elseif $randomValue <=30>>
-			... failed text ...
-			<<jump FailedAttempt_3>>
-		<<endif>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillPrecisionQuestioning >=1>>
+		<<set $randomValue = $randomValue +20>>
+		You: "Sometimes, reflecting on past experiences can help us understand our current feelings better. Would you be willing to talk about what happened the day of your accident?"
+		The client looks down, their fingers nervously tracing the edge of their chair.
+		Client: “I was driving home. It had been a rough day at work, and... I don’t know. I was distracted. I remember looking at my phone, just for a second, and then… the sound of the crash.”
+		Their voice cracks slightly, and they rub their temples, clearly struggling to keep their emotions in check.
+		Inner Thoughts: They’re starting to connect to the event. The precise question has brought them to this critical detail—a source of guilt that may be amplifying their trauma.
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.5>>
+		<b>Precision Questioning Skill +0.5!</b>
+		You: “That must have been a terrifying moment. It’s natural to feel overwhelmed looking back, but it’s important to understand it wasn’t your fault alone.”
+		The client nods slightly, their breathing steadying as they appear ready to delve deeper. A memory fragment surfaces.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue >=30>>
+		You: "Sometimes, reflecting on past experiences can help us understand our current feelings better. Would you be willing to talk about what happened the day of your accident?"
+		The client shifts uneasily in their seat, looking at you with hesitation before finally responding.
+		Client: “I remember… I was in the car. It had been a long day, and I wasn’t paying attention. There was this… this loud noise, and then everything went black.”
+		They take a deep breath, gripping their knees tightly as they speak.
+		Inner Thoughts: They’re starting to open up, though the details are still vague. I’ll need to tread carefully to help them recall more without increasing their distress.
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
+		<b>Precision Questioning Skill +0.2!</b>
+		You: “It sounds like that moment really stuck with you. Let’s take it slow. What’s the first thing you remember after the crash?”
+		The client exhales shakily, as though relieved to share even this small piece. A memory fragment surfaces in their mind.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue <=30>>
+		<<jump FailedAttempt_3>>
 	<<endif>>
 ->Exploring Coping Mechanisms.
-	<<if $TheAccidentUnlocked is true>>
-		... different text ...
-		<<jump TheAccident>>
-	<<else>>
-		<<set $randomValue = random()*100>>
-		<<if $SkillEmpathy >=1>>
-			<<set $randomValue = $randomValue +20>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillEmpathy = $SkillEmpathy +0.5>>
-			<b>Empathy Skill +0.5!
-			<<jump TheAccident>>
-		<<elseif $randomValue >=45>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillEmpathy = $SkillEmpathy +0.2>>
-			<b>Empathy Skill +0.2!
-			<<jump TheAccident>>
-		<<elseif $randomValue <=45>>
-			... failed text ...
-			<<jump FailedAttempt_4>>
-		<<endif>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillEmpathy >=1>>
+		<<set $randomValue = $randomValue +20>>
+		You: "From what I read and understand from your file, painkillers are a way you've been coping after the accident. Can we figure out together what led you to that choice?"
+		The client pauses, their eyes glistening as they look down at their hands. They exhale deeply before speaking.
+		Client: “I just… I couldn’t handle it. The pain, the nightmares, the memories. The pills made it all... quieter. For a little while, at least.”
+		They squeeze their hands into fists, as if bracing against the emotional weight of their words.
+		Inner Thoughts: This is the first step toward acknowledgment. Empathy helps them feel seen, which can create the trust we need to explore their choices further.
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Empathy Skill +0.5!</b>
+		You: “I hear you. It sounds like the pills offered relief when everything felt overwhelming. Let’s work together to find ways that can bring you comfort without numbing what you’re going through.”
+		The client nods hesitantly, their posture softening slightly as they seem more open to the idea of exploring alternatives. A memory fragment surfaces.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue >=45>>
+		You: "From what I read and understand from your file, painkillers are a way you've been coping after the accident. Can we figure out together what led you to that choice?"
+		The client shifts uncomfortably, their gaze flickering toward the window. After a moment, they speak in a quiet voice.
+		Client: “It just… it helped me get through the day. I didn’t know what else to do.”
+		They glance at you cautiously, their shoulders slightly hunched as if waiting for judgment.
+		Inner Thoughts: They’re starting to acknowledge their reliance on painkillers, but I’ll need to approach carefully to avoid making them feel defensive.
+		<<set $SkillEmpathy = $SkillEmpathy +0.2>>
+		<b>Empathy Skill +0.2!</b>
+		You: “It’s okay to feel like that. Sometimes we rely on what’s within reach when we’re hurting. Let’s think together about what might help you feel more in control.”
+		The client offers a small nod, their expression softening as they seem more open to exploring the topic further.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue <=45>>
+		<<jump FailedAttempt_4>>
 	<<endif>>
 ->Identifying Triggers.
-	<<if $TheAccidentUnlocked is true>>
-		... different text ...
-		<<jump TheAccident>>
-	<<else>>
-		<<set $randomValue = random()*100>>
-		<<if $SkillObservation >=1>>
-			<<set $randomValue = $randomValue +20>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillObservation = $SkillObservation +0.5>>
-			<b> Observation Skill +0.5!
-			<<jump TheAccident>>
-		<<elseif $randomValue >=50>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillObservation = $SkillObservation +0.2>>
-			<b> Observation Skill +0.2!
-			<<jump TheAccident>>
-		<<elseif $randomValue <=50>>
-			... failed text ...
-			<<jump FailedAttempt_5>>
-		<<endif>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillObservation >=1>>
+		<<set $randomValue = $randomValue +20>>
+		You: "Sometimes certain places or feelings remind us of past trauma. Are there particular moments or situations that spark those memories for you?"
+		The client pauses, their brow furrowing as they look down, tapping their fingers rhythmically on the armrest.
+		After a moment, they take a deep breath and speak softly.
+		Client: “There’s this intersection near my house. Every time I pass by, I feel like I can’t breathe. It’s like I’m back there, hearing the screech of tires, feeling that impact again.”
+		Their hands start trembling, and they grip the edge of the chair tightly.
+		Inner Thoughts: They’re starting to connect the physical and emotional reactions to a specific trigger. This awareness can help them regain some control over these moments.
+		<<set $SkillObservation = $SkillObservation +0.5>>
+		<b> Observation Skill +0.5!</b>
+		You: “That sounds incredibly difficult to face repeatedly. Let’s work on ways to ground yourself when those memories resurface. We’ll take it step by step.”
+		The client nods hesitantly, their grip loosening slightly. A memory fragment begins to surface, linked to the accident.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue >=50>>
+		You: "Sometimes certain places or feelings remind us of past trauma. Are there particular moments or situations that spark those memories for you?"
+		The client frowns, their gaze distant as they think. After a pause, they exhale and speak with a quiet voice.
+		Client: “There’s a spot on my way to work. I can’t even look at it without feeling like my chest is caving in. It’s where it happened. I just avoid it now.”
+		Their voice cracks slightly, and they quickly look away, fidgeting with the hem of their sleeve.
+		Inner Thoughts: They’re beginning to name their triggers, but I need to tread carefully to ensure this doesn’t overwhelm them.
+		<<set $SkillObservation = $SkillObservation +0.2>>
+		<b> Observation Skill +0.2!</b>
+		You: “Thank you for sharing that. Avoiding the spot makes sense—it’s a way to protect yourself. When you’re ready, we can talk about ways to confront those feelings safely.”
+		The client nods slightly, still avoiding eye contact. A memory fragment begins to surface, linked to the accident.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue <=50>>
+		<<jump FailedAttempt_5>>
 	<<endif>>
 ->Introducing the Concept of Memory Spaces.
-	<<if $TheAccidentUnlocked is true>>
-		... different text ...
-		<<jump TheAccident>>
-	<<else>>
-		<<set $randomValue = random()*100>>
-		<<if $SkillAnalyticalInsight >=1>>
-			<<set $randomValue = $randomValue +20>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.5>>
-			<b> Analytical Insight Skill +0.5!
-			<<jump TheAccident>>
-		<<elseif $randomValue >=40>>
-			... text ...
-			<<set $TheAccidentUnlocked = true>>
-			... smt about having successfully unlocked the next area ...
-			<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
-			<b> Analytical Insight Skill +0.2!
-			<<jump TheAccident>>
-		<<elseif $randomValue <=40>>
-			... failed text ...
-			<<jump FailedAttempt_6>>
-		<<endif>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillAnalyticalInsight >=1>>
+		<<set $randomValue = $randomValue +20>>
+		You: "In our sessions, we can explore your mind like a landscape filled with different memories—some painful, some comforting. The accident is a significant part of your landscape, isn’t it?"
+		Client: “That’s... different. So you’re saying we can actually explore what’s locked away in my head? Like, revisit those moments?”
+		You: “Exactly. It’s about making sense of those memories in a way that feels safe and manageable. It’s not just about reliving them—it’s about giving you the tools to shape how they affect you.”
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.5>>
+		<b> Analytical Insight Skill +0.5!</b>
+		The client nods slowly, their expression a mix of apprehension and hope. A memory fragment tied to the accident begins to surface.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue >=40>>
+		You: "Think of your mind as a series of connected rooms. Each room holds different memories and experiences. Together, we can unlock those spaces and make sense of what’s inside."
+		The client frowns, their arms crossed as they mull over your words. After a moment, they speak hesitantly.
+		Client: “That sounds... strange. But if it helps, I guess I’m willing to try.”
+		The client says, letting out a long sigh.
+		You: “It might feel unfamiliar at first, but the goal is to give you a sense of control over those memories. We’ll take it one step at a time.”
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+		<b> Analytical Insight Skill +0.2!</b>
+		The client offers a tentative nod. A memory fragment tied to the accident begins to surface.
+		<<set $TheAccidentUnlocked = true>>
+		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
+		<<jump UnlockedTheAccident>>
+	<<elseif $randomValue <=40>>
+		<<jump FailedAttempt_6>>
 	<<endif>>
-
 ===
 
 title: FailedAttempt_1
 ---
-
-you failed
-try again
+You: "Before we dive deeper today, let's take a moment to ensure you feel comfortable. Remember, this is a safe place to explore your thoughts and feelings. Is there anything on your mind that you’d like to share first?"
+The client crosses their arms, their gaze darting away from yours. Their tone becomes defensive.
+Client: “I don’t think I can do this right now. Maybe next time.”
+They shift uncomfortably, clearly wanting to change the subject.
+Inner Thoughts: Pushing now might backfire. They’re not ready to open up yet. I need to approach this more gradually.
+You: “I understand. We can pause and take a step back whenever you need. Let’s focus on something that feels manageable today.”
+You lean back slightly, giving them space. Their shoulders remain tense, but they seem to relax just a fraction.
 <<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+//anxiety rises slightly
 <<jump UnlockingTheAccident>>
-
 ===
 
 title: FailedAttempt_2
 ---
-
-you failed
-try again
+You: "I’ve noticed that there are moments when you seem particularly overwhelmed. Can you describe what those moments feel like for you?"
+The client stiffens, their arms crossing defensively as they shift in their seat. Their gaze hardens, and their tone becomes curt.
+Client: "Why do you keep asking me this stuff? It’s not like talking about it will change anything. It just makes me feel worse.
+They lean back in their chair, avoiding eye contact and creating more distance.
+Inner Thoughts: They’re shutting down. I pushed too soon, and now they’re retreating. I need to repair the connection before moving forward.
+You: “I can see this is a difficult topic, and I don’t want to push you. Let’s take a step back for now and focus on something that feels safer to talk about.”
+The client doesn’t respond, but their posture relaxes slightly. The moment passes without progress.
 <<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+//anxiety rises slightly
 <<jump UnlockingTheAccident>>
-
 ===
 
 title: FailedAttempt_3
 ---
-
-you failed
-try again
+You: "Sometimes, reflecting on past experiences can help us understand our current feelings better. Would you be willing to talk about what happened the day of your accident?"
+The client’s body tenses immediately, and they look at you with frustration.
+Client: “No. I… I can’t talk about it. It’s too much.”
+They cross their arms defensively, their voice sharp as they continue.
+Client: “Why do you keep asking about this? Talking about it won’t change anything. I just want to move on.”
+They lean back, clearly withdrawing emotionally and creating distance.
+Inner Thoughts: They’ve hit a wall. Pushing further now could increase their anxiety or even jeopardize the session. I need to pivot and regain their trust.
+You: “I understand this is a difficult topic, and I don’t want to push you before you’re ready. Let’s focus on what feels safer for you to discuss today.”
+The client doesn’t respond verbally, but their defensive posture softens slightly as you shift the conversation.
 <<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+//anxiety rises mildly
 <<jump UnlockingTheAccident>>
-
 ===
 
 title: FailedAttempt_4
 ---
-
-you failed
-try again
+You: "From what I read and understand from your file, painkillers are a way you've been coping after the accident. Can we figure out together what led you to that choice?"
+The client’s expression hardens, and they cross their arms defensively.
+Client: “Why does it matter? It’s not like I want to be on them, but I don’t have a choice. You don’t know what it’s like.”
+Inner Thoughts: Their defenses are up, and I’ve pushed too far too quickly. I need to step back and refocus before I lose their trust.
+They avert their gaze, their tone sharp and filled with frustration.
+You: “You’re right—it’s not my place to assume how you feel. Let’s shift gears and talk about what feels more manageable for you right now.”
+The client’s posture relaxes slightly, but their expression remains guarded.
 <<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+//anxiety rises slightly
 <<jump UnlockingTheAccident>>
-
 ===
 
 title: FailedAttempt_5
 ---
-
-you failed
-try again
+You: "Sometimes certain places or feelings remind us of past trauma. Are there particular moments or situations that spark those memories for you?"
+The client stiffens, their expression closing off as they cross their arms defensively. 
+Client: “Why does it even matter? It’s not like I can just forget it happened. Thinking about it doesn’t help. It just makes everything worse.”
+Their tone is sharp and dismissive.
+They lean back, their posture rigid, creating a visible barrier between you.
+Inner Thoughts: I pushed too hard. They’re feeling cornered, and this might escalate their anxiety if I don’t de-escalate quickly.
+You: “You’re right—thinking about it can feel overwhelming. Let’s focus on what feels safer to talk about right now. We can revisit this when you feel more ready.”
+The client’s shoulders relax slightly, but their gaze remains guarded.
 <<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+//anxiety rises slightly
 <<jump UnlockingTheAccident>>
-
 ===
 
 title: FailedAttempt_6
 ---
-
-you failed
-try again
+You: "Our minds are like landscapes filled with memory spaces. Each space holds experiences and emotions. By exploring them together, we can better understand what’s affecting you now."
+The client’s expression hardens, and they shake their head dismissively.
+Client: “That sounds like some new-age nonsense. I’m here to get real help, not play some mind games.”
+Their tone is sharp, and they lean back in their chair, crossing their arms defensively.
+Inner Thoughts: They’re resistant to abstract concepts right now. I need to pivot and approach this differently to rebuild trust.
+You: “I understand this might sound unconventional. Let’s take a different approach for now and revisit this idea later if it feels more comfortable.”
+The client’s posture relaxes slightly, but they remain guarded.
 <<set $AmountTryUnlockTheAccident = $AmountTryUnlockTheAccident +1>>
+//anxiety rises slightly
 <<jump UnlockingTheAccident>>
-
 ===
 

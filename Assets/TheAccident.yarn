@@ -1,6 +1,253 @@
-﻿title: TheAccident
+﻿title: UnlockedTheAccident
 ---
+<<declare $MemoryFragmentsTheAccidentUnlocked = false>>
+<<declare $AmountTrysUnlockMemoryFragmentsTheAccident = 0>>
+<<declare $UnlockedScreechingTires = false>>
+<<declare $UnlockedSirensHaunting = false>>
+<<declare $UnlockedJobLoss = false>>
+<<declare $UnlockedSocialIsolation = false>>
+<<declare $UnlockedRushingToMeetAFriend = false>>
+<<declare $UnlockedArgumentWithPartner = false>>
+<<declare $UnlockedFeelingOfRuin = false>>
+<<declare $UnlockedBlameOnTheOtherDriver = false>>
+<<declare $UnlockedMemorySpaceCycleRelapse = false>>
+<<declare $UnlockedMemorySpaceChildhoodTrauma = false>>
+<<declare $UnlockedMemorySpaceResistance = false>>
+<<declare $UnlockedSupportiveFigure = false>>
+<<declare $UnlockedFamilyIntervention = false>>
+<<declare $UnlockedFamilySecrets = false>>
+...
+<<jump ContentTheAccident>>
+===
 
-bliblablub
+title: ContentTheAccident
+---
+...whats in the accident visual descr. etc.
+<<jump TheAccident>>
+===
 
+title: TheAccident
+---
+...
+->Ask the Client more questions.
+	<<jump UnlockingMemoryFragmentsTheAccident>>
+->Repeat Memory Space "The Accident".
+	...
+	<<jump ContentTheAccident>>
+->Go to the Memory Fragments. if $MemoryFragmentsTheAccidentUnlocked = true
+	<<jump UnlockingMemoryFragmentsTheAccident>>
+->Go to the Mindscape.
+	<<jump TheMindscape>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+===
+
+title: UnlockingMemoryFragmentsTheAccident
+---
+<<if $AmountTrysUnlockMemoryFragmentsTheAccident >=144>>
+	...
+	Restart
+	<<jump start>>
+<<endif>>
+->Deepening the Narrative.
+	<<set $randomValue = random()*100>>
+	<<if $SkillReflectiveListening >=1.2>>
+		<<set $randomValue = $randomValue +15>>
+		...
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
+		<b>Reflective Listening Skill +0.5!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $SkillPrecisionQuestioning >=1>>
+		<<set $randomValue = $randomValue +10>>
+		...
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
+		<b>Precision Questioning Skill +0.2!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue >=65>>
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue <=65>>
+		...
+		<<jump FailedAttempt_7>>
+	<<endif>>
+->Exploring Transformations.
+	<<set $randomValue = random()*100>>
+	<<if $SkillAnalyticalInsight >=1>>
+		<<set $randomValue = $randomValue +10>>
+		...
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+		<b>Analytical Insight Skill +0.5!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $SkillEmpathy >=1.5>>
+		<<set $randomValue = $randomValue +20>>
+		...
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Empathy Skill +0.2!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue >=45>>
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue <=45>>
+		...
+		<<jump FailedAttempt_8>>
+	<<endif>>
+->Unraveling the Context.
+	<<set $randomValue = random()*100>>
+	<<if $SkillObservation >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+		...
+		<<set $SkillObservation = $SkillObservation +0.5>>
+		<b>Observation Skill +0.5!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $SkillPrecisionQuestioning >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+		...
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
+		<b>Precision Questioning Skill +0.2!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue >=60>>
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue <=60>>
+		...
+		<<jump FailedAttempt_9>>
+	<<endif>>
+->Understanding Emotional Impact.
+	<<set $randomValue = random()*100>>
+	<<if $SkillReflectiveListening >=1.2>>
+		<<set $randomValue = $randomValue +20>>
+		...
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+		<b>Reflective Listening Skill +0.5!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $Skillempathy >=1>>
+		<<set $randomValue = $randomValue +15>>
+		...
+		<<set $Skillempathy = $Skillempathy +0.2>>
+		<b>Empathy Skill +0.2!
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue >=60>>
+		...
+		<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<jump MemoryFragmentsTheAccident>>
+	<<elseif $randomValue <=60>>
+		...
+		<<jump FailedAttempt_10>>
+	<<endif>>
+===
+
+title: FailedAttempt_7
+---
+...
+<<jump TheAccident>>
+===
+
+title: FailedAttempt_8
+---
+...
+<<jump TheAccident>>
+===
+
+title: FailedAttempt_9
+---
+...
+<<jump TheAccident>>
+===
+
+title: FailedAttempt_10
+---
+...
+<<jump TheAccident>>
+===
+
+title: MemoryFragmentsTheAccident
+---
+...
+->Screeching Tires. if $UnlockedScreechingTires is true
+	<<jump ScreechingTires>>
+->Sirens Haunting. if $UnlockedSirensHaunting is true
+	<<jump SirensHaunting>>
+->Job Loss. if $UnlockedJobLoss is true
+	<<jump JobLoss>>
+->Social Isolation. if $UnlockedSocialIsolation is true
+	<<jump SocialIsolation>>
+->Rushing to meet a Friend. if $UnlockedRushingToMeetAFriend is true
+	<<jump RushingToMeetAFriend>>
+->Argument with Partner. if $UnlockedArgumentWithPartner is true
+	<<jump ArgumentWithPartner>>
+->Feeling of Ruin. if $UnlockedFeelingOfRuin is true
+	<<jump FeelingOfRuin>>
+->Blame on the Other Driver. if $UnlockedBlameOnTheOtherDriver is true
+	<<jump BlameOnTheOtherDriver>>
+->Safe Space.
+	<<jump TheSafeSpace>>
+->Memory Space "The Accident".
+	<<jump TheAccident>>
+===
+
+title: ScreechingTires
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: SirensHaunting
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: JobLoss
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: SocialIsolation
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: RushingToMeetAFriend
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: ArgumentWithPartner
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: FeelingOfRuin
+---
+...
+<<jump MemoryFragmentsTheAccident>>
+===
+
+title: BlameOnTheOtherDriver
+---
+...
+<<jump MemoryFragmentsTheAccident>>
 ===

@@ -1,11 +1,11 @@
 ﻿title: Start
-tags:
 ---
 Inner Thoughts: Another Session, another story waiting to unfold. Each journey is unique, yet they all share the weight of unspoken struggles.
 You are seated at your desk, surrounded by an air of stillness interrupted only by the faint ticking of a clock. The office is a refuge of muted colors—soft greys, light beige walls, and the deep brown of the wooden furniture. The afternoon light filters through half-closed blinds and a lamp in the corner eluminating the darkness the sunlight couldnt reach.
 A faint breeze stirs a plant in the corner, its leaves trembling as if echoing the uncertainty of those who sit here. Your desk is meticulously arranged, yet every object tells a story.
 <<jump Desk>>
 ===
+
 title:Desk
 ---
 ->Stress Ball.
@@ -23,6 +23,7 @@ title:Desk
 ->Move on.
 	<<jump Footsteps>>
 ===
+
 title:Footsteps
 ---
 The sound of footsteps echoes faintly, growing louder. The rhythm is hesitant, the soft shuffle of shoes against polished wood. They stop just outside the door.

@@ -1,0 +1,26 @@
+﻿title: TheMindScape
+---
+...
+->Memory Space "The Accident".
+	<<jump TheAccident>>
+->Memory Space "The Cycle of Relapse". if $UnlockedMemorySpaceCycleRelapse is true
+	<<jump TheCycleOfRelapse>>
+->Memory Space "Childhood Trauma". if $UnlockedMemorySpaceChildhoodTrauma is true
+	<<jump ChildhoodTrauma>>
+->Memory Space "The Resitance". if $UnlockedMemorySpaceResistance is true
+->Memory Space "The Supportive Figure". if $UnlockedSupportiveFigure is true
+->Memory Space "Family Intervention". if $UnlockedFamilyIntervention is true
+->Memory Space "Family Secrets". if $UnlockedFamilySecrets is true
+->Go to the Safe Space
+	<<jump TheSafeSpace>>
+->Repeat the Mind Scape.
+	<<jump ContentMindScape>>
+->End the Session.
+	<<jump EndSessionMindscape>>
+===
+
+title: ContentMindScape
+---
+...
+<<jump TheMindScape>>
+===

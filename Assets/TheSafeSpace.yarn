@@ -1,0 +1,6 @@
+﻿title: TheSafeSpace
+---
+...
+->Go to the Mind Scape.
+	<<jump TheMindScape>>
+===
