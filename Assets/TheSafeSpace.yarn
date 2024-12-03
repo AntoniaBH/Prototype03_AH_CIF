@@ -1,6 +1,41 @@
 ﻿title: TheSafeSpace
 ---
-...
+The client sits quietly, their eyes soft as they picture the sanctuary they’ve created in their mind.
+You: “Let’s take a moment to step back into that cabin by the lake. Can you describe what it looks like as you walk up to it?”
+Client: “It’s small, but cozy. The wood is a deep, warm brown, and there’s a porch with two chairs. I can see the lake just beyond it, glistening in the sunlight.”
+You: “It sounds like a peaceful place. As you stand there, what do you notice about the air around you?”
+Client: “It’s fresh, with a hint of pine. There’s a cool breeze, but it’s not too cold—it’s just right.”
+You: “Good. Breathe in that fresh air for a moment. Let it fill you. Now, as you step closer to the cabin, what feelings come to mind?”
+Client: “I feel... calm. Like nothing can reach me here. It’s safe.”
+//essentially  lowers the sanity bar<<jump SafeSpace>>
+===
+
+title: SafeSpace
+---
+->Explore the Safe Space.
+	You: 
+	<<jump ContentSafeSpace>>
 ->Go to the Mind Scape.
 	<<jump TheMindScape>>
+===
+
+title: ContentSafeSpace
+---
+The client’s expression softens as they immerse themselves in the scene. 
+You: “Let’s step inside the cabin now. What do you see as you open the door?”
+Client:  “There’s a fireplace, with logs stacked neatly beside it. The flames are small but steady. The light flickers on the walls, and there’s a soft rug in the middle of the room.”
+You: “It sounds warm and inviting. How does it feel to sit there by the fire?”
+The client smiles softly.
+Client: “It feels like a hug. The heat from the fire, the soft rug under my feet... it’s comforting. I can almost hear the crackling of the wood.”
+You: “As you sit in this space, what emotions come up for you?”
+Client: “I feel... lighter. Like all the tension in my chest is easing. It reminds me of when I was a kid, just being carefree for a little while.”
+You:  “That’s wonderful. Hold onto that feeling for a moment. If you think about the challenges you’re facing now, how does being in this space help you?”
+Client: “It makes everything feel less heavy. Like, even if things get tough, I know I can come back here and just... breathe.”
+You:  “You’ve created a beautiful sanctuary for yourself. Remember, it’s always there for you. Anytime you feel overwhelmed, you can pause and step into this space, even if it’s just for a moment. Does that feel like something you can do?”
+Client: “Yeah, I think so. It’s like having a place that’s just mine, where nothing can touch me.”
+You: “Exactly. And the best part is, you’re the one in control of it. You can add to it, change it, or visit whenever you need to. It’s always within reach.”
+You: “When you’re ready, take a deep breath and let the scene fade for now. Open your eyes, knowing that your Safe Space is still there, waiting for you whenever you need it.”
+The client exhales slowly, their posture noticeably more relaxed. They glance up with a hint of a smile, their anxiety visibly eased.
+You: “Good. Let’s continue from here, carrying that sense of peace with us as we move forward.”
+<<jump SafeSpace>>
 ===

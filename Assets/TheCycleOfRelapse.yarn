@@ -1,10 +1,179 @@
 ﻿title: UnlockedCycleRelapse
 ---
-...
+The air is thick with an unspoken weight as the conversation shifts into a new chapter. The client’s posture reflects a sense of resistance, yet also an underlying vulnerability, as they brace themselves for what comes next. You take a moment to breathe, acknowledging the complexity of the journey you're about to continue together.
+You: “Alright, let’s just breathe for a second. We don’t have to rush through this. You mentioned that feeling of being overwhelmed when things started to spiral. Can you tell me a bit more about how it felt, looking back on it?”
+The client takes a slow breath, looking away as if searching for the right words.
+Client: “It felt like... I was juggling everything at once, but it was too much. I kept telling myself I could handle it, but... I wasn’t doing okay.”
+You feel a small pang of empathy as their words hit close to home, a soft understanding that this was more than just a slip-up.
+You: “Yeah, I hear you. It’s easy to think we can handle everything, especially when there’s that pressure to keep it all together. When you started feeling overwhelmed, what did you do?”
+The client shifts in their seat, their voice quieter now.
+Client: “I started pulling back. I canceled plans. Ignored messages. I thought if I just... stayed alone, I wouldn’t have to explain myself.”
+You notice their hands tightening, fingers curled slightly. You let the silence linger for a moment before responding.
+You: "I get it. It’s like shutting down, trying to protect yourself. But the more you shut people out, the harder it becomes, doesn’t it?”
+The client nods slowly, eyes distant as they reflect.
+Client: “Yeah. It was like the more I shut people out, the worse I felt. But I didn’t know how to stop.”
+You feel a small shift in the room, as though they're beginning to see that pattern for what it is. You hold that thought for a second before speaking again, voice soft, encouraging.
+You: “It’s a tough place to be in. To feel like you’re suffocating, but also scared of letting anyone see. What was going on in your mind when you isolated like that?”
+The client’s face tightens a little, eyes flicking downward. You stay quiet, letting them find their own pace.
+Client: “I was... ashamed. I didn’t want anyone to see how bad it was. I kept telling myself that I should be better, but it just felt easier to pull away.”
+You watch them fidget slightly, hands twisting in their lap. It’s clear they’re battling both the shame and the loneliness that came with it.
+You: "Yeah... it’s like you’re trying to protect yourself from the judgment, but all it does is make you feel more alone, doesn’t it?”
+The client exhales sharply, a bit of frustration creeping into their tone.
+Client: “Exactly. And then the thoughts... they just... spiral, you know? I’d think, ‘It’s fine. One more time won’t hurt.’ But it always did.”
+You feel the tension rising in the air, a deep, painful recognition of that moment when everything seems to fall apart. You give them a moment to sit with it, before gently speaking again.
+You: “I can hear how easy it is to convince yourself that it’s okay, that it’s just this one time. But... how did that relief feel in the moment? And then afterward?”
+The client’s voice falters as they remember, and you can almost see the weight of it in their expression.
+Client: “It felt good, at first. Like... a small escape. But then the guilt hits so hard, it’s like everything crashes down. I’d promise myself it wouldn’t happen again, but... it always did.”
+There’s a deep weariness in their tone now, something that speaks to the exhaustion from this repeated cycle. You catch yourself breathing deeply, wondering how many times they’ve felt this way before.
+You: “Yeah... that guilt, it’s heavy. It pulls you back into the same place. But you’re starting to see it, right? That pattern? The way it all ties together?”
+The client pauses, their gaze distant for a moment, as though grappling with the realization.
+Client: “I think I’m starting to. I just... don’t know how to break it.”
+You lean forward slightly, your gaze softening, trying to offer a sense of reassurance that things can change, even if it’s hard to see right now.
+You: “Breaking the cycle... it’s not easy. But you’re already taking the first step, just by recognizing it. What do you think might help you move out of it? What would be different, if you didn’t feel like you had to do this on your own?”
+The client shifts their weight, leaning forward as they think about it, their expression thoughtful.
+Client: “Maybe I could reach out before it gets bad. Like... maybe I could talk to someone when I start feeling those urges instead of shutting them out.”
+You feel a flicker of hope rise inside you as they speak. It’s a small step, but it’s a significant one. You keep your tone gentle, but warm, encouraging them to see the potential for change.
+You: “That’s a great idea. Reaching out before it spirals, staying connected— that’s powerful. What do you think would make it easier for you to do that?”
+The client thinks for a moment, the silence stretching out just a bit.
+Client: “I could start by writing down when I feel that pull. Like a journal, so I can track it. And maybe, just... send a message to someone. Even if I don’t want to.”
+You smile gently, a sense of pride rising in you for the progress they’re already making.
+You: “I like that. Keeping track, staying connected—it’s all part of creating a new cycle, one that doesn’t pull you back into the same place. You’re doing good work.”
+As you both sit in the quiet, the weight of the conversation begins to settle in. But there’s a sense of progress too. The cycle of relapse may be far from broken, but the first cracks have appeared, and the path ahead feels just a little clearer. There’s more work to do, more layers to uncover—but for now, they’ve taken the first steps toward healing.
+<<jump TheCycleOfRelapse>>
 ===
 
 title: TheCycleOfRelapse
 ---
-
+->Confront the Reflection.
+////	
+->Deepening the Narrative.
+	<<set $BaseSuccessRate = 65>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillReflectiveListening >=1.2>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillPrecisionQuestioning >=1>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You:  "Can you tell me more about the accident? What do you remember about it?" 
+		The client takes a deep breath, while fidgeting nervously with their hands, before answering.
+		Client: “It was... a lot. I remember the truck suddenly stopping. I hit the brakes, but it wasn’t enough. Everything just... collapsed. The sound of the impact still rings in my ears. It’s so vivid.”
+		Inner Thoughts: They’re opening up, focusing on the details. Let’s mirror their words to help them feel understood.
+		You: “That sound—the impact. You mentioned it feels vivid. It seems like it left a strong impression on you. Can we explore that more? What comes to mind when you think about it?”   
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
+		<b>Reflective Listening Skill +0.5!
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
+		<b>Reflective Listening Skill +0.2!
+		The client shoulders relax slightly and their voice seems steadier now when they speak.
+		Client: “It felt like the world stopped. I couldn’t move. The sound was deafening, but also... it was a blur. Does that make sense?”
+		You: "Yes, it does. Its a heavy experience you had to endure, its only logical to think what you experienced is not real or not understandable to anyone else."
+		Client: "That makes sense, thank you for listening to me."
+		You: "You are welcome."
+		<<set $BaseSuccessRate = 80>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedScreechingTires = true>>
+			<b>Memory fragment: "Screeching Tires" unlocked!</b>
+			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Screeching Tires"</b>
+		<<endif>>
+		<<set $BaseSuccessRate = 70>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+		 	<<set $UnlockedSirensHaunting = true>>
+			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+			<b>Memory fragment: "Sirens Haunting" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Screeching Tires"</b>
+		<<endif>>
+		<<jump TheAccident>>
+	<<else>>
+		<<jump FailedAttempt_7>>
+	<<endif>>
+->Exploring Transformations.
+	<<set $BaseSuccessrate = 45>>
+	<<set $randomValue = random()*100>>
+		<<if $SkillAnalyticalInsight >=1>>
+			<<set $randomValue = $randomValue +10>>
+		<<elseif $SkillEmpathy >=1.5>>
+			<<set $randomValue = $randomValue +20>>
+		<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+			You: "What do you mean by ‘downhill’? Can you elaborate on what changed after the accident?" 
+		The Clients brows furrow as they think, their hands fiddling with the edge of their shirt.
+		Client: “After the accident... I just couldn’t keep up. Work was a mess. My relationships... fell apart. It was like everything that was holding me together came undone.”
+		Inner Thoughts: They’re describing a cascade of issues. Let’s focus on uncovering the root causes to identify patterns or triggers.
+		You: “It sounds like the accident set off a chain reaction. If you think back, was there a specific moment where things started feeling out of control?”
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+		<b>Analytical Insight Skill +0.2!
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Analytical Insight Skill +0.5!
+		A faint nod comes from the client, and their voice becomes quieter.
+		Client: “Yeah... after my boss said I wasn’t meeting expectations. That was the first real blow. I couldn’t sleep after that. It’s like I was failing everywhere.”
+		<<set $BaseSuccessRate = 50>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedJobLoss = true>>
+			<b>Memory fragment: "Job Loss" unlocked!</b>
+			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Job Loss"</b>
+		<<endif>>
+		<<set $BaseSuccessRate = 40>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedSocialIsolation = true>>
+			<b>Memory fragment: "Social Isolation" unlocked!</b>
+			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Social Isolation"</b>
+		<<endif>>
+		<<jump TheAccident>>
+	<<else>>
+		<<jump FailedAttempt_8>>
+	<<endif>>
+->Unraveling the Context.
+	<<set $BaseSuccessRate = 60>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillObservation >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillPrecisionQuestioning >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: "I noticed earlier you mentioned feeling uneasy when talking about the accident. Can you help me understand why that moment stands out?"
+		Client: “It’s just... the way the light hit the road. I still see it in my dreams. It was raining, but the road looked dry—like a trap.”
+		Inner Thoughts: They’ve fixated on specific sensory details. This could be tied to their emotional processing. Let’s carefully explore this further.
+		You: "That image seems really vivid for you. Do you think there’s something about that moment that made it stick in your mind?"
+		<<set $SkillObservation = $SkillObservation +0.5>>
+		<b>Observation Skill +0.5!
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
+		<b>Precision Questioning Skill +0.2!
+		Client: “It was the moment I realized... I couldn’t stop. No matter what I did, it was already too late.” 
+		<<set $BaseSuccessRate = 55>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedRushingToMeetAFriend  = true>>
+			<b>Memory fragment: "Rushing to meet a Friend" unlocked!</b>
+			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Rushing to meet a Friend"</b>
+		<<endif>>
+		<<set $BaseSuccessRate = 50>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedArgumentWithPartner  = true>>
+			<b>Memory fragment: "Argument with Partner" unlocked!</b>
+			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Argument with a Partner"</b>
+		<<endif>>
+		<<jump TheAccident>>
+	<<else>>
+		<<jump FailedAttempt_9>>
+	<<endif>>
+//////
 ===
 
+title:

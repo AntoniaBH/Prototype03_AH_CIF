@@ -51,18 +51,23 @@ You lean back slightly, letting your words settle. The client’s expression is 
 Inner Thoughts: This is the beginning of their journey—a delicate but vital step forward. The Safe Space is their anchor, and the Mindscape will be their path. Now it’s time to help them take that first step into understanding themselves.
 
 <<declare $AmountTryUnlockTheAccident = 0>>
+<<declare $BaseSuccessRate = 0>>
 <<jump UnlockingTheAccident>>
 ===
 
 title: UnlockingTheAccident
 ---
+<<set $BaseSuccesRate = 0>>
 <<if $AmountTryUnlockTheAccident >6>>
 	<<jump FailedUnlockAccident>>
 <<endif>>
 ->Establishing a Safe Enviroment.
-	<<set $randomValue = random()*100>>
+	<<set $BaseSuccessRate = 40>>
+	<<set $randomValue = random() * 100>>
 	<<if $SkillGroundingTechnique >=1>>
 		<<set $randomValue = $randomValue +20>>
+	<<endif>>
+	 <<if $randomValue >= $BaseSuccessRate>>
 		You: "Before we dive deeper now, let's take a moment to ensure you feel comfortable. Remember, this is a safe place to explore your thoughts and feelings. Is there anything on your mind that you’d like to share first?"
 		The client takes a deep breath, their body visibly relaxing as they nod.
 		Client: “Thank you. It’s hard sometimes to feel safe, even here. But... I do want to try talking about it.”
@@ -78,58 +83,38 @@ title: UnlockingTheAccident
 		<<set $TheAccidentUnlocked = true>>
 		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
 		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue >=40>>
-		You: "Before we dive deeper today, let's take a moment to ensure you feel comfortable. Remember, this is a safe place to explore your thoughts and feelings. Is there anything on your mind that you’d like to share first?"
-		The client sits quietly for a moment, their expression conflicted. Eventually, they speak, their voice hesitant but clear.
-		Client: “I don’t know. It’s hard to even think about what to say. But... there’s this feeling I can’t shake. Like I’m stuck in a loop, replaying the accident over and over.”
-		Inner Thoughts: This is a significant step forward. Even sharing that they feel stuck indicates they’re starting to confront the experience, even if it’s painful.
-		You: “It’s okay to feel uncertain—it’s part of the process. Together, we’ll work on finding a way out of that loop.”
-		You give them a supportive nod, and they exhale slowly, as though reassured.
-		<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.2>>
-		<b>Grounding Technique Skill +0.2!</b>
-		<<set $TheAccidentUnlocked = true>>
-		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
-		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue <=40>>
+	<<else>>
 		<<jump FailedAttempt_1>>
 	<<endif>>
 ->Encouraging Reflection on the Present.
+	<<set $BaseSuccessRate = 35>>
 	<<set $randomValue = random()*100>>
 	<<if $SkillReflectiveListening >=1>>
 		<<set $randomValue = $randomValue +20>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
 		You: "I’ve noticed that there are moments when you seem particularly overwhelmed. Can you describe what those moments feel like for you?"
 		The client’s expression softens, and they place a hand on their chest as if to ground themselves.
 		Client: “It feels like... my heart races, and my thoughts spin out of control. I can’t focus. It’s like I’m reliving something but don’t know what it is.”
 		They rub their hands together nervously, as though trying to shake off the sensation.
 		Inner Thoughts: This is a critical moment. They’re describing a panic response. I can use this opening to help them identify patterns and triggers.
 		You: “That sounds overwhelming. It’s good that you’re starting to notice these patterns. Recognizing them is the first step to understanding them.”
-		The client nods slightly, their breathing slowing as they seem to process your words. A memory fragment begins to surface in their mind.
 		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
 		<b>Reflective Listening Skill +0.5!</b>
+		The client nods slightly, their breathing slowing as they seem to process your words. A memory fragment begins to surface in their mind.
 		<<set $TheAccidentUnlocked = true>>
 		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
 		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue >=40>>
-		You: "I’ve noticed that there are moments when you seem particularly overwhelmed. Can you describe what those moments feel like for you?"
-		The client shifts uncomfortably in their seat, but after a moment of hesitation, they respond.
-		Client: “I... guess it feels like I’m not in control. My chest tightens, and everything seems too much to handle. I don’t know where it comes from, though.”
-		They glance at you briefly before looking down, their hands fidgeting with the hem of their sleeve.
-		Inner Thoughts: They’re beginning to open up, but their understanding of the experience is still surface-level. I’ll need to help them explore this further.
-		You: “That sounds really tough. Even acknowledging it takes courage. Together, we can figure out where these feelings are coming from.”
-		The client exhales slowly, as though relieved to hear your words.
-		Client: "Okay, thank you."
-		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
-		<b>Reflective Listening Skill +0.2!</b>	
-		<<set $TheAccidentUnlocked = true>>
-		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
-		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue <=40>>
+	<<else>>
 		<<jump FailedAttempt_2>>
 	<<endif>>
 ->Prompting Memory Recall.
-	<<set $randomValue = random()*100>>
+	<<set $baseSuccessRate = 30>>
+	<<set $randomValue = random() * 100>>
 	<<if $SkillPrecisionQuestioning >=1>>
 		<<set $randomValue = $randomValue +20>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
 		You: "Sometimes, reflecting on past experiences can help us understand our current feelings better. Would you be willing to talk about what happened the day of your accident?"
 		The client looks down, their fingers nervously tracing the edge of their chair.
 		Client: “I was driving home. It had been a rough day at work, and... I don’t know. I was distracted. I remember looking at my phone, just for a second, and then… the sound of the crash.”
@@ -142,26 +127,16 @@ title: UnlockingTheAccident
 		<<set $TheAccidentUnlocked = true>>
 		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
 		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue >=30>>
-		You: "Sometimes, reflecting on past experiences can help us understand our current feelings better. Would you be willing to talk about what happened the day of your accident?"
-		The client shifts uneasily in their seat, looking at you with hesitation before finally responding.
-		Client: “I remember… I was in the car. It had been a long day, and I wasn’t paying attention. There was this… this loud noise, and then everything went black.”
-		They take a deep breath, gripping their knees tightly as they speak.
-		Inner Thoughts: They’re starting to open up, though the details are still vague. I’ll need to tread carefully to help them recall more without increasing their distress.
-		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
-		<b>Precision Questioning Skill +0.2!</b>
-		You: “It sounds like that moment really stuck with you. Let’s take it slow. What’s the first thing you remember after the crash?”
-		The client exhales shakily, as though relieved to share even this small piece. A memory fragment surfaces in their mind.
-		<<set $TheAccidentUnlocked = true>>
-		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
-		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue <=30>>
+	<<else>>
 		<<jump FailedAttempt_3>>
-	<<endif>>
+	<<endif>>	
 ->Exploring Coping Mechanisms.
-	<<set $randomValue = random()*100>>
+	<<set $BaseSuccessRate = 45>>
+	<<set $randomValue = random() * 100>>
 	<<if $SkillEmpathy >=1>>
 		<<set $randomValue = $randomValue +20>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
 		You: "From what I read and understand from your file, painkillers are a way you've been coping after the accident. Can we figure out together what led you to that choice?"
 		The client pauses, their eyes glistening as they look down at their hands. They exhale deeply before speaking.
 		Client: “I just… I couldn’t handle it. The pain, the nightmares, the memories. The pills made it all... quieter. For a little while, at least.”
@@ -174,26 +149,16 @@ title: UnlockingTheAccident
 		<<set $TheAccidentUnlocked = true>>
 		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
 		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue >=45>>
-		You: "From what I read and understand from your file, painkillers are a way you've been coping after the accident. Can we figure out together what led you to that choice?"
-		The client shifts uncomfortably, their gaze flickering toward the window. After a moment, they speak in a quiet voice.
-		Client: “It just… it helped me get through the day. I didn’t know what else to do.”
-		They glance at you cautiously, their shoulders slightly hunched as if waiting for judgment.
-		Inner Thoughts: They’re starting to acknowledge their reliance on painkillers, but I’ll need to approach carefully to avoid making them feel defensive.
-		<<set $SkillEmpathy = $SkillEmpathy +0.2>>
-		<b>Empathy Skill +0.2!</b>
-		You: “It’s okay to feel like that. Sometimes we rely on what’s within reach when we’re hurting. Let’s think together about what might help you feel more in control.”
-		The client offers a small nod, their expression softening as they seem more open to exploring the topic further.
-		<<set $TheAccidentUnlocked = true>>
-		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
-		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue <=45>>
+	<<else>>
 		<<jump FailedAttempt_4>>
 	<<endif>>
 ->Identifying Triggers.
-	<<set $randomValue = random()*100>>
+	<<set $BaseSuccessRate = 50>>
+	<<set $randomValue = random() * 100>>
 	<<if $SkillObservation >=1>>
 		<<set $randomValue = $randomValue +20>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
 		You: "Sometimes certain places or feelings remind us of past trauma. Are there particular moments or situations that spark those memories for you?"
 		The client pauses, their brow furrowing as they look down, tapping their fingers rhythmically on the armrest.
 		After a moment, they take a deep breath and speak softly.
@@ -207,26 +172,16 @@ title: UnlockingTheAccident
 		<<set $TheAccidentUnlocked = true>>
 		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
 		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue >=50>>
-		You: "Sometimes certain places or feelings remind us of past trauma. Are there particular moments or situations that spark those memories for you?"
-		The client frowns, their gaze distant as they think. After a pause, they exhale and speak with a quiet voice.
-		Client: “There’s a spot on my way to work. I can’t even look at it without feeling like my chest is caving in. It’s where it happened. I just avoid it now.”
-		Their voice cracks slightly, and they quickly look away, fidgeting with the hem of their sleeve.
-		Inner Thoughts: They’re beginning to name their triggers, but I need to tread carefully to ensure this doesn’t overwhelm them.
-		<<set $SkillObservation = $SkillObservation +0.2>>
-		<b> Observation Skill +0.2!</b>
-		You: “Thank you for sharing that. Avoiding the spot makes sense—it’s a way to protect yourself. When you’re ready, we can talk about ways to confront those feelings safely.”
-		The client nods slightly, still avoiding eye contact. A memory fragment begins to surface, linked to the accident.
-		<<set $TheAccidentUnlocked = true>>
-		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
-		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue <=50>>
+	<<else>>
 		<<jump FailedAttempt_5>>
 	<<endif>>
 ->Introducing the Concept of Memory Spaces.
-	<<set $randomValue = random()*100>>
+	<<set $BaseSuccessRate = 40>>
+	<<set $randomValue = random() * 100>>
 	<<if $SkillAnalyticalInsight >=1>>
 		<<set $randomValue = $randomValue +20>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
 		You: "In our sessions, we can explore your mind like a landscape filled with different memories—some painful, some comforting. The accident is a significant part of your landscape, isn’t it?"
 		Client: “That’s... different. So you’re saying we can actually explore what’s locked away in my head? Like, revisit those moments?”
 		You: “Exactly. It’s about making sense of those memories in a way that feels safe and manageable. It’s not just about reliving them—it’s about giving you the tools to shape how they affect you.”
@@ -236,19 +191,7 @@ title: UnlockingTheAccident
 		<<set $TheAccidentUnlocked = true>>
 		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
 		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue >=40>>
-		You: "Think of your mind as a series of connected rooms. Each room holds different memories and experiences. Together, we can unlock those spaces and make sense of what’s inside."
-		The client frowns, their arms crossed as they mull over your words. After a moment, they speak hesitantly.
-		Client: “That sounds... strange. But if it helps, I guess I’m willing to try.”
-		The client says, letting out a long sigh.
-		You: “It might feel unfamiliar at first, but the goal is to give you a sense of control over those memories. We’ll take it one step at a time.”
-		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
-		<b> Analytical Insight Skill +0.2!</b>
-		The client offers a tentative nod. A memory fragment tied to the accident begins to surface.
-		<<set $TheAccidentUnlocked = true>>
-		<b>The Memory Space “The Accident” has been unlocked! You can now access and explore it.</b>
-		<<jump UnlockedTheAccident>>
-	<<elseif $randomValue <=40>>
+	<<else>>
 		<<jump FailedAttempt_6>>
 	<<endif>>
 ===

@@ -1,26 +1,53 @@
 ﻿title: TheMindScape
 ---
-...
 ->Memory Space "The Accident".
 	<<jump TheAccident>>
-->Memory Space "The Cycle of Relapse". if $UnlockedMemorySpaceCycleRelapse is true
+->Memory Space "The Cycle of Relapse".<<if $UnlockedMemorySpaceCycleRelapse is true>>
 	<<jump TheCycleOfRelapse>>
-->Memory Space "Childhood Trauma". if $UnlockedMemorySpaceChildhoodTrauma is true
+->Memory Space "Childhood Trauma".<<if $UnlockedMemorySpaceChildhoodTrauma is true>>
 	<<jump ChildhoodTrauma>>
-->Memory Space "The Resitance". if $UnlockedMemorySpaceResistance is true
-->Memory Space "The Supportive Figure". if $UnlockedSupportiveFigure is true
-->Memory Space "Family Intervention". if $UnlockedFamilyIntervention is true
-->Memory Space "Family Secrets". if $UnlockedFamilySecrets is true
+->Memory Space "The Resitance".<<if $UnlockedMemorySpaceResistance is true>>
+->Memory Space "The Supportive Figure".<<if $UnlockedSupportiveFigure is true>>
+->Memory Space "Family Intervention".<<if $UnlockedFamilyIntervention is true>>
+->Memory Space "Family Secrets".<<if $UnlockedFamilySecrets is true>>
 ->Go to the Safe Space
 	<<jump TheSafeSpace>>
-->Repeat the Mind Scape.
-	<<jump ContentMindScape>>
+->Explore the Mind Scape.
+	<i>This is a repetition of the Mind Scape, what it is and why it is being used here. Do you wish to continue nontheless?</i>
+	->Continue.
+		<<jump ContentMindScape>>
+	->Go back.
+		<<jump TheMindScape>>
 ->End the Session.
-	<<jump EndSessionMindscape>>
+	<i>Are you sure you want to end the session already?</i>
+	->End the Session.
+		<<jump Ending>>
+	->Reconsider.
+		<<jump TheMindScape>>
 ===
 
 title: ContentMindScape
 ---
-...
+The room feels still, a quiet anticipation hanging in the air. You take a moment, observing the client as they settle into their seat, their gaze focused but uncertain. You allow the silence to linger, giving the client space to center themselves before you begin.
+You: “So, this is your Mind Scape. This is where we’ll explore the deeper layers of your memories and experiences. As I mentioned earlier, it’s like a reflection of your mind—a space where your memories and emotions take form.”
+You pause for a moment, watching the client’s reaction. Their eyes are steady, and they nod slightly.
+You: “In this space, we won’t rush. We’ll take it step by step, allowing you to explore what feels comfortable. You’re always in control, and you can pause or retreat to your Safe Space at any time.”
+The client shifts slightly, their hands resting calmly on their lap, though their expression still carries some tension.
+You: “We’ve already established that the Mindscape will have distinct areas—Memory Spaces that hold different pieces of your life. As we begin to navigate these spaces, we’ll encounter events and emotions tied to key moments.”
+You tilt your head thoughtfully. 
+You: “Think of each Memory Space as a room or a setting, each one tied to a chapter of your life. Some may be clearer than others. As we move through them, we may uncover new details, but for now, we’re just beginning to open the door to those places.”
+Client: “So, it’s like... walking through my past? Different memories, like rooms in a house?”
+You smile gently at their insight.
+You: “Exactly. Every Memory Space might feel different—some might feel comfortable, others more difficult. But each one has something important to teach us.”
+You observe the client’s face as they consider this, their brow furrowing slightly, but there’s a quiet curiosity in their eyes.
+You: “Remember the door we talked about before?"
+Client: "Oh, yes I do. The door of my childhood home."
+You: “Imagine yourself as you step through that door. Once you’ll step trough, you enter your Mindscape. Here, we’ll start to uncover your memories and feelings. You don’t need to know everything right now. You don’t need to rush.”
+You allow a moment of silence, letting the client reflect.
+You: “This process isn’t about digging into everything at once. We’ll move at your pace. You can take as much time as you need with each Memory Space.”
+Client: “I think I’m ready... to start walking through that gate.”
+You offer a small, reassuring nod.
+You: “Take a deep breath and step through when you’re ready. As you cross over, you’ll be entering a place where your memories are waiting, ready to be explored.”
+The room falls quiet again, the client’s breathing steadying as they mentally prepare to cross the threshold. You remain seated, offering a calm presence.
 <<jump TheMindScape>>
 ===
