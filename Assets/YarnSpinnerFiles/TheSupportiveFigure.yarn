@@ -1,0 +1,459 @@
+﻿title: UnlockedSupportiveFigure
+---
+<<declare $UnlockedFirstImpression = false>>
+<<declare $UnlockedWordsOfStrength = false>>
+<<declare $UnlockedInTheEyeOfTheStorm = false>>
+<<declare $UnlockedGuidingWisdom = false>>
+<<declare $UnlockedSafeHarbor = false>>
+<<declare $UnlockedPathwayToGrowth = false>>
+<<declare $UnlockedMomentsOfVulnerability = false>>
+<<declare $UnlockedStepsTowardsHealing = false>>
+<<declare $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = 0>>
+<<declare $PryFurtherTheSupportiveFigureUnlocked = false>>
+<<jump ContentTheSupportiveFigure>>
+===
+
+title: ContentTheSupportiveFigure
+---
+The atmosphere in the room shifts as the client recalls someone significant from their past—a person who may have been a quiet yet unwavering source of support during times of hardship. You sit back, your tone calm and inviting as you allow them to speak freely.
+You: "I want you to think about the person who stood by you, even when the world seemed against you. Who was the one person who made you feel seen and supported? How did they help you during those times?"
+The client’s gaze softens, their expression changing as they settle into the memory. It’s clear this is someone who holds a special place in their heart.
+Client: "It was my sister. She’s always been there for me, even when I didn’t know I needed her. We’ve been through a lot together, but she was always the one who knew how to make things feel just a little bit easier."
+You nod thoughtfully, your tone gentle and understanding.
+You: "What was it about your sister that made her someone you could rely on? How did she make you feel when things were at their hardest?"
+Client: "She always knew what I needed without me saying a word. I never had to ask her for help—she just showed up. She’d sit with me, let me vent, or just be there in silence. She never judged me for what I was going through."
+You give them space to reflect, your voice calm as you encourage them to continue.
+You: "It sounds like she had an intuitive way of knowing when to step in and how to be there for you. How do you think that shaped your connection with her, and what did it teach you about the kind of support you needed?"
+Client: "It made me realize that sometimes, you don’t need someone to fix things—you just need someone to be with you. I learned that having someone to share my pain with made it easier to handle. She taught me that I didn’t have to go through everything alone."
+The client takes a deep breath, their emotions clear as they reflect on the bond they shared with their sister. There’s a quiet strength in their voice now, as if revisiting this moment has helped them better understand the importance of that connection.
+You: "It seems like your sister’s presence gave you a sense of comfort and relief in ways you didn’t expect. How do you think her support has impacted the way you approach relationships or your own emotional challenges?"
+Client: "I think because of her, I’ve learned how to lean on people more. I used to think I had to handle everything by myself, but my sister showed me that it’s okay to depend on others when I need to. She made me feel like I wasn’t a burden for needing help."
+There’s a softness in the client’s tone now, a feeling of reassurance as they continue.
+You: "It’s clear that your sister gave you something precious—permission to ask for support, to be vulnerable. How do you think you can carry that lesson forward in your life?"
+Client: "I think I can start by being more open with the people I care about. It’s still hard for me, but I know now that I don’t have to carry everything on my own. And maybe I can be that kind of support for others, too."
+You offer a small smile, acknowledging their insight. It’s a moment of clarity and progress
+<<jump TheSupportiveFigure>>
+===
+
+title: TheSupportiveFigure
+---
+->Ask the Client further questions.
+	<<jump UnlockingMemoryFragmentsTheSupportiveFigure>>
+->Repeat the Memory Space "The Supportive Figure".
+	<i>This is a repetition of the memory space "The Resistance", what it is and what the client experienced. Do you wish to continue nontheless?</i>
+	->Continue.
+		<<jump ContentTheSupportiveFigure>>
+	->Go back.
+		<<jump TheSupportiveFigure>>
+->Go to the Memory Fragments.<<if $MemoryFragmentsTheSupportiveFigure is true>>
+	<<jump MemoryFragmentsTheSupportiveFiure>>
+->Go to the Mindscape.
+	<<jump TheMindScape>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+===
+
+title: UnlockingMemoryFragmentsTheSupportiveFigure
+---
+<<if $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure >=36>>
+	<<jump FailUnlockMemoryFragmentsTheSupportiveFigure>>
+<<endif>>
+->A Warm Welcome.
+	<<set $BaseSuccessRate = 70>> 
+	<<set $randomValue = random() * 100>>
+	<<if $SkillEmpathy > 2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $SkillGroundingTechniques > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $baseSuccessRate>>
+        	You: “Can you recall a time when you felt truly welcomed and accepted by someone? What sensations or feelings arise when you reflect on that moment, and how did it impact you?”
+		The client’s gaze softens, a faint smile appearing as they begin to speak.
+		Client: "I remember... it was my sister. She had this way of making me feel like I belonged, no matter how broken I felt. I think it was one evening after a particularly hard day. I didn’t even tell her what was wrong, but she just knew."
+		You nod gently, inviting them to continue with a soft prompt.
+		You: "What did she do that evening that made you feel so welcomed? Was it something she said, or perhaps just her presence?"
+		Client: "She didn’t say much at first. She just hugged me—one of those hugs where you don’t feel judged, like the weight you’ve been carrying doesn’t matter in that moment. Then she brought out some tea, and we sat together on the couch. She didn’t ask questions or try to fix things; she just sat with me. It was exactly what I needed."
+		You: "It sounds like her presence gave you a sense of peace and safety. How did that moment shape how you view your relationship with her?"
+		The client takes a breath, their voice steadier now.
+		Client: "It made me realize how much she understood me—sometimes better than I understood myself. She made me feel like it was okay to just... be. I didn’t have to put up a front or pretend to be strong."
+		You: "Feeling that level of acceptance must have been powerful. How has that moment stayed with you, and how does it influence how you interact with others now?"
+		Client: "It’s stayed with me because it showed me what real support looks like. I try to be that for others, though it’s not always easy. But I’ve learned that sometimes, just being there for someone, without needing to say much, is enough."
+		The room feels lighter as the memory settles in, a warm glow of connection radiating through their words.
+		<<set $BaseSuccessRate = 55>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedFirstImpressions = true>>
+			<<set $MemoryFragmentsTheSupportiveFigure = true>>
+			<b>Memory fragment: "First Impressions" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "First Impressions"!</b>
+		<<endif>>
+			<<jump TheSupportiveFigure>>
+	<<else>>
+		<<jump FailedAttempt_22>>
+	<<endif>>
+->The Encouragement.
+	<<set $BaseSuccessRate = 60>> 
+	<<set $randomValue = random() * 100>>
+	<<if $Skill > 2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $Skill > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $baseSuccessRate>>
+        	You: “Think about a time when someone offered you encouragement. What words or actions did they use that made a difference for you? How did it change your perspective or motivate you to move forward?”
+		You: "Think about a time when someone offered you encouragement. What words or actions did they use that made a difference for you? How did it change your perspective or motivate you to move forward?"
+		The client takes a deep breath, their face softening as they reflect.
+		Client: "There was this one time... my sister. She always believed in me, even when I didn’t believe in myself. I remember I was struggling to finish a school project. She sat with me, told me, ‘You’ve got this. You just need to take it one step at a time.’ She stayed up all night with me, helping me figure it out. That meant everything."
+		You: "Your sister’s belief in you sounds so powerful. It’s amazing how her encouragement helped you push through a tough moment. How do you feel thinking back on that experience?"
+		Client: "Grateful. And... a little emotional, I guess. It reminds me I’m not alone, even when it feels like it."
+		<<set $BaseSuccessRate = 55>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedWordsOfStrength = true>>
+			<<set $MemoryFragmentsTheSupportiveFigure = true>>
+			<b>Memory fragment: "Words of Strength" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "Words of Strength"!</b>
+		<<endif>>
+			<<jump TheSupportiveFigure>>
+	<<else>>
+		<<jump FailedAttempt_23>>
+	<<endif>>
+->Facing the Storm.
+	<<set $BaseSuccessRate = 55>> 
+	<<set $randomValue = random() * 100>>
+	<<if $Skill > 2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $Skill > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $baseSuccessRate>>
+        	You: “During challenging times, who stood by your side, offering support? What insights or grounding techniques did they share that helped you navigate those stormy moments?”
+		The client’s eyes grow distant, and they exhale deeply.
+		Client: "It was my sister again. I remember when I got into a huge argument with my parents. I was so overwhelmed, I felt like I couldn’t breathe. She sat me down and said, ‘Let’s just focus on right now. Take a deep breath with me.’ She didn’t try to fix it or tell me what to do—she just... helped me stay calm in the chaos."
+		You: "That sounds like a profound moment of connection. Her presence and approach gave you space to face the situation without feeling lost. How does reflecting on that moment make you feel now?"
+		Client: "It’s comforting. I don’t think I’ve ever truly appreciated how much she’s been there for me."
+		<<set $BaseSuccessRate = 65>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedInTheEyeOfTheStorm = true>>
+			<<set $MemoryFragmentsTheSupportiveFigure = true>>
+			<b>Memory fragment: "In the Eye of the Storm" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "In the Eye of the Storm"!</b>
+		<<endif>>
+			<<jump TheSupportiveFigure>>
+	<<else>>
+		<<jump FailedAttempt_24>>
+	<<endif>>
+->Lessons of Love.
+	<<set $BaseSuccessRate = 65>> 
+	<<set $randomValue = random() * 100>>
+	<<if $Skill > 2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $Skill > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $baseSuccessRate>>
+        	You: “Reflect on a moment when you felt loved and understood. What lessons did you take away from that experience about yourself and the relationships you cherish?”
+		The client closes their eyes, a soft smile crossing their face.
+		Client: "There was this time my sister stayed up all night with me before an important test. She didn’t have to—she had her own things going on. But she brought me snacks, quizzed me, and told me she believed in me when I was doubting myself. I didn’t realize it then, but it taught me how powerful unconditional support could be."
+		You: "It sounds like her actions didn’t just help you succeed in that moment—they also shaped your understanding of what love and care look like. How do you see that lesson influencing your relationships now?"
+		Client: "I guess I’ve always tried to be there for people the way she was there for me. But I don’t think I’ve told her how much it meant to me."
+		You: "Acknowledging her role could strengthen that bond even further. It’s incredible how moments like these leave lasting imprints on our hearts."
+		The Client nods Softly murmuring; <i>yeah, I guess so</i> and then fixing their gaze onto on of the walls behind you.
+		<<set $BaseSuccessRate = 60>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedGuidingWisdom = true>>
+			<<set $MemoryFragmentsTheSupportiveFigure = true>>
+			<b>Memory fragment: "Guiding Wisdom" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "Guiding Wisdom"!</b>
+		<<endif>>
+			<<jump TheSupportiveFigure>>
+	<<else>>
+		<<jump FailedAttempt_25>>
+	<<endif>>
+->Go back to the Memory Space "The Supportive Figure".
+	<<jump TheSupportiveFigure>>
+===
+
+title: FailedAttempt_22
+---
+You maintain a gentle tone as you guide the client toward their thoughts.
+You: "Can you recall a time when you felt truly welcomed and accepted by someone? What sensations or feelings arise when you reflect on that moment, and how did it impact you?"
+The client hesitates, their expression clouded with uncertainty.
+Client: "I... I don’t know. I’m trying to think of something, but nothing’s coming to mind right now. It’s not that there weren’t moments like that... I just... I can’t seem to picture one."
+You notice their frustration building, and you respond with a grounding approach.
+You: "That’s okay. Sometimes these memories can feel distant or hard to access. Let’s take a step back for now and focus on what feels most present to you in this moment."
+The client exhales, their shoulders slumping slightly.
+Client: "I guess I’m just not ready to go there yet. It feels... blurry, like I’m trying too hard to find something specific."
+You: "That’s perfectly valid. We can revisit this when it feels right for you. It’s important to move at a pace that feels comfortable."
+The session shifts back to safer ground, and while this particular thread remains untapped, the opportunity to revisit it later is left open.
+<b>Failed to unlock Memory fragment: "First Impressions"!</b>
+<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure +1>>
+<<jump UnlockingMemoryFragmentsTheSupportiveFigure>>
+===
+
+title: FailedAttempt_23
+---
+You: "Think about a time when someone offered you encouragement. What words or actions did they use that made a difference for you? How did it change your perspective or motivate you to move forward?"
+The client fidgets, their gaze dropping to their hands.
+Client: "Encouragement... I’m not sure. I feel like there were moments, but... I can’t remember anything specific. It’s like trying to catch smoke."
+You: "That’s understandable. Sometimes, when we try to focus on something uplifting, it can feel just out of reach. Take a moment—what emotions come up as you think about encouragement, even if the memory itself isn’t clear?"
+Client: "Frustration, mostly. I guess I just didn’t hear a lot of that growing up. Or maybe I did, but it didn’t stick. I don’t know."
+You: "That frustration makes sense. It’s hard to reflect on support when it feels sparse or distant. We can explore this more when you’re ready—it’s okay if it takes time."
+The client offers a faint nod but doesn’t seem ready to delve further. You decide to shift focus, allowing the conversation to settle.
+<b>Failed to unlock Memory fragment: "Words of Strength"!</b>
+<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure +1>>
+<<jump UnlockingMemoryFragmentsTheSupportiveFigure>>
+===
+
+title: FailedAttempt_24
+---
+You: "During challenging times, who stood by your side, offering support? What insights or grounding techniques did they share that helped you navigate those stormy moments?"
+The client frowns, rubbing their hands together.
+Client: "Honestly? No one comes to mind. Whenever things got bad, it felt like I was completely on my own."
+You: "That sense of isolation must have been overwhelming. When we face challenges alone, it’s hard to recognize any moments of support that might have been there, even if they were small. Could that be part of why this feels so distant?"
+Client: "Maybe. I don’t know. I’m just used to handling things by myself."
+You: "That strength you’ve built is remarkable, even if it came from hard experiences. Let’s leave this open for now—we can explore it further when you feel ready."
+The client gives a small shrug, their body language slightly closed off as they shift uncomfortably in their seat.
+<b>Failed to unlock Memory fragment: "In the Eye of the Storm"!</b>
+<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure +1>>
+<<jump UnlockingMemoryFragmentsTheSupportiveFigure>>
+===
+
+title: FailedAttempt_25
+---
+You: "Reflect on a moment when you felt loved and understood. What lessons did you take away from that experience about yourself and the relationships you cherish?"
+The client stares at the floor, their expression unreadable.
+Client: "I… don’t know. Maybe there were times, but nothing stands out right now."
+You: "It’s okay if it feels hard to access those moments. Sometimes our most meaningful experiences are hidden beneath the weight of everything else. Could it be that this question feels a bit too distant or abstract right now?"
+Client: "Yeah, maybe. I just… don’t think about these things much. It’s hard to remember."
+You: "That’s completely understandable. Let’s keep exploring—you might find that those moments reveal themselves when you least expect it."
+The client shifts slightly in their seat, offering a faint nod but remaining guarded.
+<b>Failed to unlock Memory fragment: "Guiding Wisdom"!</b>
+<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure +1>>
+<<jump UnlockingMemoryFragmentsTheSupportiveFigure>>
+===
+
+title: MemoryFragmentsTheSupportiveFiure
+---
+<<if $UnlockedWordsOfStrength is true and $UnlockedInTheEyeOfTheStorm is true>>
+	<<set $PryFurtherTheSupportiveFigureUnlocked = true>>
+	<b>Unlocked Choice: "Moments of Vulerability" to pry further in the Memory Fragments!</b>
+<<elseif $UnlockedFirstImpression is true and $UnlockedGuidingWisdom is true>>
+	<<set $PryFurtherTheSupportiveFigureUnlocked = true>>
+	<b>Unlocked Choice: "Steps towards Healing" to pry further in the Memory Fragments!</b>
+<<elseif $UnlockedSafeHarbor is true>>
+	<b>Unlocked Memory Fragment "Safe Harbor"!</b>
+<<elseif $UnlockedPathwayToGrowth is true>>
+	<b>Unlocked Memory Fragment "Pathway to Growth"!</b>
+<<endif>>
+->First Impressions.<<if $UnlockedFirstImpression is true>>
+	<<jump FirstImpressions>>
+->Words of Strength.<<if $UnlockedWordsOfStrength is true>>
+	<<jump WordsOfStrength>>
+->In the Eye of the Storm.<<if $UnlockedInTheEyeOfTheStorm is true>>
+	<<jump InTheEyeOfTheStorm>>
+->Guiding Wisdom.<<if $UnlockedGuidingWisdom is true>>
+	<<jump GuidingWisdom>>
+->Pry further.<<if $PryFurtherTheSupportiveFigureUnlocked is true>>
+->Safe Harbor.<<if $UnlockedSafeHarbor is true>>
+	<<jump SafeHarbor>>
+->Pathway to Growth.<<if $UnlockedPathwayToGrowth is true>>
+	<<jump PathwayToGrowth>>
+->Go back to the Memory Space "The Supportive Figure".
+	<<jump TheSupportiveFigure>>
+===
+
+title: FirstImpressions
+---
+You: "Think about a time when you met someone who made an immediate positive impression on you. What about them made you feel at ease or valued in that moment?"
+The client’s face softens, their gaze distant as they think.
+Client: "I remember the first time I brought home a bad grade. My sister didn’t get mad or disappointed like I thought she would. Instead, she said, ‘Okay, let’s figure this out together.’ That was the first time I realized I didn’t have to handle everything alone."
+You: "She didn’t just acknowledge the challenge; she showed you how to face it with support. That must’ve been a defining moment for how you saw your relationship with her."
+Client: "Yeah, it was. It’s funny—she always seemed like she had her act together, but that moment showed me how much she cared about me, even if I wasn’t perfect."
+You: "Her actions shaped a safe space for you, one where mistakes didn’t mean isolation but connection. How do you think that bond has influenced your sense of self over time?"
+Client: "It made me believe I could try, even if I wasn’t sure I’d succeed, because I wasn’t alone in it."
+Inner Thoughts: Their sister seems to be a pivotal character in their life, a pillar of stability. 
+You take some notes and return your attention back to the client to continue.
+<<jump MemoryFragmentsTheSupportiveFiure>>
+===
+
+title: WordsOfStrength
+---
+You: "Now I want you to think about a time when someone offered you encouragement. What words or actions did they use that made a difference for you? How did it change your perspective or motivate you to move forward?"
+The client leans back, a soft smile playing at the corners of their mouth as they recall the memory.
+Client: "I remember when I was struggling with my college applications. I thought I wasn’t good enough for any of it. My sister looked at me and said, ‘You’ve always pushed through tough times, so why stop now? You’ve got this.’ It didn’t fix everything, but it made me believe I could try."
+You: "It sounds like her words gave you more than just encouragement; they gave you permission to believe in yourself again, even when doubt was clouding your mind."
+Client: "Exactly. It wasn’t just the words, but the fact that she genuinely believed in me. I guess I needed someone to remind me of my own strength."
+You: "Sometimes, we forget our own strength until someone else reflects it back to us. How do you think that moment shaped how you approach challenges now?"
+Client: "I think I’ve learned to give myself a little more credit when things get tough. I try to remember her words and know I can keep going, even when I’m not sure how."
+<<jump MemoryFragmentsTheSupportiveFiure>>
+===
+
+title: InTheEyeOfTheStorm
+---
+You: "During challenging times, who stood by your side, offering support? What insights or grounding techniques did they share that helped you navigate those stormy moments?"
+The client’s face softens as they reflect on the question, their gaze distant for a moment.
+Client: "My sister… she was always the calm when everything else felt overwhelming. I remember when I was going through that rough patch after the accident—everything felt out of control. She would sit with me in silence, not saying much at first, but somehow her presence was enough. Then, she’d share little things that helped me focus—like breathing exercises or just reminding me to take things one step at a time."
+You: "It sounds like her presence wasn’t just comforting, but also a source of strength, helping you ground yourself in a time of chaos."
+Client: "Yeah, she’d never pressure me to talk or ‘fix’ anything. She just created space for me to breathe, even when I felt like I was drowning in everything."
+You: "It’s often the people who allow us to sit in our storm, without judgment or haste, who give us the strength to weather it. How did her support change your approach to difficult situations?"
+Client: "I’ve learned that it’s okay to just sit with the pain sometimes, without trying to force it away. And I try to be that for others too—not just rush in with solutions, but let them know I’m there, in the quiet moments too."
+You: "That is a great accomplishment that you have figured out all by yourself already! You are doing great, I believe your sister would be proud of you.
+A small tear runs down the clients face.
+<<jump MemoryFragmentsTheSupportiveFiure>>
+===
+
+title: GuidingWisdom
+---
+You: "Reflect on a moment when you felt loved and understood. What lessons did you take away from that experience about yourself and the relationships you cherish?"
+The client leans back, their eyes searching the space as they recall a distant memory.
+Client: "I remember a time when I was struggling with my self-worth, feeling like I’d failed everyone around me. I was sitting with my sister one evening, feeling completely lost. She looked at me, and instead of offering advice, she just told me, ‘You’re enough, just as you are. No need to fix anything.’ That simple statement… it changed everything for me."
+You: "That sounds like a pivotal moment. How did her words impact you in the long run?"
+Client: "They gave me permission to accept myself. I didn’t need to constantly prove myself to anyone. Her words made me realize that love isn’t about fixing or changing; it’s about being present, just as we are."
+You: "It seems like that moment instilled a sense of inner peace within you, as well as a deeper understanding of unconditional love. Has this lesson affected how you approach your relationships now?"
+Client: "Definitely. I’m more patient with myself and with others. I try to remind myself that sometimes just being there for someone is enough. No need to ‘fix’ everything. I focus more on the connection than the outcome."
+You: "It sounds like that moment with your sister had a lasting impact, not only on how you view yourself but also on how you engage with others. It’s powerful to realize that sometimes the most profound support comes from simply offering presence and understanding. You’ve gained a deeper wisdom that can guide you through challenging times."
+<<jump MemoryFragmentsTheSupportiveFiure>>
+===
+
+title: PryFurtherTheSupportiveFigureUnlocked
+---
+->Moments of Vulerability.<<if $UnlockedWordsOfStrength is true and $UnlockedInTheEyeOfTheStorm is true>>
+	<<jump MomentsOfVulerability>>
+->Steps towards Healing.<<if $UnlockedFirstImpression is true and $UnlockedGuidingWisdom is true>>
+	<<jump StepsTowardsHealing>>
+->Go back to the Memory Fragments.
+	<<jump MemoryFragmentsTheSupportiveFiure>>
+===
+
+title: MomentsOfVulerability
+---
+<<set $BaseSuccessRate = 55>> 
+<<set $randomValue = random() * 100>> 
+<<if $SkillEmpathy > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillPrecisionQuestioning > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillGroundingTechniques > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillObservation > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillReflectiveListening > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillAnalyticalInsight > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<endif>>
+<<if $randomValue >= $baseSuccessRate>>
+	You: “Think of a time when being vulnerable felt safe. What made that moment special, and how did it affect your connection with the supportive person in your life?”
+	As you ask, you notice a slight shift in their posture—shoulders relaxing, but a brief tightening in their hands as they rest them in their lap. There’s a stillness in the room as they contemplate, a slight furrow between their brows.
+	Client: "I... I think it was when my sister sat with me one night, after everything happened. She didn’t say much. She just... listened, really listened. It was the first time in a long while I didn’t feel like I had to be strong. I felt like it was okay to be weak, to cry."
+	You notice their eyes well up, the raw vulnerability they offer. You lean in slightly, maintaining eye contact, providing silent affirmation. The weight of their words sits heavily between the two of you, but there's a sense of relief in the air too.
+	You: “That sounds like an incredibly intimate moment. To have someone just be there with you, without needing to fix anything. It must’ve allowed you to release some of that built-up tension, not having to hold up that wall anymore.”
+	The client exhales deeply, nodding slowly, the tightness in their face softening. They seem more at ease, as though the acknowledgment of that vulnerability helps in the healing process.
+	Client: "Yeah... it was like she gave me permission to let my guard down, to not be afraid of what I might show."
+	You: “That’s so powerful. To be given that safe space, where vulnerability isn’t seen as weakness, but as a sign of trust. It sounds like your sister played a key role in helping you access that space.”
+	Client: “I think... I think that’s why I trust her so much. I know she’s not going to judge me.”
+	You smile gently, nodding.
+	You: “And that trust you have in her, it seems to have been a turning point in how you view vulnerability, as something not to fear but to embrace. I imagine that experience has given you a sense of safety in opening up, not just with her but with yourself as well.”
+	The room feels lighter now, the unspoken connection between you both palpable. You watch as the client takes another slow breath, their shoulders dropping a little further.	
+        <<set $UnlockedSafeHarbor = true>>
+	<b>Memory fragment: "Safe Harbor" unlocked!</b>
+	<<jump MemoryFragmentsTheSupportiveFiure>>
+<<else>>
+	You: “Think of a time when being vulnerable felt safe. What made that moment special, and how did it affect your connection with the supportive person in your life?”
+	The client shifts uncomfortably in their seat, eyes downcast, fingers fidgeting with the edge of their sleeve. There's a slight tremor in their hands. You can sense the hesitation, the wall they're holding up—something about this question seems to hit too close to the surface.
+	Client: "I… I’m not sure. It’s hard to think of a moment like that. I’ve never really felt… safe enough to be vulnerable. Not with anyone."
+	You take a slow, measured breath, keeping your tone calm and understanding. You don’t press, giving them space to sit with the discomfort, allowing silence to fill the room for a moment.
+	You: “It’s okay if you can’t pinpoint that moment right now. Vulnerability takes a lot of trust, and not everyone has had the chance to experience it in a way that feels safe. Sometimes, those moments are hard to access when we’ve been carrying the weight of the past.”
+	The client nods slowly, but the defensiveness is still there, visible in their stiff posture. They seem uncertain, a little withdrawn, perhaps fearful of what they might reveal if they continue down this path.
+	You: “When the time is right, we can explore that moment. It’s important that you only share what feels comfortable for you.”
+	There's a subtle shift in their expression—almost as if a tiny weight has been lifted—but it’s clear that the walls are still up. They’re not ready to share yet, and that's okay.
+	<b>Failed to unlock Memory fragment: "Safe Harbor"!</b>
+	<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure +1>>
+	<<jump MemoryFragmentsTheSupportiveFiure>>
+<<endif>>
+===
+
+title: StepsTowardsHealing
+---
+<<set $BaseSuccessRate = 60>> 
+<<set $randomValue = random() * 100>> 
+<<if $SkillEmpathy > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillPrecisionQuestioning > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillGroundingTechniques > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillObservation > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillReflectiveListening > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<elseif $SkillAnalyticalInsight > 2>> 
+        <<set $randomValue = $randomValue + 15>>
+<<endif>>
+<<if $randomValue >= $baseSuccessRate>>
+	You: “As you reflect on your journey, who has helped you take steps toward healing? What role did their support play in your process, and what have you learned about seeking help from others?”
+	The client pauses, their gaze drifting upward as if searching the ceiling for an answer. A soft sigh escapes their lips, their shoulders sinking into the chair, and you can see a faint flicker of recognition in their eyes. It’s a quiet moment, but one filled with a sense of reflection.
+	Client: “I guess… my sister. She’s always been there when I needed someone to listen, even when I didn’t know how to ask for help. She doesn’t judge me, and she never pushed me too hard. She just… stood by me. That made a huge difference. I realized it’s okay to lean on people.”
+	You nod slowly, feeling a shift in their energy as they speak. 
+	Inner Thoughts: There’s a subtle vulnerability in their words, the kind that only comes when someone starts to trust the process. I can sense that they’re beginning to piece together the importance of that support in their healing journey.
+	You: “It sounds like your sister provided a safe space for you, allowing you to be yourself without pressure. That kind of unconditional support can be such a powerful catalyst for healing. How do you think you can carry that feeling with you, even when she’s not physically present?”
+	The client takes a moment to consider, their hand resting lightly on their lap. A small, thoughtful smile tugs at the corners of their lips as they think about the question.
+	Client: “I think it’s about remembering that support doesn’t always have to be in person. I can reach out when I need to. I can carry that sense of safety with me.”
+	There’s a soft yet profound shift in the air, as if the client is gaining new insight. You offer a gentle nod, affirming their response.
+	You: “That’s a beautiful realization. The ability to reach out, even in our toughest moments, is a step towards creating a path for continued growth. You’re building your own resilience, one step at a time.”
+	The client nods, looking more settled, as if the weight of their emotions has lightened. It’s a small victory, but one that’s significant in the broader journey toward healing.
+        <<set $UnlockedPathwayToGrowth = true>>
+	<b>Memory fragment: "Pathway to Growth" unlocked!</b>
+	<<jump MemoryFragmentsTheSupportiveFiure>>
+<<else>>
+	You: “As you reflect on your journey, who has helped you take steps toward healing? What role did their support play in your process, and what have you learned about seeking help from others?”
+	The client’s eyes flicker nervously, their gaze dropping immediately to their hands, fingers playing with the seams of their pants. They seem to withdraw slightly, uncomfortable with the vulnerability of the question.
+	Client: “I’m not sure I can really think of anyone. I mean… I’ve been doing it all on my own. I’ve never really asked for help.”
+	You notice the stiffness in their posture, the way their shoulders seem to tighten, and their voice becomes quieter. It’s like a wall has risen between you, and they’re retreating into a familiar space of self-reliance, however unhealthy it might be.
+	You: “It’s okay if you don’t feel like anyone’s been there for you in the way you might have hoped. Sometimes, the process of healing feels like something we have to do alone, even when support might be there. What does asking for help feel like to you? Is there something that makes it difficult?”
+	The client shifts in their seat, hesitant, as if weighing the question. They look down at their hands, still fidgeting, and a heavy silence hangs in the air.
+	Client: “It just feels… weak. Like I’m admitting I can’t handle things on my own.”
+	You pause for a moment, considering how best to respond. The client’s words carry a heavy load, revealing a deep-seated belief that asking for help is a sign of failure. You approach the conversation with gentle care.
+	You: “Asking for help doesn’t make you weak—it’s a way of acknowledging that we all have our limits. It’s okay to lean on others, especially those who care about you. Healing isn’t about doing it alone—it’s about knowing when to share that burden.”
+	There’s a flicker of doubt in their eyes, but they’re not ready to fully engage with the idea yet. They nod, but the tension remains.
+	<b>Failed to unlock Memory fragment: "Pathway to Growth"!</b>
+	<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure +1>>
+	<<jump MemoryFragmentsTheSupportiveFiure>>
+<<endif>>
+===
+
+title: SafeHarbor
+---
+You: “When we talked about vulnerability earlier, you mentioned your sister’s unwavering support. I want you to think about a moment when you felt truly safe and unjudged. Can you recall a time when you allowed yourself to be fully open, knowing that you were met with compassion and understanding? What did that moment reveal to you about trust and connection?”
+The client exhales, their expression softening. You notice their eyes searching the room as if recalling a distant, yet comforting memory. A sense of warmth seems to settle into the space between you. They relax into their chair a bit more, and you can see the shift—a slight vulnerability creeping into their posture.
+Client: “I think… it was when I finally told my sister about what happened with my parents. I had never really talked about it with anyone before. I was so scared of what she would think, but when I finally said it, she didn’t judge me. She didn’t even flinch. She just held me, said she’d always be there, and that was it. It felt like the weight of everything just lifted for a moment.”
+You lean in slightly, letting your presence be a quiet support as the client continues, their voice gaining strength with each word. The raw honesty in their confession is palpable, and you can feel the significance of this memory unfolding. It’s a delicate but pivotal moment for the client.
+You: “That sounds like a powerful experience—being seen, heard, and accepted without conditions. It’s as if, in that moment, your sister created a safe space where you could be fully yourself. How did that impact your relationship with her, or perhaps even with yourself?”
+The client’s eyes glisten slightly as they reflect on your words, their fingers curling gently into their palms, as if grounding themselves in the present.
+Client: “I think it made me realize that I don’t have to carry everything alone. She was there, and I felt so… so protected. It changed everything. I started to feel like maybe I could actually heal, maybe I could trust again.”
+A small smile touches their lips, an expression that feels fragile but hopeful. You recognize this moment as a breakthrough—a shift in their understanding of what it means to be supported and, more importantly, what it means to allow someone else in.
+You: “That’s a beautiful realization. Finding that safe harbor in someone else allows you to not only trust them but also yourself. It’s a step toward healing, allowing vulnerability without the fear of rejection. You’ve given yourself permission to be cared for, and that is something truly valuable.”
+The client nods, the tension in their body noticeably easing, and for a moment, there’s a quiet understanding between you. It’s a significant step forward in their journey—a moment of growth born from trust, vulnerability, and the presence of someone who truly cares.
+<<jump MemoryFragmentsTheSupportiveFiure>>
+===
+
+title: PathwayToGrowth
+---
+You: “Earlier, we spoke about the people who have helped you along your healing journey, particularly your sister. You mentioned that her support has played such a pivotal role. I’d like you to reflect a little further: How has the support from those close to you shaped your growth? What have you learned from their encouragement and presence that’s allowed you to move forward on your path?”
+The client exhales deeply, their posture shifting as they lean forward slightly. Their gaze softens, and for a moment, you notice the subtle reflection of past struggles in their eyes. It’s as though they are revisiting the beginning of this journey—recognizing the moments that have shaped them.
+Client: “I think it’s really about… trust. I never realized how much I needed to trust people again. I was so closed off before, but my sister… she showed me that it’s okay to let others in. It was small at first, just little things, like asking for help when I needed it. But it built up. And now, I’m starting to believe that I can move forward. Maybe I don’t have to carry all the weight myself.”
+There’s a pause. The client looks down for a moment, their fingers idly tracing the edge of their chair. You can sense the vulnerability in their admission, the quiet acceptance that they’re beginning to lean into this newfound trust.
+You: “It sounds like, by allowing yourself to lean on others, you’ve discovered the strength to move forward. That’s a significant shift. And trust—especially in those who truly care for you—can create a foundation from which healing can take place. How do you feel that change within you now?”
+Client: “I feel... lighter. I don’t feel like I’m stuck anymore. Weird."
+Their voice trembles slightly, but there’s a sense of resolve beneath it—an internal shift from despair to hope. They’re beginning to see the possibilities ahead, and you sense the healing unfolding within them, step by step.
+You: “That’s a powerful realization. It’s as if you’re beginning to believe in your own strength to grow, not because the road ahead is easy, but because you’re no longer walking it alone. And that’s a huge step forward.”
+The client nods, their expression a mix of relief and quiet determination. You can feel the weight of their words—they’ve taken another significant step in their healing, and with it, a deeper connection to the path ahead.
+<<jump MemoryFragmentsTheSupportiveFiure>>
+===

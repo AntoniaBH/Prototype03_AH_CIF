@@ -1,0 +1,420 @@
+﻿title: UnlockedFamilyIntervention
+---
+<<declare $AmountTrysUnlockMemoryFragmentsFamilyIntervention = 0>>
+<<declare $UnlockedRootsOfConnection = false>>
+<<declare $MemoryFragmentsFamilyIntervention = false>>
+<<declare $UnlockedHeartfeltMessages = false>>
+<<declare $UnlockedEmotionalCurrents = false>>
+<<declare $PryFurtherFamilyIntervention = false>>
+<<declare $UnlockedSharedAmbitions = false>>
+<<declare $UnlockedFacingFears = false>>
+<<declare $UnlockedPerceptionsUnveiled = false>>
+<<declare $UnlockedTapestryOfTruth = false>>
+<<declare $TOT1 = false>>
+<<declare $TOT2 = false>>
+<<declare $TOT3 = false>>
+Inner Thoughts: This might be the right time to bring up the topic of family. Family dynamics can be one of the hardest and biggest roots of our problems. This is not going to be easy.
+You: "After hearing a bit from your childhood already, what do you think about telling me also something about your family?"
+<<jump ContentFamilyIntervention>>
+===
+
+title: ContentFamilyIntervention
+---
+The client sits still for a moment, their hands fidgeting in their lap. Their voice is hesitant but carries an edge of frustration.
+Client: “I don’t even know why we’re talking about them. My family never understood me. They always acted like I was the problem, like everything was my fault. What’s the point of digging all that up now?”
+You lean forward slightly, keeping your tone measured and gentle.
+You: “Families can shape so much of who we are, for better or worse. It’s not about blaming anyone but understanding the patterns and beliefs that might still affect you today. When you think about those moments, what stands out the most? A specific conversation, a look, or maybe something left unsaid?”
+The client exhales sharply, their gaze dropping to the floor.
+Client: “It’s like… they had this image of who I was supposed to be, and when I didn’t fit, they just… stopped trying. But I always felt like I had to keep proving myself, you know? Like if I didn’t, I’d disappear.”
+You let the silence settle briefly, allowing the weight of their words to linger.
+You: “That sounds like a lot to carry, especially as a child. Feeling unseen or like you have to prove yourself can leave deep marks. If you’re ready, we can explore how those feelings might still be shaping your life today.”
+The client hesitates, their expression softening as they meet your gaze. Their voice is quieter now.
+Client: “I guess… maybe. I don’t know where to start, though.”
+You: “That’s okay. We can take it one step at a time, focusing on what feels manageable. Sometimes, starting small can lead us to the bigger picture.”
+The air between you feels a little less tense as the client nods slowly, their posture easing ever so slightly.
+<<jump FamilyIntervention>>
+===
+
+title: FamilyIntervention
+---
+->Ask the Client further questions.
+	<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+->Repeat Memory Space "Family Intervention".
+	<i>This is a repetition of the memory space "Childhood Trauma", what it is and what the client experienced. Do you wish to continue nontheless?</i>
+	->Continue.
+		<<jump ContentFamilyIntervention>>
+	->Go back.
+		<<jump FamilyIntervention>>
+->Go to the Memory Fragments.<<if $MemoryFragmentsFamilyInterventionUnlocked is true>>
+	<<jump MemoryFragmentsFamilyIntervention>>
+->Go to the Mindscape.
+	<<jump TheMindscape>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+===
+
+title: UnlockingMemoryFragmentsFamilyIntervention
+---
+<<if $AmountTrysUnlockMemoryFragmentsFamilyIntervention >=36>>
+	<<jump FailUnlockMemoryFragmentsFamilyIntervention>>
+<<endif>>
+->Assesing the Family Tree.
+	<<set $BaseSuccessRate = 60>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillEmpathy >=2>>
+		<<set $randomValue = $randomValue +20>>
+	<<elseif $SkillObservation >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillReflectiveListening >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: “Can you describe the roles and relationships within your family? How do you think these dynamics influence how each member interacts with one another?”
+		The client shifts in their seat, looking thoughtful but a little tense.
+		Client: "Well, my mom… she was always the one keeping things together. Or at least trying to. My dad, though… he was just distant, like he wasn’t really there, even when he was sitting right in front of us. And my siblings… it felt like they were always competing for attention, like it was some kind of game we didn’t agree to play."
+		You nod, leaning in slightly.
+		You: "That sounds like a complicated mix of roles. How did you see yourself fitting into all of that? Did you feel like you had a specific role within the family?"
+		The client’s expression shifts, a flicker of realization crossing their face.
+		Client: "I guess… I was the one who kept quiet. Tried not to make waves. It felt like the safest thing to do."
+		You: "Keeping quiet can be a way of protecting yourself in a chaotic environment. But it can also leave certain feelings unaddressed. Let’s think about how those roles shaped how you see yourself today."
+		The client nods slowly, their gaze lowering as they reflect further.
+		<b>Empathy Skill +0.5!</b>
+		<<set $SkillObservation = $SkillObservation +0.2>>
+		<b>Observation Skill +0.2!</b>
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.1>>
+		<b>Reflective Listening Skill +0.1!</b>
+		<<set $BaseSuccessRate = 75>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedRootsOfConnection = true>>
+			<b>Memory fragment: "Roots of Connection" unlocked!</b>
+			<<set $MemoryFragmentsFamilyIntervention = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Roots of Connection"</b>
+		<<endif>>
+		<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+	<<else>>
+		<<jump FailedAttempt_27>>
+	<<endif>>		
+->Messages to Convey.
+	<<set $BaseSuccessRate = 30>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillPrecisionQuestioning >=2>>
+		<<set $randomValue = $randomValue +20>>
+	<<elseif $SkillAnalyticalInsight >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillGroundingTechniques >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		 You: “What important thoughts or feelings do you feel you haven’t expressed to your family, and what challenges do you anticipate in conveying those messages?”
+		The client takes a deep breath, their fingers fidgeting with a loose thread on their sleeve.
+		Client: "I’ve never told them how much their expectations weighed on me. It’s like… no matter what I did, it was never enough. I wanted to say something so many times, but I didn’t know how without making things worse."
+		You lean forward slightly, your voice steady and supportive.
+		You: "It’s understandable to feel caught between wanting to be heard and fearing the consequences of speaking up. If you could imagine having that conversation, what would you want them to know about how their actions have impacted you?"
+		The client looks down for a moment, their voice quieter.
+		Client: "I’d want them to know that I wasn’t trying to disappoint them. That I just wanted to feel… seen. Like I mattered, even if I didn’t fit into their plans."
+		You: "That’s a powerful message. It’s not easy to communicate those feelings, but recognizing what you want to say is an important step. Let’s think about ways to approach this in a way that feels manageable for you."
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.5>>
+		<b>Precision Questioning Skill +0.5!</b>
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+		<b>Analytical Insight Skill +0.2!</b>
+		<<set $SkillGroundingTechniques = $SkillGroundingTechniques +0.1>>
+		<b>Grounding Techniques Skill +0.1!</b>
+		<<set $BaseSuccessRate = 50>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedHeartfeltMessages = true>>
+			<b>Memory fragment: "Heartfelt Messages" unlocked!</b>
+			<<set $MemoryFragmentsFamilyIntervention = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Heartfelt Messages"</b>
+		<<endif>>
+		<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+	<<else>>
+		<<jump FailedAttempt_28>>
+	<<endif>>	
+->Emotional Landscape.
+	<<set $BaseSuccessRate = 45>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillEmpathy >=2>>
+		<<set $randomValue = $randomValue +20>>
+	<<elseif $SkillReflectiveListening >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillObservation >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: “How would you describe the range of emotions that linger within your family interactions? Are there particular emotions that seem to dominate or go unacknowledged?”
+		The client tilts their head slightly, a mix of hesitation and thoughtfulness on their face.
+		Client: "It’s… complicated. There’s always this undercurrent of tension, like everyone’s walking on eggshells. Anger is the loudest, but no one ever talks about it openly. And underneath that… I think there’s a lot of sadness. But it’s like we’re all too afraid to admit it."
+		You nod empathetically, your tone gentle but probing.
+		You: "That sounds like a heavy atmosphere to navigate. Anger and sadness can often mask deeper feelings. Do you think there’s any space within those interactions for something like understanding or connection, even if it feels distant right now?"
+		The client looks down, their voice softening.
+		Client: "Maybe. I think… sometimes, I catch glimpses of it. Like when my mom used to hum while cooking, or when my dad smiled at something I said. But those moments feel like they’re buried under everything else."
+		You: "It’s valuable to hold onto those glimpses. They can help guide us as we explore these emotions further. Recognizing the full spectrum of feelings within your family is an important step toward understanding your own role in those dynamics."
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Empathy Skill +0.5!</b>
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+		<b>Reflective Listening Skill +0.2!</b>
+		<<set $SkillObservation = $SkillObservation +0.1>>
+		<b>Observation Skill +0.1!</b>
+		<<set $BaseSuccessRate = 65>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedEmotionalCurrents = true>>
+			<b>Memory fragment: "Emotional Currents" unlocked!</b>
+			<<set $MemoryFragmentsFamilyIntervention = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Emotional Currents"</b>
+		<<endif>>
+		<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+	<<else>>
+		<<jump FailedAttempt_29>>
+	<<endif>>
+->Go back to the Memory Space.
+	<<jump FamilyIntervention>>	
+===
+
+title: FailedAttempt_27
+---
+You: "Can you describe the roles and relationships within your family? How do you think these dynamics influence how each member interacts with one another?"
+The client crosses their arms, a hint of defensiveness in their tone.
+Client: "I don’t know. It’s all just a mess. What’s the point of even talking about it?"
+You keep your tone calm and steady.
+You: "I understand it’s difficult to unpack all of this. It might feel overwhelming or even pointless right now, but understanding these dynamics can give us clues about patterns that might still affect you today."
+The client exhales sharply, shaking their head.
+Client: "I just… don’t see how this helps. It’s in the past, you know?"
+You: "That’s a valid feeling. Sometimes the past feels like it’s better left alone. But even when it’s behind us, it can leave an imprint that shows up in the present. We can pause here if you need, or we can explore it bit by bit."
+The client hesitates, the defensiveness softening slightly, though they remain guarded.
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = $AmountTrysUnlockMemoryFragmentsFamilyIntervention +1>>
+<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+===
+
+title: FailedAttempt_28
+---
+You: "What important thoughts or feelings do you feel you haven’t expressed to your family, and what challenges do you anticipate in conveying those messages?"
+The client stiffens, a shadow of frustration crossing their face.
+Client: "I don’t know. Even if I tried, they wouldn’t listen. They’ve never really cared about what I had to say."
+You keep your tone calm and reassuring.
+You: "That sounds like a painful experience, feeling unheard. Sometimes, it helps to start by identifying what’s most important for you to express, even if the opportunity to share it hasn’t come yet."
+The client shakes their head, the frustration giving way to resignation.
+Client: "It’s pointless. They’re not going to change, so what’s the use?"
+You: "I hear you. It’s hard to believe things can be different when past attempts have felt futile. But sometimes, focusing on how sharing your feelings can help you is just as important as how they respond. We can revisit this when you’re ready."
+The client offers a small nod, but their body language remains guarded.
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = $AmountTrysUnlockMemoryFragmentsFamilyIntervention +1>>
+<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+===
+
+title: FailedAttempt_29
+---
+You: "How would you describe the range of emotions that linger within your family interactions? Are there particular emotions that seem to dominate or go unacknowledged?"
+The client exhales sharply, crossing their arms.
+Client: "I don’t know. It’s just… a mess. There’s no point in trying to figure it out when it’s always been this way."
+You maintain a calm, supportive demeanor.
+You: "It sounds like trying to untangle those emotions feels overwhelming. Sometimes, even recognizing what feels messy is a step toward clarity. What’s the first emotion that comes to mind when you think about your family interactions?"
+The client shrugs, their voice flat.
+Client: "Frustration. Maybe anger. But that’s all there is to it."
+You: "That’s a start. Exploring those feelings further might help uncover what lies beneath them, but we can take it one step at a time."
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = $AmountTrysUnlockMemoryFragmentsFamilyIntervention +1>>
+<<jump UnlockingMemoryFragmentsFamilyIntervention>>
+===
+
+title: MemoryFragmentsFamilyIntervention
+---
+<<if $TOT1 is true and $TOT2 is true and $TOT3 is true>>
+	<<set $UnlockedTapestryOfTruth = true>>
+	<b>Unlocked Memory Fragment "Tapestry of truth"!</b>
+<<endif>>
+->Roots of Connection.<<if $UnlockedRootsOfConnection is true>>
+	<<jump RootsOfConnection>>
+->Heartfelt Messages.<<if $UnlockedHeartfeltMessages is true>>
+	<<jump HeartfeltMessages>>
+->Emotional Currents.<<if $UnlockedEmotionalCurrents is true>>
+	<<jump EmotionalCurrents>>
+->The Tapestry of Truth.<<if $UnlockedTapestryOfTruth is true>>
+	<<jump TheTapestryOfTruth>>
+->Pry further.<<if $PryFurtherFamilyIntervention is true>>
+	<<jump PryFurtherFamilyIntervention >>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+->Go back to the Memory Space.
+	<<jump FamilyIntervention>>
+===
+
+title: PryFurtherFamilyIntervention
+---
+->Shared Ambitions.<<if $UnlockedSharedAmbitions is true>>
+	You: “What common goals or dreams do you believe your family members share, and how do you see these ambitions shaping your family dynamics?”
+	The client pauses, their eyes narrowing as they contemplate the question. There’s a hint of curiosity in their expression, as if the idea has never been fully explored before.
+	Client: "I think… in some ways, we all want the same thing. We all want to be seen, you know? Underneath all the tension and everything, we want to be understood, to feel like we belong in each other’s lives. Maybe that’s the common thread."
+	You nod thoughtfully, allowing space for the client to continue.
+	You: "It sounds like there’s a shared desire for connection, even if it’s not always expressed in the most direct way. How do you think these unspoken goals affect the way your family interacts?"
+	Client: "It’s strange. There’s this push and pull, like we’re all trying to reach the same place but none of us really know how to get there. We get frustrated, but I think it’s because we’re all looking for the same thing – just… we don’t know how to get it together."
+	You: "It’s common for families to have overlapping desires, but without clear communication, those desires can sometimes lead to misunderstanding and tension. What do you think might help in getting everyone on the same page?"
+	Client: "I guess it would help if we could talk more openly. Maybe just start by admitting that we all want the same thing, even if we’re not sure how to go about it."
+	You: "Opening up those conversations could be a powerful first step. Sometimes the hardest part is just acknowledging that shared goal, even if we don’t know exactly how to reach it."
+	The client nods slowly, processing the conversation and dazing off. You give them a moment befoer continuing.
+	<<set $TOT1 = true>>
+	<<jump PryFurtherFamilyIntervention>>
+->Facing Fears.<<if $UnlockedFacingFears is true>>
+	You: “What fears or anxieties exist within your family that may prevent open communication, and how do these fears manifest in your relationships?”
+	The client shifts uncomfortably, their body language tense as they take a slow breath. Their gaze drops, and for a moment, they seem to retreat into themselves.
+	Client: "I think... a lot of it has to do with not wanting to disappoint each other. There's this fear of letting down the family, and it keeps everyone from saying what they really feel. If someone speaks up, it feels like it might unravel everything, like all the good things would fall apart."
+	You listen carefully, your tone gentle.
+	You: "It sounds like there’s a lot of pressure to keep up appearances, to maintain harmony even if that means avoiding difficult conversations. How do you think this fear has affected your ability to communicate openly?"
+	Client: "We don’t really talk about anything that matters, not for real. It’s easier to pretend everything’s fine than face the truth, because what if it breaks everything? What if it can’t be fixed?"
+	You nod, understanding the weight of what they’re saying.
+	You: "It’s understandable that those fears would hold you back. When we’re afraid of hurting someone, we sometimes avoid the very thing that could lead to healing. What do you think would help in moving past those fears?"
+	Client: "Maybe just... trusting more. Trusting that speaking the truth won’t make everything fall apart. But it’s hard."
+	You: "Trust is essential in any relationship, and it can take time to rebuild. But acknowledging the fear is the first step towards moving past it. If you feel ready, we can start to explore what those fears look like, and how they show up in your family’s dynamics."
+	Inner Thoughts: I think now they are ready to delve deeper into the underlying anxieties that shape their family’s communication patterns.
+	<<set $TOT2 = true>>
+	<<jump PryFurtherFamilyIntervention>>
+->Perceptions Unveiled.<<if $UnlockedPerceptionsUnveiled is true>>
+	You: “How do you think your family views one another, and what assumptions might be influencing your collective perceptions and interactions?”
+	The client’s eyes narrow slightly, deep in thought. They shift in their seat, as if wrestling with an idea they've never fully expressed before.
+	Client: "I think… there’s a lot of judgment. We all have these ideas about each other, like the roles we’ve been assigned. My sister’s the perfect one, always doing everything right. My brother’s the screw-up. And me? I’m the one who keeps everything together. But none of us are really like that. We just pretend because it's easier than dealing with the truth."	You notice the bitterness in their voice, mixed with a sense of resignation.
+	You: "It sounds like each of you has been put into a role that’s hard to break out of. How do you think these perceptions affect how you interact with one another?"
+	Client: "It’s like we’re all stuck in these boxes. We can’t be who we really are because if we step outside those roles, it messes up the whole dynamic. It’s like we’re playing parts in a play we didn’t audition for."
+	You take a moment to reflect on their words.
+	You: "That must be exhausting, constantly trying to live up to expectations that don’t reflect who you really are. Do you think these assumptions are part of why things feel so distant, even within the family?"
+	Client: "Yeah. We don’t really see each other anymore. We just see these versions of ourselves we’ve created. And I think we’re all afraid to change. If we start seeing each other differently, everything else might have to change too, and that’s scary."
+	You nod, acknowledging the depth of the situation.
+	You: "I can understand how those roles would feel limiting. But recognizing how those perceptions shape your relationships is the first step in breaking free from them. Are you willing to explore what might happen if you start seeing each other differently?"
+	Client: "I think I am, I want to atleast."
+	The client fidgets with their hands in their lap, but seems not uncomfortable or stressed. You take quick note of this progress before continuing.
+	<<set $TOT3 = true>>
+	<<jump PryFurtherFamilyIntervention>>
+->Go back to the Memory Fragments.
+	<<jump MemoryFragmentsFamilyIntervention>>
+===
+
+title:RootsOfConnection
+---
+<<set $BaseSuccessRate = 60>>
+<<set $randomValue = random()*100>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: "When you think about your family, are there shared ambitions or values that have tied you together, even through difficult times? What do you think those connections mean to each of you?"
+	The client pauses, their expression softening as they reflect.
+	Client: "I suppose… there was always this sense of needing to work hard, to achieve something better. My parents were always pushing me, sometimes too much, but… I think they really believed it was for my future."
+	You nod, offering a gentle smile.
+	You: "It sounds like their drive was both a source of connection and strain. Do you feel like their ambitions ever aligned with your own, or did they seem more like expectations placed upon you?"
+	Client: "A little of both, maybe. When I succeeded at something, there was this rare moment of pride in their eyes. It felt… good, even if I didn’t always agree with their way of showing it."
+	You: "Acknowledging both the support and the tension in those moments is important. Those shared values may hold insights into the ways your family connects, even if those connections feel distant at times."
+	<<set $UnlockedSharedAmbitions = true>>
+	<b>New Choice unlocked: "Shared Ambitions" to pry further into the Memory Fragments!</b>
+	<<set $PryFurtherFamilyIntervention = true>>
+	<<jump MemoryFragmentsFamilyIntervention>>
+<<else>>
+	<<jump FailedAttempt_30>>
+<<endif>>
+===
+
+title: HeartfeltMessages
+---
+<<set $BaseSuccessRate = 45>>
+<<set $randomValue = random()*100>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: "What feelings or thoughts have you wanted to share with your family but never could? What holds you back from expressing those emotions openly?"
+	The client hesitates, their gaze dropping to their hands.
+	Client: "I’ve thought about it so many times… telling them how much their silence hurt me, how alone I felt even when they were right there. But every time I try, it feels like I’m choking on the words."
+	You lean forward slightly, your tone encouraging.
+	You: "It’s not easy to confront those emotions, especially when you’re unsure of the response. But acknowledging those feelings is the first step toward release. What would you want them to know most of all?"
+	Client: "That… I just needed to know they cared, that they were proud of me. I’ve always wondered if they even saw me for who I really was."
+	You: "That’s a powerful message, one that deserves to be heard. What if we worked together on finding a way to convey those thoughts? Even the smallest step can bring clarity and peace."
+	<<set $UnlockedFacingFears = true>>
+	<b>New Choice unlocked: "Facing Fears" to pry further into the Memory Fragments!</b>
+	<<set $PryFurtherFamilyIntervention = true>>
+	<<jump MemoryFragmentsFamilyIntervention>>
+<<else>>
+	<<jump FailedAttempt_31>>
+<<endif>>
+===
+
+title: EmotionalCurrents
+---
+<<set $BaseSuccessRate = 55>>
+<<set $randomValue = random()*100>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: "How would you describe the range of emotions that linger within your family interactions? Are there particular emotions that seem to dominate or go unacknowledged?"
+	The client takes a deep breath, their eyes flickering with a mixture of discomfort and reflection.
+	Client: "There’s always this undercurrent of tension. It’s like… no one really talks about it, but it’s there. I can feel it in the way they look at me, the way we all just... exist around each other. No one says anything, but you can feel the weight of everything unsaid."
+	You nod, offering a soft, affirming smile.
+	You: "That silent tension can be suffocating. It’s as if emotions are held under the surface, never given a chance to be addressed. What do you think those emotions are trying to tell you?"
+	Client: "I don’t know. Maybe that they’re scared of what’s really going on. Or maybe they’re just too hurt to talk about it. I’m not sure."
+	You: "It’s difficult when emotions are kept hidden, especially when they’re shared by so many. Sometimes, giving those emotions a voice is the only way to truly begin healing."
+	Client: "I guess… it’s just so hard to even know where to start."
+	You: "That’s why we’re here. Every step, no matter how small, helps unravel those layers."	
+	<<set $UnlockedEmotionalCurrents = true>>
+	<b>New Choice unlocked: "Emotional Currents" to pry further into the Memory Fragments!</b>
+	<<set $PryFurtherFamilyIntervention = true>>
+	<<jump MemoryFragmentsFamilyIntervention>>
+<<else>>
+	<<jump FailedAttempt_32>>
+<<endif>>
+===
+
+title: TheTapestryOfTruth
+---
+You: "As we dive deeper into your family’s story, I want you to think about the threads that make up the bigger picture. What truths about your family have been hidden or left unsaid for a long time? And how do you think uncovering those truths might change how you see your family and yourself?"
+The client takes a deep breath, their hands fidgeting slightly with a pen. There's a mix of hesitation and curiosity in their eyes.
+Client: "I’ve always known there’s something beneath the surface. We all have our secrets, things we just... don't talk about. My dad’s always been so focused on appearing perfect, like everything is fine. But I remember when I was younger, I would see him looking at old pictures of my mom, like he was holding onto something—something painful."
+You lean in slightly, sensing the weight of the unspoken truth.
+You: "It sounds like there’s something unresolved there. What do you think your father’s hidden pain has to do with how the family functions?"
+Client: "I don’t know. But it’s like we’ve all been living in his shadow, pretending everything’s fine because that’s how he wants it. My mom never talked about it either. She just kept things running, like that’s all she could do. But I’ve always felt like there was something more. Something that we were all avoiding."
+There’s a pause as the client reflects, their gaze distant.
+You: "It seems like your family has been carrying these hidden truths, each person holding their own pieces of the puzzle. Do you think uncovering those truths could change how you relate to each other?"
+Client: "Maybe. But what if it’s worse than we think? What if the truth changes everything?"
+You nod, acknowledging the fear in their voice.
+You: "I understand the fear of facing something that could shake everything you know. But sometimes, acknowledging these truths is the only way to begin healing and moving forward. What do you think it would take for your family to confront these hidden pieces?"
+Client: "I don’t know. Maybe... honesty. Maybe we all need to admit that we’ve been lying to each other and to ourselves. If we can’t face the truth, we’ll just keep repeating the same mistakes."
+You: "Facing the truth can be painful, but it’s also empowering. Do you think you’re ready to start unraveling this tapestry and see what’s been hidden there all along?"
+The client nods, their expression one of quiet determination.
+<<jump MemoryFragmentsFamilyIntervention>>
+===
+
+title: FailedAttempt_30
+---
+You: "When you think about your family, are there shared ambitions or values that have tied you together, even through difficult times? What do you think those connections mean to each of you?"
+The client frowns, their body language closing off.
+Client: "I don’t know. We didn’t really talk about things like that. It’s not like we ever worked as a team or anything. It always felt like we were just… surviving."
+You keep your tone steady and empathetic.
+You: "Survival itself can sometimes be a form of connection, even if it doesn’t feel supportive. Have you ever seen moments, even small ones, where your family seemed united by a common goal or understanding?"
+The client shakes their head, their voice edged with frustration.
+Client: "Not really. It always felt like everyone was in their own world."
+You: "That disconnection must have been hard to navigate. Even if those shared moments feel absent now, exploring these dynamics further might help us uncover deeper insights."
+<i>The session doesn’t yield deeper insights this time. The topic remains sensitive, and further exploration will be needed in the future.</i>
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = $AmountTrysUnlockMemoryFragmentsFamilyIntervention +1>>
+<<jump MemoryFragmentsFamilyIntervention>>
+===
+
+title: FailedAttempt_31
+---
+You: "What feelings or thoughts have you wanted to share with your family but never could? What holds you back from expressing those emotions openly?"
+The client fidgets, their jaw tightening as they avert their gaze.
+Client: "I… I don’t know. It just feels like no matter what I say, it wouldn’t make a difference. They don’t listen. They never have."
+You keep your tone gentle, acknowledging their hesitation.
+You: "That fear of being unheard is valid. It’s painful to feel like your voice doesn’t matter. But what if expressing those emotions isn’t just for them—it’s also for you, to unburden yourself from carrying it all alone?"
+The client shakes their head, their voice barely above a whisper.
+Client: "I don’t think I’m ready for that yet. Maybe… maybe someday."
+You: "That’s okay. Readiness takes time. When you feel ready to take that step, those words will be waiting, and we’ll find the right way to say them."
+<i>The conversation reveals hesitation and fear. The client needs more time to feel secure in addressing these difficult emotions.</i>
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = $AmountTrysUnlockMemoryFragmentsFamilyIntervention +1>>
+<<jump MemoryFragmentsFamilyIntervention>>
+===
+
+title: FailedAttempt_32
+---
+You: "How would you describe the range of emotions that linger within your family interactions? Are there particular emotions that seem to dominate or go unacknowledged?"
+The client looks down, shifting uncomfortably in their seat.
+Client: "I don’t know if I can put it into words. It’s not something we really talk about. There’s just... a lot of stuff that’s been left unspoken for so long."
+You lean in slightly, your voice encouraging yet gentle.
+You: "It’s okay if it’s hard to find the words right now. Sometimes, it takes time to bring those feelings to the surface. But even acknowledging them can be the first step toward understanding."
+The client fidgets with their sleeve, still avoiding eye contact.
+Client: "I guess I just don’t want to stir things up. It’s easier to ignore it."
+You: "Avoiding those emotions might feel safer in the moment, but they don’t go away. They linger, quietly shaping everything. We don’t have to confront everything all at once, but each step toward recognizing those emotions is a step toward freedom from them."
+<i>The client remains guarded, unable or unwilling to access the depth of the emotions at play. More time and safety are needed before they can confront these underlying currents.</i>
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = $AmountTrysUnlockMemoryFragmentsFamilyIntervention +1>>
+<<jump MemoryFragmentsFamilyIntervention>>
+===

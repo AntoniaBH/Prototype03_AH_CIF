@@ -1,0 +1,166 @@
+﻿title: UnlockedResistance
+---
+<<declare $AmountTrysUnlockMemoryFragmentTheResistance = 0>>
+<<declare $UnlockedTheBuriedTruth = false>>
+<<declare $QuestionTheDoubts = false>>
+<<declare $FaceTheShadows = false>>
+<<jump ContentTheResistance>>
+===
+
+title: TheResistance
+---
+->Ask the Cient more questions.
+	Inner Thoughts: I should be mindful of what approach I decide to take this is a sensitive topic one wrong step might not be visible in the beginning but when it comes to the end it might backfire.
+	<<jump UnlockingMemoryFragmentTheResistance>>
+->Repeat the Memory Space "The Resistance".
+	<i>This is a repetition of the memory space "The Resistance", what it is and what the client experienced. Do you wish to continue nontheless?</i>
+	->Continue.
+		<<jump ContentTheResistance>>
+	->Cancel.
+		<<jump TheResistance>>
+->Go to the Memory Fragment "The Buried Truth".<<if $UnlockedTheBuriedTruth is true>>
+	<<jump TheBuriedTruth>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+->Go back to the Mind Scape.
+	<<jump TheMindScape>>
+===
+
+title: ContentTheResistance
+---
+The client crosses their arms and looks away, their tone sharper than before.
+Client: “Why do we have to keep digging into this? It’s not like talking about it will change anything. I’ve already tried to move on.”
+You remain calm, noting the shift in their body language and voice.
+You: “It’s okay to feel resistant. Facing these memories is hard, and it can feel overwhelming. But sometimes, the things we avoid hold the key to understanding and healing. Let’s take this at your pace. What feels most difficult about continuing right now?”
+The room feels heavier as silence fills the space. The client eventually glances at you, their expression uncertain, as if weighing whether to say more.
+<<jump TheResistance>>
+===
+
+title: UnlockingMemoryFragmentTheResistance
+---
+<<if $AmountTrysUnlockMemoryFragmentTheResistance >= 36>>
+	<<jump FailUnlockMemoryFragmentTheResistance>>
+<<endif>>
+->Face the Shadows.
+	You: “What feelings or thoughts have you been holding back recently? Can you identify any fears that come to mind, and what would it mean for you to acknowledge them?”
+	Client: “I don’t know... I guess I’ve been feeling really anxious about my job. It feels like everything is piling up, and I’m just... avoiding it.”
+	You: “It’s okay to feel that way. Acknowledging those fears is the first step. What do you think is holding you back from confronting this anxiety?”
+	Client: “Honestly? I fear I’ll fail or that I’m just not cut out for it. Maybe that everyone will see I’m not as competent as they think I am.”
+	You: “That’s a significant fear. What would acknowledging that fear mean for you?”
+	They take a deep breath befoer answering, seemingly gathering their thoughts.
+	Client: “It would mean admitting that I’m struggling, which feels like a weakness. I’m not sure I’m ready to do that.”
+	You: “It’s completely understandable to feel that way. But remember, acknowledging these feelings doesn't diminish your strength; it’s a part of being human. Together, we can explore these thoughts and find ways to work through them.”
+	Client: “Yeah, I guess you're right. Maybe I do need to face it instead of hiding.”
+	<<set $FaceTheShadows = true>>
+	<<jump UnlockingMemoryFragmentTheResistance2>>
+->Pause for Reflection.
+	You: “Let’s take a moment to slow down. What have you noticed about your recent behaviors or feelings? How might you interpret these patterns, and what do they reveal about your current state?”
+	Client: “I’ve been feeling really overwhelmed lately. I keep finding myself avoiding social situations and just want to stay home.”
+	You: “That’s an important observation. What do you think is driving that avoidance?”
+	Client: “I think I’m just tired of putting on a facade... like I’m pretending everything is okay when it really isn’t.”
+	You: “That sounds exhausting. How do you interpret this pattern of behavior? What might it reveal about how you’re feeling internally?”
+	Client: “It probably shows that I’m not coping well. I’m scared of opening up to others because I don’t want to burden them with my struggles. It feels easier to withdraw.”
+	You: “That’s a significant insight. By recognizing this pattern, you’re taking a step toward understanding yourself better. What do you think you might gain from exploring these feelings further?”
+	Client: “I suppose if I faced it, I could find a way to talk about it. Maybe it would help to stop feeling so isolated.”
+	<<jump UnlockingMemoryFragmentTheResistance2>>
+===
+
+title: UnlockingMemoryFragmentTheResistance2
+---
+->Protecting Current Progress.
+	You: “As you think about the progress you’ve made, what aspects feel most at risk? What steps can you take to safeguard those positive changes in your life?”
+	Client: “I’ve started to feel more confident in my decisions and even opened up to a few friends about what I’m going through. But I worry that if I face stress again, I’ll just revert back to isolating myself.”
+	You: “That’s a valid worry. It’s common to fear losing the progress we’ve fought hard to achieve. Which specific changes do you feel are most at risk in this situation?”
+	Client: “I think my ability to be open and communicate—if I get overwhelmed again, I might just shut down like I used to.”
+	You: “Understanding that dynamic is crucial. What steps can you take to create a safety net for those changes? How can you remind yourself to lean on those support systems when times get tough?”
+	Client: “Maybe I could make a list of my coping strategies and people I can reach out to? And set a reminder for myself to practice those whenever I start to feel overwhelmed again.”
+	You give the client an aknowledging node and set an encouraging tone before speaking;
+	You: “That’s a great idea! Having a clear action plan can reinforce your progress and help you feel more secure when challenges arise. How do you feel about taking those steps?”
+	Client: “I feel good about it. It’s nice to have a plan in place.”
+	<<jump UnlockingMemoryFragmentTheResistance3>>
+->Question the Doubts.
+	You: “When doubts creep in, what are the specific thoughts that tend to arise? Can you challenge those thoughts by identifying evidence that supports or contradicts them?”
+	Client: “I often think that I’m not good enough or that I’m going to fail, especially when I’m trying something new.”
+	You: “Those can be really heavy thoughts to carry. Can you recall specific instances where you felt that way? What were the exact thoughts that came to mind?”
+	Client: “I remember when I applied for that job I wanted. I kept telling myself I wouldn’t get it because I didn’t have enough experience.”
+	You: “That’s a classic doubt-based thought. Let’s challenge it together. What evidence do you have that contradicts that belief? Have there been moments where you succeeded despite feeling unqualified?”
+	Client: “Well, when I got my last job, I thought I wasn’t going to get it either. I had fewer qualifications than the other candidates, but I still got hired because of my passion and willingness to learn.”
+	You: “Exactly! That’s a powerful example. It shows that your doubts don’t define your abilities. How can you remind yourself in the future of this success when those doubts arise?”
+	Client: “Maybe I can keep a journal where I write down my accomplishments? It would be helpful to look back on those when I’m feeling uncertain.”
+	You: “That’s a fantastic idea! By documenting your achievements, you create tangible evidence to counter your doubts and build your confidence. How do you feel about putting that into practice?”
+	Client: “I feel motivated! It’ll be a good way to keep my mind in check.”
+	<<set $QuestionTheDoubts = true>>
+	<<jump UnlockingMemoryFragmentTheResistance3>>
+===
+
+title: UnlockingMemoryFragmentTheResistance3
+---
+->Embrace Vulnerability.
+	You: “Opening up can be scary. What feelings come up when you think about being vulnerable with others? How could embracing that vulnerability serve you in your journey?”
+	Client: “I feel anxious and exposed when I think about being vulnerable. It’s like I’m afraid of being judged or rejected.”
+	You: “Those feelings are completely understandable. Vulnerability does have its risks. Can you think of situations where being vulnerable led to positive outcomes for you?”
+	Client: “Well, I did open up to a close friend about my struggles last year, and it actually brought us closer together. I felt relieved afterward.”
+	You: “That’s a powerful example. It shows how vulnerability can strengthen relationships. How might embracing that vulnerability help you in your current situation?”
+	Client: “I guess if I opened up more, I could build stronger connections and receive support. That might help me feel less alone.”
+	You: “Absolutely! Embracing vulnerability can lead to deeper relationships and a greater sense of belonging. What might your first step be in practicing vulnerability with someone you trust?”
+	Client: “Maybe I could share some of my current challenges with my friend. I’ve been hesitant, but I think it could be good.”
+	You: “That sounds like an excellent plan. Taking that step can be empowering. How do you feel about opening up to your friend?”
+	Client: “I feel a little scared, but also excited. It’s nice to think that I might feel supported.”
+	<<if $FaceTheShadows is true and $QuestionTheDoubts is true>>
+		<<set $UnlockedTheBuriedTruth = true>>
+		<b>Unlocked the Memory Fragment "The Buried Truth"!</b>
+		<<jump TheResistance>>
+	<<else>>
+		...
+		<b>Failed to Unlock the Memory Fragment "The Buried Truth".</b>
+		<<jump FailedAttempt_21>>
+	<<endif>>
+->Creating Safe Boundaries.
+	You: “Boundaries are essential for well-being. What situations or relationships have you felt uncomfortable in recently? How might setting boundaries help you maintain your emotional health?”
+	Client: “I’ve been feeling really drained after spending time with a family member. They tend to dominate conversations and often bring up negative topics.”
+	You: “That sounds challenging. Can you recall specific instances where you felt uncomfortable during those interactions?”
+	Client: “Yes, during our last visit, I felt overwhelmed while they kept criticizing my choices. I wanted to speak up, but I held back.”
+	You: “It’s understandable to feel that way, especially in family dynamics. How might setting a boundary in that situation have changed your experience?”
+	Client: “I suppose if I had told them I wanted to steer the conversation in a different direction or that I needed a break, I might have felt more in control.”
+	You: “Exactly, setting that boundary could create space for you to feel heard and respected. What do you think might be a good approach for communicating that boundary in future interactions?”
+	Client: “Maybe I could say something like, ‘I appreciate your concern, but I’d prefer if we talked about something more positive.’”
+	You: “That sounds like a thoughtful and clear way to set a boundary. How do you feel about practicing that in your next conversation with them?”
+	Client: “I feel a bit nervous, but also determined. It’s about time I took care of my emotional health.”
+	<b>Failed to Unlock the Memory Fragment "The Buried Truth".</b>
+	<<jump FailedAttempt_21>>
+===
+
+title: FailedAttempt_21
+---
+Despite the progress made in discussing boundaries and emotional well-being, the core memories associated with this fragment remained elusive.
+You took a deep breath, reflecting on the insights gained from your recent discussions. While it felt like you were edging closer to understanding your emotions and experiences, the deeper truths still felt out of reach, shrouded in a veil of uncertainty.
+The weight of unaddressed feelings hung in the air, hinting at the importance of what lies beneath. 
+With renewed determination, you embraced the idea that patience is integral to healing. Today’s setback was not a failure but rather a reminder that uncovering the past takes time and care. As you moved forward, you resolved to remain open to whatever unraveling lay ahead, knowing that every step contributes to your ongoing growth.
+<<set $AmountTrysUnlockMemoryFragmentTheResistance = $AmountTrysUnlockMemoryFragmentTheResistance +1>>
+<<jump TheResistance>>
+===
+
+title: TheBuriedTruth
+---
+You: "I just wanted to let you know I’m glad we’re here today. How are you feeling about our sessions so far? Anything you'd like to share?"
+Client: "Honestly? I feel kind of lost. I want to open up, but every time I start to, something stops me. It’s like I hit a wall."
+You notice the tension in the client's shoulders as they speak, their hands fidgeting with the edge of their shirt. It’s a familiar struggle, one you’ve seen before.
+You: "That sounds frustrating, especially after all the effort you’ve put in. What do you think that wall represents for you?"
+Client: "I think it’s fear. I’ve built these walls to protect myself for so long. Letting anyone in feels like a huge risk."
+You lean in slightly, maintaining eye contact to convey understanding. Their fear resonates with you—it’s something that many people grapple with, and it’s crucial to honor that feeling.
+You: "It’s completely understandable. Those walls have served a purpose. What do you think would happen if you allowed a crack in that wall?"
+Client: "I guess I’m terrified of what lies behind it. I fear that if I let go of those defenses, I’ll be overwhelmed by everything I’ve tried to bury.
+As they speak, you feel a lump in your throat—this is a heavy realization. You remember similar moments in your own journey, instances where vulnerability felt like standing on the edge of a cliff."
+You: "That fear of being overwhelmed makes sense, especially knowing how much you’ve carried with you. But facing those buried feelings doesn’t mean you have to confront everything all at once. It’s okay to take small steps."
+You watch as the client’s gaze drifts downward, a sign of uncertainty. You want to create a sense of safety, to help them find a way through their fear.
+Client: "But what if those small steps lead to a flood of emotions I can’t control? I’ve kept everything tucked away for so long."
+You: "It’s a valid concern. Just know that you’re not alone in this. We can navigate those emotions together, making sure you feel safe every step of the way. How about we explore those layers gradually—maybe through journaling? That way, you can open that door without fully stepping in just yet?"
+A deep breath escapes you, a reminder to maintain your calm.
+Client: "Writing feels less scary than talking about it. But still, there’s part of me that fears I won’t be able to handle what I uncover."
+You: "That fear you’re feeling is a reflection of your resilience. You’ve worked hard to keep those feelings at bay, and now you’re considering a new approach. It’s powerful to recognize that you want to try. Remember, it’s okay to feel resistance; it’s part of this journey."
+Client: "I just don’t want to disappoint you or myself by not progressing fast enough."
+You sit back slightly, feeling the weight of their words. It’s crucial to convey that progress isn’t linear; it’s individual.
+You: "There’s no right pace for this process. Every small step you take is progress in its own way. Your willingness to even consider these changes indicates that you’re moving forward, even when it feels slow. We’re in this together."
+As you offer your words of support, you feel a weight lifting slightly. You can see the flicker of hope in their eyes, and it fuels your commitment to guiding them through their journey.
+<<jump TheResistance>>
+===

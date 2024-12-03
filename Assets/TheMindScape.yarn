@@ -10,13 +10,23 @@
 ->Memory Space "The Supportive Figure".<<if $UnlockedSupportiveFigure is true>>
 ->Memory Space "Family Intervention".<<if $UnlockedFamilyIntervention is true>>
 ->Memory Space "Family Secrets".<<if $UnlockedFamilySecrets is true>>
+->Display current skills.
+	<<load_variables>>
+	Empathy Skill = {$SkillEmpathy}
+	Precision Questioning = {$SkillPrecisionQuestioning}
+	Grounding Technique Skill = {$SkillGroundingTechniques}
+	Observation Skill = {$SkillObservation}
+	Reflective Listening Skill = {$SkillReflectiveListening}
+	Analytical Insight Skill = {$SkillAnalyticalInsight}
+	<<store_variables>>
+	<<jump TheMindScape>>
 ->Go to the Safe Space
 	<<jump TheSafeSpace>>
 ->Explore the Mind Scape.
 	<i>This is a repetition of the Mind Scape, what it is and why it is being used here. Do you wish to continue nontheless?</i>
 	->Continue.
 		<<jump ContentMindScape>>
-	->Go back.
+	->Cancel.
 		<<jump TheMindScape>>
 ->End the Session.
 	<i>Are you sure you want to end the session already?</i>

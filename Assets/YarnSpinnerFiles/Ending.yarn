@@ -1,0 +1,254 @@
+﻿title: Ending
+---
+As you take a quick glance onto the clock on the wall you notice the time.
+You: "It looks like our time for today is coming to an end. I know we've touched on some difficult moments, and I want to acknowledge your willingness to dive into these memories."
+You: "You’ve done a lot of important work today, and while we’re out of time, remember that this is a process. Each step, even the small ones, matters."
+You: "Next time we meet, we can continue exploring these moments, at your pace. If you feel ready, we’ll dive deeper into what you’ve shared today. How are you feeling about where we’ve gone so far?"
+Client: "Honestly, it’s been... a lot to take in. I wasn’t sure how I’d feel coming into today, but now, I feel like I’m starting to understand some things I’ve been avoiding. It’s not easy, but I feel like there’s some weight being lifted, even if just a little."
+Client: "I’m nervous about where we’ll go next, but... I think I’m ready. I just need to think about everything we talked about today."
+You: "Whenever you're ready, we’ll build from here. But for now, I want you to take care of yourself, and remember, it's okay to take a break. We’ll pick up right where we left off next time."
+YOu offer a reassuring smile.
+You: "Take care, and I’ll see you in our next session."
+the client smiles faintly, with a bit of hesitation.
+Client: "Thanks... I’ll see you next time."
+<<if $UnlockedMemorySpaceCycleRelapse is true and $UnlockedMemorySpaceChildhoodTrauma  is true and $UnlockedMemorySpaceSupportiveFigure is true and $UnlockedMemorySpaceFamilyIntervention is true>>
+	<<jump GoodEnding>>
+<<elseif $UnlockedFamilySecrets is true>>
+	<<jump SpecialEnding1>>
+<<elseif $UnlockedTheResistance is true>>
+	<<jump SpecialEnding2>>
+<<endif>>
+<<jump EndSessionMindscape>>
+===
+
+title: GoodEnding
+---
+The room feels different today. The usual tension, the weight of unspoken words, is noticeably lighter. The client sits across from you, posture more relaxed, eyes focused, though a flicker of vulnerability still lingers beneath the surface.
+You: "It feels like we’ve covered a lot of ground together, doesn’t it?"
+The client nods slowly, their expression softening. There’s a subtle shift in their demeanor—a quiet strength that wasn’t there before.
+Client: "Yeah, it’s... been a lot. But I think I’m starting to understand more about myself. The memories, the pain... it’s still there, but it doesn’t feel so overwhelming anymore."
+You take a moment, feeling the weight of their words settle between you. This is the progress you've been working toward—slow, steady, but meaningful.
+You: "You’ve done a lot of work, digging into memories that were painful and finding new ways to view them. It’s not easy, but you’ve taken the first crucial steps towards healing."
+The client’s gaze drops for a moment, but they don’t seem lost in it like before. They’re grounded, aware. They look back at you, meeting your eyes with a small, but genuine, smile.
+Client: "I didn’t think I could face some of those things. The family stuff, the trauma... I didn’t know how to even start. But now, I’m starting to see them as parts of my story, not the whole of who I am."
+Inner Thoughts: There’s a noticeable shift in their tone—an acceptance. It’s not perfect, but it’s real. They’ve begun to separate themselves from their pain, understanding that they’re not defined by it.
+You: "That’s a powerful realization. And it’s only the beginning. There will be moments when those memories resurface, but now you have tools—tools to manage them, to keep moving forward. You’re not alone in this journey."
+The client’s shoulders relax, and for the first time in a while, they seem at peace with themselves. There’s a quiet sense of accomplishment in the air.
+Client: "I think I’m ready for the next step. I know it won’t be perfect, but... I feel like I have the strength to keep going now. Maybe not all at once, but I know I can do this."
+You: "And I’ll be here whenever you need support. This journey isn’t linear, and there will be ups and downs. But you’ve made real progress, and that’s something to be proud of."
+You both fall into a comfortable silence, the kind that signals contentment—no need for words. The work isn’t over, but they’re on a new path, one where the weight of the past doesn’t hold the same power.
+Inner Thoughts: They’ve unlocked pieces of their past, and with each one, they’ve unlocked more of themselves. This journey won’t end with this session, but today feels like a meaningful step.
+<b>The session has ended. Today marks another chapter in their healing journey. With the tools they’ve gained, the client is ready to continue their path toward greater understanding and emotional growth.<b>
+<i>Good Ending</i>
+===
+
+title: SpecialEnding1
+---
+As you sit back and reflect on the journey you and your client have shared, the path of resistance is clear in your mind. Over the past sessions, you've watched as the client slowly but surely began to confront the very thing they feared most—their own resistance to change.
+At first, they came in guarded, unwilling to open up about the deeper struggles that lurked beneath the surface. Each session felt like pulling teeth as they resisted delving into the painful memories and emotions that had been locked away for so long. Every step forward seemed to come with two steps back, and the client would often retreat into familiar defenses: silence, avoidance, and denial.
+But through steady work, gradual breakthroughs started to emerge. With each small victory, the client learned to sit with discomfort instead of running from it. They began to recognize the patterns of avoidance they’d relied on for so long, and with that recognition came the first glimmer of change. There was still hesitation, still moments when the urge to retreat would surface, but there was also an undeniable shift.
+And now, after much effort, here they are—at a crossroads where they’ve confronted the resistance head-on. It’s been a difficult road, but one that has paved the way for transformation.
+You: "You’ve made incredible progress. I know it hasn’t been easy, and we’ve had some tough moments along the way, but you’ve faced the resistance that’s held you back for so long. It’s a huge step forward."
+The client looks at you, their expression a mix of uncertainty and newfound understanding. They’ve been through a lot, and while they still have doubts, there’s a sense of pride in their eyes.
+Client: "It’s still hard to believe that I’ve come this far. I remember how much I resisted at first, and now I can see... I’ve been holding myself back for so long."
+You: "It’s understandable. Resistance is a defense mechanism, a way to protect yourself from pain. But sometimes, that same protection keeps us from growing. What you’ve done, by facing that resistance, is allowed yourself to feel that discomfort—and that’s where change happens."
+The client nods slowly, processing the truth of what you’ve said. There’s a quiet weight in the air, but it’s not heavy with defeat. Instead, it’s filled with the quiet acceptance of a breakthrough.
+Client: "I think I’m starting to get it. I’ve always thought that if I just ignored the pain, it would go away. But now, I see that I can’t run from it forever."
+You: "Exactly. The fear of facing the pain is often worse than the pain itself. And in trying to avoid it, we stay stuck. What you’ve learned—and what you continue to learn—is that it’s okay to feel vulnerable, to ask for help, and to allow yourself to heal at your own pace."
+Inner Thoughts: They’re still navigating their way through it, and there will be moments where they falter, where the resistance rises again. But this time, they know they have the tools to face it. They understand that resistance doesn’t define them, and it doesn’t have to control their path forward.
+The client leans back in their chair, the tension that once gripped them easing as they reflect on their growth.
+Client: "I think I’m finally realizing that I don’t have to do this alone. It’s been hard to let people in, but I’m learning that I can trust others, and I can trust myself to keep moving forward."
+You: "That’s a major realization. You’ve come a long way, not just in facing your resistance, but in learning to embrace the discomfort of growth. It won’t always be easy, but you’re stronger now because of what you’ve learned."
+As the session winds down, you reflect on the progress they’ve made. You can see the shift in them, the quiet strength that comes from allowing themselves to be vulnerable, from understanding that they don’t need to fight every battle alone. There’s still much work to be done, but today marks an important turning point in their journey.
+Inner Thoughts: The resistance hasn’t disappeared, but the way they face it has changed. They’ve learned to sit with it, to understand it, and to move through it—something they never thought possible at the start of this process.
+You: "I’m proud of you for how far you’ve come. The road ahead may still have challenges, but I know you’re ready to face them with the strength you’ve built."
+The client smiles, a small but genuine expression of hope.
+Client: "Thanks. I’m starting to believe I can keep moving forward."
+<b>The session has ended. The client has made significant progress in facing their resistance. They’ve learned to embrace discomfort, seek support, and take the steps necessary for healing. The journey ahead may not be easy, but they are now equipped to navigate the challenges that lie ahead.<b>
+===
+
+title: SpecialEnding2
+---
+As you reflect on the series of sessions that led you and the client to this pivotal point, it becomes clear just how much the exploration of their family dynamics has shaped their journey.
+Throughout the earlier sessions, the client had grappled with the hidden truths that had been swept under the rug for so long. In the beginning, they were hesitant, reluctant to even acknowledge the weight of their family’s influence on their emotional struggles. But with each conversation, the client began to peel back the layers of silence and avoidance that had defined their relationships with their family members.
+There were small, painful realizations along the way—moments where the client began to see the cracks in the perfect family image they had once believed in. They began to understand how certain patterns had been passed down through generations, shaping not just their relationships but their identity as well. And despite the resistance, they slowly started to uncover the truth about their own role in these dynamics.
+But today, everything changed. After months of careful exploration, the truth that had remained hidden for so long finally came to light.
+You: "You’ve made tremendous strides in understanding your family dynamics. I know it hasn’t been easy, and there were many moments where it felt like we were uncovering things you weren’t ready to face."
+The client is quiet for a moment, their eyes focused on the floor as they process what they’ve learned. There’s a heaviness in the air—a mixture of relief and discomfort—as they prepare to speak.
+Client: "I never expected to find this... I thought I knew my family, but I didn’t. There’s so much I didn’t understand. My father... he had a problem. I don’t know why I never saw it before."
+You: "What do you mean?"
+The client lifts their head, their voice barely above a whisper, filled with both anger and sadness.
+Client: "My dad... he had an alcohol problem. He always hid it. It was like this... dark cloud hanging over everything. But he never talked about it, and neither did my grandfather. Turns out, he had the same problem. It was always there, buried deep down, and I never understood why things felt... off. Why things never seemed normal."
+You listen intently, aware that this is a major breakthrough in their understanding of their family’s history.
+You: "So your father’s struggle was something you weren’t aware of?"
+Client: "No. I mean, I had my suspicions, but it was always brushed aside. He made sure we never saw it—just like my grandfather. It was like a family secret that no one talked about. But now, I see the pattern. I’ve been running from the same thing. I’ve been scared that I’d end up like them."
+You: "That’s a powerful realization. It sounds like this legacy of addiction has been passed down through generations. And now, you’re starting to understand how it’s affected you."
+The client’s voice trembles as they continue.
+Client: "It’s terrifying. I didn’t even realize how deep this runs. I’ve always feared being like them, but now I see the whole picture. My father was trying to protect me from it... but in a way, he was passing it on without even knowing."
+You: "It sounds like a lot of weight to carry. But now that you know, you have the power to break that cycle. You don’t have to carry that legacy with you."
+The client’s face softens, and for the first time in a long while, they seem to relax a little. There’s still a sense of confusion, but also the beginning of clarity.
+Client: "I don’t want to end up like them. I don’t want this to be my story. I know it won’t be easy, but I think... I think I can face it now."
+You: "You’ve already made the most important step by confronting it. Acknowledging this truth is the first part of breaking the cycle. It’s not easy, but it’s possible. You don’t have to repeat their mistakes."
+Inner Thoughts: The depth of what they’ve just discovered is staggering. This isn’t just about family secrets—it’s about generational trauma and the way it affects each individual in its path. The client’s fear of becoming their father, their grandfather, is a powerful motivator. But now, with this awareness, they have a chance to rewrite their narrative. It will take time, but they have the strength to make this change.
+Client: "I’ve been so afraid of becoming my father. But now, I’m starting to see that it’s not too late. I can choose a different path."
+You: "Exactly. You’ve already begun that journey by facing these truths. It’s going to be difficult, but you don’t have to carry the burden alone. You have the tools now to start healing and creating a new legacy for yourself."
+The client nods slowly, their eyes reflecting a mix of relief and uncertainty. There’s still fear there, but there’s also hope—a flicker of belief that they can break free from the chains of their family’s past.
+Inner Thoughts: The work is far from over. There will be moments of doubt, moments where the temptation to fall back into old patterns feels overwhelming. But today, the client has uncovered the key to their own healing. The past no longer has to define them.
+You: "This is a major turning point for you. We’ll continue to work through it, but remember—you’re not defined by your family’s past. You have the power to choose your own path moving forward."
+The client stands, a quiet sense of resolve settling over them. They may not have all the answers yet, but they are no longer trapped by the secrets of the past. They have faced them, and now they can begin to heal.
+Client: "Thank you. I think... I think I’m ready to keep going. I’m ready to face whatever comes next."
+<b>The session has ended. The client has uncovered the hidden truths of their family and has begun to break the cycle of addiction. The road ahead will not be easy, but with this newfound awareness, they have the strength to move forward and rewrite their story.<b>
+===
+
+title: EndSessionMindscape
+---
+<b>The session has concluded. While some areas were explored, there may be more to uncover next time. The journey towards understanding and healing is ongoing, and there are always opportunities to revisit and delve deeper when you know where to look.</b>
+<i>Neutral Ending</i>
+===
+
+title: FailedUnlockAccident
+---
+The client stands abruptly, their expression one of frustration and exhaustion.
+Client: “I can’t do this anymore. I thought I was ready, but I’m not. Maybe this was a mistake.”
+They begin to gather their belongings, avoiding eye contact.
+You: “It’s okay to feel this way. Therapy can be challenging, and sometimes we need to step back to move forward. If you decide to try again, I’ll be here.”
+<b>The session has ended. Try again to rebuild trust and progress.<b>
+===
+
+title: FailUnlockMemoryFragmentsAccident
+---
+The client lets out a frustrated sigh, running their hands through their hair.
+	Client: “I don’t think this is working.”
+	You lean slightly forward and speak with a calm tone.
+	You: “I know this feels difficult right now, but progress often takes time. If we stay with it—”
+	Client: “Time? That’s all I’ve been giving it! Time, and effort, and... I don’t even know what I’m doing here anymore.”
+Inner Thoughts: I’ve lost them. The frustration has built too much. I should try to ease their anxiety before it’s too late.
+	You: “It’s okay to feel frustrated. Therapy can be challenging, especially when the emotions are this raw. Maybe we can slow down and focus on what feels manageable?”
+	The client stands up abruptly, grabbing thei coat. Their Movements are sharp and their voice tight.
+	Client: “No, I can’t. This... this just isn’t helping. I thought maybe talking to someone would make it easier, but it doesn’t. It’s just making me feel worse.”
+	You stay seated, keeping your voice steady despite the tension.
+	You: “I understand. This can be overwhelming, and it’s not uncommon to feel stuck. If you ever feel ready to try again, I’ll be here.”
+	The client hesitates for a moment at the door, glancing back with a mix of frustration and sadness.
+	Client: “Maybe. But right now, I just... I can’t.”
+	The door clicks shut behind them, leaving the room eerily quiet. You sit back in your chair, exhaling slowly.
+	Inner thoughts: Another session, another opportunity slipping through my fingers. They walked out, but the weight they carry remains. I can only hope they find the strength to face it someday.
+<b>The session has ended. Sometimes, taking a step back is part of the process. Be patient, and the path forward may reveal itself.<b>
+===
+
+title: FailUnlockMemoryFragmentsCycleRelapse
+---
+The client shifts uncomfortably in their seat, their hands clenched tightly in their lap.
+Client: “I thought I was getting somewhere, but... this just feels like I’m stuck in a loop. Why can’t I just break free from this?”
+You observe the growing frustration, feeling the weight of their emotions.
+You: "I can see how exhausting this is for you. It can feel like you're trapped, but even when progress seems slow, each step forward counts."
+The client’s voice cracks with frustration as they stand, pacing the room.
+Client: "No, I’ve been here before. I keep falling back into the same habits. It's like I never really move forward, no matter how hard I try."
+Inner Thoughts: They're drowning in their own sense of defeat. I need to find a way to ground them before they completely lose hope.
+You: "I understand that this can be incredibly discouraging. Healing isn’t always linear, and setbacks are part of the journey. But we can work through this together. Would it help if we took a step back and reassessed where we are?"
+The client pauses for a moment, their back to you, clearly torn. Then, with a sharp exhale, they turn toward the door.
+Client: “I don’t know. I just need some time to think about all of this... Maybe this isn’t for me.”
+They grab their coat with tense movements, their shoulders hunched as they head for the door.
+You: "Take all the time you need. If you ever feel ready to continue, you know where to find me."
+As the door shuts with a soft thud, the room feels impossibly quiet. You sit back in your chair, eyes closed for a moment.
+Inner Thoughts: It’s hard watching them walk away. But sometimes, the hardest part is waiting for them to come back on their own terms.
+<b>The session has ended. Take a step back, and allow for space. Healing will come when the time is right.<b>
+===
+
+title: FailUnlockMemoryFragmentsChildhoodTrauma
+---
+The client rubs their temples, eyes closed tightly as if trying to block out the rising tide of emotions.
+Client: “I just... I can’t go back there. It’s too painful. I’ve buried it for so long, and now it feels like opening that door will destroy me.”
+You watch them closely, feeling the weight of their resistance and the struggle behind their words.
+You: "I know it feels overwhelming, but sometimes confronting the past, even in small steps, can help us heal. It’s okay to go slow, we can take it at your pace."
+The client’s breath becomes shaky, their fists clenched at their sides.
+Client: "I don’t even know where to begin. There’s so much hurt, so many things I can’t even put into words. I’m scared to open up and face it. What if it’s too much for me?"
+Inner Thoughts: They’re teetering on the edge of something deep and painful. I need to reassure them, but also give them space to decide if they’re ready.
+You: "I understand. It’s okay to feel that fear. We don’t need to dive into everything at once. If you want, we can focus on one small piece at a time. The healing process doesn’t have to be all at once."
+The client shakes their head, backing away slightly from the conversation.
+Client: "I just can’t. Maybe I’m not ready for this. It’s too much... too soon."
+With a shaky breath, they stand and grab their jacket, their movements quick and almost frantic.
+You: "It’s okay. Take your time. When you're ready, we can take this journey together. But there’s no rush."
+They hesitate at the door, eyes downcast, clearly conflicted. Then, with a final glance, they leave, the door closing softly behind them.
+Inner Thoughts: They’ve left, but the burden they carry is still there. It’s heavy, and I hope, one day, they’ll be ready to face it when they’re able to.
+<b>The session has ended. Healing takes time, and sometimes that means taking a step back. Trust that when the moment is right, they’ll be ready to face it.<b>
+===
+
+title: FailUnlockMemoryFragmentsTheSupportiveFigure
+---
+The client shifts uncomfortably in their seat, their fingers tapping restlessly on the armrest. Their gaze is distant, unfocused, as though they’re trying to retreat into themselves.
+Client: "I... I can’t think of anyone. Not really. No one comes to mind who’s ever truly been there for me, not in the way you're asking."
+You notice their posture stiffen, as if the weight of the question has become too much to bear.
+You: "It’s okay to feel that way. Sometimes it’s hard to see those moments clearly, especially when trust has been broken in the past. We can revisit it when you're ready."
+The client’s eyes flicker with something close to frustration.
+Client: "I don’t even know what you mean. I’ve had people around me, sure, but they weren’t really... they didn’t really see me. I don’t know who could’ve been the supportive figure you’re asking about. Maybe I’ve just been too alone."
+Inner Thoughts: This feels like a place of deep isolation for them. It’s hard to reach someone who feels like they’ve never been seen or supported. I need to give them space to process that.
+You: "It sounds like you’ve been carrying that weight on your own for a long time. It’s understandable to feel like no one could truly be there for you. We can take this slowly, and if you ever want to explore it again, I’ll be here."
+The client exhales sharply, their eyes briefly meeting yours before they quickly look away.
+Client: "I’m sorry. I just... can’t do this right now."
+With a quick motion, they rise from their chair and grab their bag, their voice tight and almost inaudible.
+Client: "I thought I could, but it’s too much. I need to go."
+They turn to leave, their movements sharp and hurried.
+You: "I understand. Take your time. We can talk when you’re ready."
+The door closes behind them, the sound of it echoing in the quiet room. You sit back, the weight of their words lingering in the air.
+Inner Thoughts: They’ve walked away, but I can’t help but wonder if they’ll ever let themselves trust in that support. I hope they will, when the time is right.
+<b>The session has ended. Sometimes, it takes time to recognize who truly supports us. It’s okay to step back for now—when the moment is right, the supportive figure will reveal themselves.<b>
+===
+
+title: FailUnlockMemoryFragmentTheResistance
+---
+The client shifts uncomfortably in their seat, their hands clenched tightly in their lap. Their gaze is unfocused, as though they’re bracing themselves against something they’re not ready to confront.
+Client: "I don’t know what you want me to say. I’ve told you everything... but it’s not like it helps. Nothing’s changing."
+You notice their jaw tighten, the frustration in their voice almost palpable. There’s a wall between you now, built from their hesitation, their refusal to let down their guard.
+You: "It’s okay. Sometimes, it feels like we’re not making progress, but the fact that you’re still here is a sign of strength. We don’t have to push forward until you’re ready."
+The client lets out a sharp breath, their eyes darting away from you. They lean forward, their voice lower, almost as if they’re trying to suppress something deeper.
+Client: "You keep asking me to open up, but I don’t want to. I don’t want to keep digging into things that just hurt. It’s easier to shut it out and move on."
+Inner Thoughts: This resistance is familiar. They’re protecting themselves, trying to maintain control in a space where they feel vulnerable. I need to be patient.
+You: "I understand. It’s completely normal to want to avoid things that bring pain. But it’s okay to take a step back when you’re not ready. We’ll work at your pace."
+The client stands abruptly, their movements sharp and impatient. They grab their jacket, shaking their head slightly, their voice tight with frustration.
+Client: "I don’t think I’m ready for this. Maybe this whole thing was a mistake."
+They don’t look at you as they head for the door, their steps quick and purposeful.
+You: "It’s okay to feel that way. You don’t have to do this all at once. I’m here whenever you feel ready to try again."
+The door closes with a soft click, leaving the room heavy with the unsaid words between you.
+Inner Thoughts: They’ve chosen to resist. I can only hope that when the time is right, they’ll find the strength to face what lies beneath that resistance. For now, I can only wait.
+<b>The session has ended. Sometimes, resistance is part of the process. It’s okay to step away and come back when you’re ready to face what lies ahead.<b>
+===
+
+title: FailUnlockMemoryFragmentsFamilyIntervention
+---
+The client’s eyes are fixed on the floor, their posture slumped as they shift uncomfortably in their seat. There’s a long silence before they finally speak, their voice barely above a whisper.
+Client: "I don’t even know what to say anymore. I thought... I thought maybe I could talk about it, but it’s just too much."
+Their fingers tap nervously on the armrest, their anxiety evident. The words they need to say are trapped, and the weight of their past is starting to feel unbearable.
+You: "It’s okay to feel overwhelmed. The things you’re carrying are heavy, and sometimes it takes time to find the words. You don’t have to force yourself."
+The client lets out a deep sigh, shaking their head.
+Client: "I thought talking about my family would help, but it’s like... every time I try, it just feels like I’m exposing something I’m not ready to face. I just want to forget."
+Their frustration is palpable, and you can see the internal struggle playing out in their expression. They’re torn between wanting to open up and the fear of what that might mean.
+Inner Thoughts: They’re not ready. The intervention they’re resisting is a reflection of the trauma they’ve been trying to protect themselves from. I need to let them know it’s okay to take a step back.
+You: "You don’t have to talk about anything until you’re ready. Sometimes, the pain of reliving those memories feels like too much, and it’s okay to step away from that for now."
+The client nods slowly, their gaze distant, as though retreating into themselves. They stand, their movements slow and deliberate.
+Client: "Maybe I’ll come back when I can actually handle it. But right now... I can’t."
+You watch them walk towards the door, their back turned, and the space between you both feels vast. They pause for a moment, but don’t turn around.
+You: "Whenever you feel ready, I’ll be here. We don’t have to rush anything."
+The door closes quietly behind them, and the silence that follows is heavy.
+Inner Thoughts: The intervention remains locked within them. I can only hope that in time, they’ll find the courage to face what they’re running from. The door may be closed for now, but it’s not the end of the journey.
+<b>The session has ended. Sometimes, the timing isn’t right. It’s okay to step back, and when they’re ready, they’ll be able to return to the work.<b>
+===
+
+title:  FailUnlockingMemoryFragmentFamilySecrets
+---
+The client shifts uncomfortably in their seat, their face tightening as they stare at the floor, their hands clenched in their lap. There’s a heavy pause before they speak, their voice barely audible.
+Client: "I just can’t. Every time I think about my family... about what happened... it’s like I can’t breathe."
+You notice the subtle tremble in their hands and the distant look in their eyes. The weight of their unspoken family secrets is pressing down on them, and the tension in the room feels suffocating.
+You: "I can see this is really difficult for you. It’s okay to feel overwhelmed. We don’t have to go into the past right now if it’s too much."
+The client shakes their head, frustration written across their face.
+Client: "I don’t know what I’m supposed to do with all of this. Talking about it, or even thinking about it... it just makes everything worse. It’s like these secrets are suffocating me, and I don’t know how to get rid of them."
+Their voice cracks slightly as they speak, a mix of anger and helplessness in their tone. The room feels thick with their emotions, and it’s clear they’re battling with something deep inside them—something they’re not ready to confront.
+Inner Thoughts: I can see they’re struggling with something they can’t yet let go of. Their family’s secrets are like a wall they can’t bring themselves to break down. I need to give them space.
+You: "I understand. Sometimes, the things we carry are so heavy that we need time to figure out how to even begin talking about them. If you need to take a break, we can always come back to this when you feel ready."
+The client rubs their eyes, the exhaustion of their inner turmoil clear in their expression. They stand up, their movements slow and deliberate.
+Client: "I thought I could face it, but I’m not ready. Maybe I need more time... or maybe... maybe I’ll never be ready."
+You don’t push them further, giving them the space they need. The door opens, and they hesitate for a moment before leaving, their footsteps echoing softly in the hallway.
+You: "Whenever you feel ready, we can pick this up again. The door is always open."
+The door closes behind them, leaving the room in a heavy silence. The session ends with unresolved feelings hanging in the air.
+Inner Thoughts: The secrets remain locked within them, but I hope that, in time, they will find the strength to open up. It’s not the end—it’s just a pause.
+<b>The session has ended. Sometimes, the secrets are too much to bear. When they’re ready, they’ll find the courage to face them.<b>
+===

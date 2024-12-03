@@ -7,11 +7,19 @@ You: “It sounds like a peaceful place. As you stand there, what do you notice 
 Client: “It’s fresh, with a hint of pine. There’s a cool breeze, but it’s not too cold—it’s just right.”
 You: “Good. Breathe in that fresh air for a moment. Let it fill you. Now, as you step closer to the cabin, what feelings come to mind?”
 Client: “I feel... calm. Like nothing can reach me here. It’s safe.”
-//essentially  lowers the sanity bar<<jump SafeSpace>>
+//essentially  lowers the sanity bar
+<<jump SafeSpace>>
 ===
 
 title: SafeSpace
 ---
+<<set $AmountTrysUnlockMemoryFragmentsTheAccident = 0>>
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = 0>>
+<<set $AmountTrysUnlockMemoryFragmentsChildhoodTrauma = 0>>
+<<set $AmountTrysUnlockMemoryFragmentTheResistance = 0>>
+<<set $AmountTrysUnlockMemoryFragmentsTheSupportiveFigure = 0>>
+<<set $AmountTrysUnlockMemoryFragmentsFamilyIntervention = 0>>
+<<set $AmountTrysUnlockMemoryFragmentsFamilySecrets = 0>>
 ->Explore the Safe Space.
 	You: 
 	<<jump ContentSafeSpace>>

@@ -16,13 +16,13 @@ Inner Thoughts: Who are they? Why are they here? What is it they are running fro
 The session is about to begin.
 You lower yourself back into your chair, adjusting its position slightly. The familiar creak of the leather cushion accompanies you as you reach for the clipboard on your desk.
 The smooth, cool surface of the clipboard meets your fingers as you lift it. On its face, a concise summary of the person sitting across from you.
-
-*clipboard pops-up*
-
+<i>*Clients Information is kept secretive*</i>
 Inner Thoughts: A life encapsulated in bullet points. Yet, the depths of their struggles remain unwritten here.
 You glance up briefly, meeting the client’s anxious gaze. Their fingers twist together in their lap, a subtle indicator of tension. You return your attention to the clipboard, committing the essentials to memory before setting it aside.
 
-*clipboard pops-up again with a different page*
+<b>Skill System Tutorial</b>: *Skills represent therapeutic techniques or interpersonal abilities. Your choices during the pre-session setup and the session itself can lead to acquiring and utilizing these skills.*
+*The six core skills are: Empathy, Precision Questioning, Grounding Techniques, Observation, Reflective Listening and Analytical Insight*
+*Pay attention to dialogue and context—your choices shape the outcome of the session and the client’s journey.* 
 
 As you return your focus to the present, the client watches you expectantly, their posture slightly more rigid now. You offer a reassuring smile before introducing yourself.
 You: "I want to start by saying how much I appreciate you taking this first step. This space is yours to share whatever feels right. Let’s take it at your pace."
@@ -427,7 +427,7 @@ Inner Thoughts: Now comes the most important part; helping them feel prepared fo
 	The client shifts in their chair, their hands loosening slightly.
 	Client: "That sounds helpful. I’ve had moments before where it felt like... too much. It’s good to know there’s something to help with that."
 	Their voice softens, and the hint of relief in their tone is unmistakable.
-	Inner Thoughts: Grounding isn’t just a tool; it’s a lifeline. Knowing they have it as a fallback can help them face difficult moments more courageously
+	Inner Thoughts: Grounding isn’t just a tool; it’s a lifeline. Knowing they have it as a fallback can help them face difficult moments more courageously.
 	<<set $SkillGroundingTechniques = $SkillGroundingTechniques +1>>
 	<b>Grounding Techniques Skill +1!</b>
 	<<jump BeginOfTheSession>>
@@ -447,7 +447,7 @@ Inner Thoughts: Now comes the most important part; helping them feel prepared fo
 	The client shifts uncomfortably but meets your gaze briefly.
 	Client: "I’m not sure... maybe stuff from when I was younger. Things I’ve tried to forget but can’t stop thinking about sometimes."
 	They look away, their tone guarded but sincere.
-	Inner Thoughts: Even this small admission is a significant step forward. They’re beginning to confront the idea of facing their past, even if hesitantly
+	Inner Thoughts: Even this small admission is a significant step forward. They’re beginning to confront the idea of facing their past, even if hesitantly.
 	You: “That’s an important insight, and it makes sense. Whatever comes up, we’ll address it together, at your pace.”
 	Inner Thoughts: Acknowledging their fears without pushing allows them to feel safe enough to keep exploring.
 	<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +1>>

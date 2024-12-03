@@ -1,0 +1,521 @@
+﻿title: UnlockedChildhoodTrauma
+---
+<<declare $AmountTrysUnlockMemoryFragmentsChildhoodTrauma = 0>>
+<<declare $MemoryFragmentsChildhoodTrauma = false>>
+<<declare $UnlockedEchoesOfSilence = false>>
+<<declare $UnlockedSlideshowOfLaughterAndTears = false>>
+<<declare $UnlockedFrozenMoments = false>>
+<<declare $UnlockedWhispersInTheHall = false>>
+<<declare $UnlockedTheBondThatBinds = false>>
+<<declare $UnlockedTheUnseenSpectator = false>>
+The session is quiet for a moment. The patient sits across from you, their hands restless in their lap. Their eyes are distant, as though they're looking somewhere far beyond the room—back in time, perhaps to a place they don’t want to visit. But you know they’re about to take the first step in confronting something painful, something they've been avoiding for so long.
+<<jump ContentChildhoodTrauma>>
+===
+
+title: ContentChildhoodTrauma
+---
+You: “I know it’s not easy to revisit those early years, but you’ve mentioned that your childhood was a time of confusion and pain. Can you tell me what comes up when you think about that time in your life? What stands out most for you?”
+The client shifts uncomfortably, as though the question has unearthed something they’ve long tried to bury. They take a deep breath, the tension in their shoulders evident as they speak.
+Client: “My childhood wasn’t easy. My parents fought a lot, and the house always felt tense. I spent a lot of time hiding in my room. There was this locked room at the end of the hall, always locked, and I never knew why. It felt... important, but I never got to see inside.”
+You listen attentively, encouraging them to continue.
+Client: “There was the playground, too. I’d go there to get away. I wasn’t really part of the other kids' world. I just wanted to be left alone. And the schools hallway, even worse.”
+Client: “My mom also had a family photo album. She’d show it to me, but I never felt like I belonged in those pictures. I was always standing off to the side, not really part of the family in those moments.”
+The client pauses, then adds;
+Client: “I don’t know. It all just felt distant, like I was never really there, even when I was.”
+<<jump ChildhoodTrauma>>
+===
+
+title: ChildhoodTrauma
+---
+->Ask the Client further questions.
+	<<jump UnlockingMemoryFragmentsChildhoodTrauma>>
+->Repeat Memory Space "Childhood Trauma".
+	<i>This is a repetition of the memory space "Childhood Trauma", what it is and what the client experienced. Do you wish to continue nontheless?</i>
+	->Continue.
+		<<jump ContentChildhoodTrauma>>
+	->Go back.
+		<<jump ChildhoodTrauma>>
+->Go to the Memory Fragments.<<if $MemoryFragmentsChildhoodTrauma is true>>
+	<<jump MemoryFragmentsChildhoodTrauma>>
+->Go to the Mindscape.
+	<<jump TheMindscape>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+===
+
+title: UnlockingMemoryFragmentsChildhoodTrauma
+---
+<<if $AmountTrysUnlockMemoryFragmentsChildhoodTrauma >= 36>>
+	<<jump FailUnlockMemoryFragmentsChildhoodTrauma>>
+<<endif>>
+->The Hidden Room.
+	<<set $BaseSuccessRate = 50>> 
+	<<set $randomValue = random() * 100>>
+	<<if $SkillEmpathy >2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $SkillObservation > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+        	You: “Think about that hidden room from your childhood. What emotions come up for you when you recall it? Can you describe any details that stand out, and how they made you feel?”
+		As you ask this, you notice the client’s eyes widen slightly, a flicker of curiosity breaking through the tension. You sense their heart rate quicken, a physiological response hinting at deeper feelings beneath the surface.
+		Client: “I always felt anxious about it. Like...like there was something important behind that door, something I needed to know but couldn't access.”
+		You can see a subtle tightening in their jaw, a physical manifestation of their struggle to articulate this buried memory. You lean in slightly, maintaining an open posture to convey your support.
+		You: “That makes sense. It seems like there was a mix of fear and intrigue surrounding that door. What do you think it meant for you, not being able to see what was inside?”
+		The client fidgets with their hands, an instinctual response to discomfort mingled with vulnerability. They glance down for a moment, as if pondering the significance.
+		Client: “It felt like a part of my life was locked away, something I couldn't touch. Maybe that’s why I often felt like I wasn’t really part of the family. I was on the outside looking in.”
+		As the client opens up, you feel a warm surge of empathy towards them. This moment feels pivotal, and you reinforce their progress with attentiveness.
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Empathy Skill +0.5!</b>
+		<<set $SkillObservation = $SkillObservation +0.2>>
+		<b>Observation Skill +0.2!</b>
+		You: “It sounds like that hidden room represents a lot of emotional weight for you. It’s as if it contains pieces of your past that still resonate today. How do you feel reflecting on that now?”
+		Client: “I think I can see it now. It's like I was protecting myself from something painful. But maybe...maybe I can start to explore that.”
+		You smile softly, pleased with their willingness to engage. You feel your own excitement rising as you reference their growth.
+		You: “That’s a significant realization. By exploring those feelings, you may uncover some important truths about yourself. Let’s keep peeling back those layers together.”
+		You feel a connection deepening, a bond built on trust and understanding—a testament to the work you’ve both engaged in. You note a slight relaxation in the client’s shoulders as the weight of secrets begins to lift.
+		<<set $BaseSuccessRate = 65>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedEchoesOfSilence = true>>
+			<<set $MemoryFragmentsChildhoodTrauma = true>>
+			<b>Memory fragment: "Echoes of Silence" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "Echoes of Silence"!</b>
+		<<endif>>
+			<<jump ChildhoodTrauma>>
+	<<else>>
+		<<jump FailedAttempt_17>>
+	<<endif>>
+->The Old Playground.
+	<<set $BaseSuccessRate = 65>> 
+	<<set $randomValue = random() * 100>>
+	<<if $SkillGroundingTechniques >2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $SkillReflectiveListening > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+        	You: “You mentioned the playground was a place you went to escape your home life. Can we explore that a bit? What do you remember most about the times you spent there?”
+		They sit a bit straighter, and you observe a flicker of nostalgia in their eyes. This might signal a readiness to share.
+		Client: “The playground was my refuge. I’d swing for hours, just trying to feel free. Sometimes, it was like I could leave everything behind.”
+		You notice a light smile forming on their face, a glimpse of the joy those moments brought them. You nod slightly, encouraging them to continue while grounding the conversation in that moment of happiness.
+		You: “That sounds lovely. The freedom of swinging up high... How did that feeling contrast with what was happening at home?”
+		You note that their breath deepens, and the smile flickers as they conjure the memories. There’s an emotional shift—a vulnerability evident as they lean forward slightly.
+		Client: “At home, it was chaos. But on the swing, I felt like I was floating, like I could escape all of it. But then—”
+		You see a shadow cross their face, tension tightening their brow again. You gently interrupt, ensuring you’re anchoring the conversation.
+		You: “It sounds like that feeling of freedom is really significant for you. But something changed, didn’t it? Can you tell me about what happens next?”
+		Client: “I remember trying to leave everything behind, but then the memories of home would creep in. It’s like... I could hear the fighting even while I was there.”
+		Taking a soft breath, you ask the client to take one with you together, echoing their emotional journey.
+		The client looks around as you guide them through this grounding exercise, and you notice them start to relax a bit, their breathing becoming more even.
+		<<set $SkillGroundingTechniques = $SkillGroundingTechniques +0.5>>
+		<b>Grounding Techniques Skill +0.5!</b>
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+		<b>Reflective Listening Skill +0.2!</b>
+		You: “That sounds really painful—the contrast between your escape and the reality drawing you back. Let’s take a moment to breathe together. Can you tell me what you see around you right now?”
+		Client: “I see the coffee cup on the table and the sun coming through the window. It’s peaceful here.”
+		You smile gently, feeling a sense of accomplishment as you observe the shift from discomfort to a more grounded state. You continue to encourage them softly.
+		You: “That’s wonderful. Recognizing that peace can help, especially when those memories feel heavy. How about we try to hold onto that feeling from the playground while we continue talking?”
+		The client nods with a expression of willingness to explore emotions more freely.
+		<<set $BaseSuccessRate = 70>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedSlideshowOfLaughterAndTears = true>>
+			<<set $MemoryFragmentsChildhoodTrauma = true>>
+			<b>Memory fragment: "Slideshow of Laughter and Tears" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "Slideshow of Laughter and Tears"!</b>
+		<<endif>>
+			<<jump ChildhoodTrauma>>
+	<<else>>
+		<<jump FailedAttempt_18>>
+	<<endif>>
+->The Family Photo Album.
+	<<set $BaseSuccessRate = 55>> 
+	<<set $randomValue = random() * 100>>
+	<<if $SkillReflectiveListening >2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $SkillAnalyticalInsight > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+        	You: “Looking through the family photo album can bring back powerful memories. Which photo stands out to you, and what story does it tell about your childhood? How does sharing this make you feel?”
+		As you pose this question, you notice the client’s eyes light up momentarily, their posture shifting slightly as if they were pulled into a different realm. Their fingers twitch as if they’re itching to flip through the imaginary album.
+		Client: “There’s one of my birthday party when I turned seven. I remember my mom’s smile, and all those balloons... but I also felt kind of lonely.”
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
+		<b>Reflective Listening Skill +0.5!</b>
+		You observe a mixture of nostalgia and sadness wash over their face. Their voice trembles slightly, revealing the complex emotions tied to that moment. You lean in, encouraging them to elaborate further.
+		You: “That sounds like a significant moment, filled with joy but also a sense of isolation. What made you feel lonely in that moment, despite being surrounded by friends and family?”
+		You see their gaze shift to the floor, a physical expression of introspection. Their fingers intertwine, a subtle confirmation of vulnerability. You give them space to process while remaining present.
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+		<b>Analytical Insight Skill +0.2!</b>
+		Client: “I think... everyone was laughing and having fun, but I felt like I was just standing there. Almost like I was invisible. I wanted to be part of the happy moments, but I felt out of place.”
+		You nod knowingly, acknowledging their pain. The shift from excitement to melancholy is palpable, and you want to be a safe vessel for these emotions. Your voice remains calm and soothing.
+		You: “That’s a powerful realization. It’s like you were present but didn’t feel truly included. Sometimes, those moments can leave lasting impressions. How does it feel to reflect on that photo now?”
+		Their shoulders drop slightly as they process your words. You notice their breathing starts to even out, a sign they are beginning to share more deeply. They meet your gaze, vulnerability now coloring their expression.
+		Client: “It’s kind of bittersweet, honestly. I feel sad but also relieved to acknowledge that loneliness.”
+		You: “That bittersweet feeling is completely valid. Sometimes, recognizing our emotions can be the first step in finding clarity about how we fit into those moments.”
+		Inner Thoughts: There’s a growing glimpse of understanding in their eyes, a breakthrough moment.
+		<<set $BaseSuccessRate = 45>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedFrozenMoments = true>>
+			<<set $MemoryFragmentsChildhoodTrauma = true>>
+			<b>Memory fragment: "Frozen Moments" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "Frozen Moments"!</b>
+		<<endif>>
+			<<jump ChildhoodTrauma>>
+	<<else>>
+		<<jump FailedAttempt_19>>
+	<<endif>>
+->The School Hallway.
+	<<set $BaseSuccessRate = 65>> 
+	<<set $randomValue = random() * 100>>
+	<<if $SkillPrecisionQuestioning >2>> 
+        	<<set $randomValue = $randomValue + 20>>
+	<<elseif $SkillGroundingTechniques > 1.5>> 
+        	<<set $randomValue = $randomValue + 15>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+        	You: “Remember walking down the school hallway? Let’s focus on that moment. What thoughts or feelings arise when you think about your experiences there? How did that environment shape your sense of self?”
+		You observe the client’s gaze drift upward, a sign they’re conjuring memories from long ago. Their body language softens slightly, but there’s a mix of anxiety and nostalgia in their expression.
+		Client: “The hallway... it always felt so crowded. I remember feeling both invisible and exposed at the same time. It was like the noise just swallowed me up.”
+		Their fingers tap rhythmically on the armrest, a physical manifestation of their internal processing. You lean in, giving them space to express the complexity of those feelings.
+		You: “It sounds overwhelming, like there was a constant buzz around you, yet you felt unseen. What specific memories come to mind when you think about those feelings of invisibility?”
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.5>>
+		<b>Precision Questioning Skill +0.5!</b>
+		Their lips press together, and you can sense the weight of those memories encroaching on them.
+		Client: “I remember one moment in particular. I was standing by my locker, trying to reach my books, and the kids behind me were laughing. I wanted to turn around and join in but it felt like I was stuck in my own bubble.”
+		Encouraging them with your eyes, you nod gently as they continue. You note the lump forming in their throat as they speak, a cue to validate their experience while guiding them further.
+		You: “That’s a very vivid image. It’s painful to feel that disconnect while wanting to be a part of something. How did that affect you in later years? Did you find yourself becoming more reserved or hesitant in social situations?”
+		Client: “Yeah, definitely. I think I learned to stay quiet and observe instead of putting myself out there. I didn’t want to feel that way again, so I kind of just faded into the background.”
+		You: “It makes sense that you’d choose to retreat rather than risk another experience of feeling invisible. Let’s take a moment—can you describe something around you in this space right now that makes you feel safe?”
+		<<set $SkillGroundingTechniques = $SkillGroundingTechniques +0.2>>
+		<b>Grounding Techniques Skill +0.2!</b>
+		You guide them to observe their environment, and they take a deep breath, visibly relaxing as they respond.
+		Client: “I see the comfortable chair I’m sitting in and the way the light comes through the window... it’s calming.”
+		You: “That’s great. Recognizing safe spaces helps ground us, especially when revisiting more challenging memories. It’s important to have anchors to hold onto.”
+		Inner thoughts: My empathic engagement seems to be positively impacting them. With each word they have seemed to shed layers of emotional weight and reconnect with the present, as I can tell from their relaxed posture.
+		<<set $BaseSuccessRate = 55>>
+		<<set $randomValue = random()*100>>
+		<<if $randomValue >= $BaseSuccessRate>>		
+			<<set $UnlockedWhispersInTheHall = true>>
+			<<set $MemoryFragmentsChildhoodTrauma = true>>
+			<b>Memory fragment: "Whispers in the Hall" unlocked!</b>
+		<<else>>
+			<b>Failed to unlock Memory fragment: "Whispers in the Hall"!</b>
+		<<endif>>
+			<<jump ChildhoodTrauma>>
+	<<else>>
+		<<jump FailedAttempt_20>>
+	<<endif>>
+===
+
+title: FailedAttempt_17
+---
+You: “Thinking about that locked room, can you share with me what that space felt like for you? Perhaps its presence affected how you experienced your childhood?”
+As you pose this question, you notice the client’s breathing quicken again, but this time there’s a hint of defensiveness in their posture. They lean back slightly, arms crossing over their chest.
+Client: “I don’t know. It’s just... I don’t think I want to go there. It’s too much.”
+You sense a shift in the energy of the room, a barrier that feels slightly impenetrable. You remind yourself to remain patient and non-judgmental as you observe their discomfort.
+You: “I understand it feels daunting. Sometimes, those memories are difficult to confront. But it’s important to acknowledge that fear. What about that room seems so overwhelming?”
+You see a flicker of frustration on their face. They look away, and you note the vein of tension returning to their jaw. This reaction speaks volumes—you recognize the emotional recall pulling them back into a protective state.
+Client: “It just feels like I should have known what was in there. Why can’t I remember?”
+With increased empathy, you try to keep the conversation anchored without pushing. You refocus your tone to reassure them.
+You: “It’s not uncommon to feel that way about suppressed memories. Often, our minds shield us from what’s too painful to face right away. It’s okay to feel uncertain about it.”
+As you speak, you notice a brief frown cross their face, a sign of struggle as they grapple with their feelings. You wish to connect but sense a wall is still up.
+Client: “I guess... I guess it just feels like I’m stuck sometimes. Like no matter how hard I try, I can’t get past it.”
+You take a slow breath, sensing the boundaries while accepting that not all moments yield breakthroughs. You want them to feel safe, even if that means stepping back.
+You: “That feeling of being stuck can be really overwhelming. It’s okay to take your time. If you ever feel ready to explore that room again, I’ll be right here with you.”
+You watch their body begin to relax, a sigh escaping them as the tension slowly dissipates. You take this moment to reflect internally, recognizing that healing isn’t always linear.
+<<set $AmountTrysUnlockMemoryFragmentsChildhoodTrauma = $AmountTrysUnlockMemoryFragmentsChildhoodTrauma +1>>
+<<jump ChildhoodTrauma>>
+===
+
+title: FailedAttempt_18
+---
+You: “Let’s return to the playground for a moment. You mentioned it was an important escape for you. Can you describe what it was like there?”
+As you ask this, you see the client’s expression grow distant, their eyes clouding over as if retreating into a fortress of memory. They look down, physically pulling away, and crossing their arms tightly over their chest.
+Client: “I don’t really want to think about it. It was just... a distraction. Nothing more.”
+You feel a wave of frustration as the conversation gets derailed, yet you remind yourself to stay calm. You adjust your posture, leaning slightly forward to show your engagement while noticing their growing discomfort.
+You: “I hear you. Sometimes, it can feel better to leave those memories alone. But if you were to try to share just a little—what comes to mind?”
+The client’s fidgeting intensifies. They shift their weight uncomfortably, eyes darting away. This physical reaction tells you they’re battling against the pull of the past, and you respect that.
+Client: “It was just a place to escape. I don’t—there’s nothing special about it.”
+You sense the defensiveness in their tone, and the silence that follows weighs heavily in the air. Their body language is closed off, and you recognize this is not the right moment to push further.
+You: “I appreciate your honesty. It’s okay to feel conflicted about those memories. We can take this at your pace. Let’s shift focus a bit. What was happening at home that made the playground feel so necessary?”
+With this, you notice their eyes narrowing, the tension still palpable in their shoulders. You wish to breach the wall but respect the barriers they’ve erected.
+Client: “I guess it was just chaos. I don’t really want to relive it. It’s too confusing.”
+You acknowledge their feelings of confusion with a soft nod, recognizing that not every session yields breakthroughs. You visualize planting a seed of trust, hoping for future growth.
+You: “That’s completely understandable. Sometimes, it’s more comfortable to stay in the present. Here, you’re safe, and we can always revisit these memories whenever you feel ready.”
+Inner Thoughts: This is about building a relationship, fostering trust for the moments when they may want to delve deeper. Pushing too soon will just make them close up even more.
+<<set $AmountTrysUnlockMemoryFragmentsChildhoodTrauma = $AmountTrysUnlockMemoryFragmentsChildhoodTrauma +1>>
+<<jump ChildhoodTrauma>>
+===
+
+title: FailedAttempt_19
+---
+You: “Let’s talk about the family photo album. Looking through it can evoke a lot of emotions. Is there a particular photo that stands out to you? What story does that photo tell?”
+As you ask, you see the client’s face tighten. They drop their gaze, shoulders tensing as their breath becomes slightly shallower—a clear indication of discomfort. You feel the air thicken with hesitation, and you adjust your approach with care.
+Client: “I don’t really want to— I don’t think there’s anything special about those photos. I was always just... there.”
+You sense a wall rising, and their arms cross protectively over their chest, furthering their retreat. The defensiveness is palpable, and you remain patient, willing to explore their boundaries.
+You: “I understand it feels difficult. Sometimes, the images in those albums don’t tell the whole story. Can you tell me what makes you feel that way about those photos?”
+You watch as their posture sinks back into discomfort. They glance around the room, avoiding eye contact. Their fingers tap nervously on their knee.
+Client: “I’m just not comfortable with it. It feels like a lot of pressure... I don’t want to dig up old stuff right now.”
+You take a moment, acknowledging their reluctance while also validating their feelings. You speak softly, wanting to create a sense of safety.
+You: “That’s perfectly okay. It’s important that you feel comfortable. We can always explore different aspects of your childhood whenever you’re ready. No pressure to force a connection.”
+Their shoulders begin to relax slightly, but the vulnerability still feels far from reach. You remind yourself that patience is key in therapy, a gradual journey of trust building.
+Client: “Thanks. It’s just... sometimes those memories feel heavy, and I’m not sure I want to carry that weight again.”
+You nod gently, validating their experience while keeping an open heart. You recognize that healing is not linear and that it’s crucial to respect their boundaries.
+You: “That’s completely understandable. When you’re ready, we can explore those feelings more. For now, let’s focus on how you can feel lighter today, in this moment.”
+<<set $AmountTrysUnlockMemoryFragmentsChildhoodTrauma = $AmountTrysUnlockMemoryFragmentsChildhoodTrauma +1>>
+<<jump ChildhoodTrauma>>
+===
+
+title: FailedAttempt_20
+---
+You: “Let’s talk about the school hallway. Remember walking down it? What thoughts or feelings come to mind about your experiences there?”
+The client’s posture stiffens, and their eyes dart away, avoiding the probing question like an uncomfortable thorn.
+Client: “Honestly, I don’t want to think about that right now. It was just a hallway—nothing special.”
+The clients walls goe up, and you acknowledge it, but stay determined to cultivate an atmosphere of safety.
+You: “I understand; sometimes those places can feel like a closed chapter. But are there any feelings that crop up when you think about that space?”
+The shift in body language remains firm, but you can feel their emotional walls beginning to resonate, but not yet break. They take a moment, eyes still averted.
+Client: “I just... it feels too heavy. I don’t want to go back there. It’s confusing.”
+Inner Thoughts: It's clear this subject weighs heavily on them. Validating their emotions becomes key to maintaining trust.
+You: “That’s completely okay. Recognizing when something feels heavy is an important step in itself. We can always explore something else or focus on how you feel safe in this space right now.”
+Client: “Yeah, I think I’d prefer to talk about something else for now.”
+You: “Absolutely, we can shift gears. Let’s focus on something that brings you joy or comfort today—what’s something that makes you feel present and connected?”
+<<set $AmountTrysUnlockMemoryFragmentsChildhoodTrauma = $AmountTrysUnlockMemoryFragmentsChildhoodTrauma +1>>
+<<jump ChildhoodTrauma>>
+===
+
+title: MemoryFragmentsChildhoodTrauma
+---
+<<if $UnlockedEchoesOfSilence is true and $UnlockedFrozenMoments is true>>
+	<b>Unlocked Choice: "Confronting the Shadows" to pry further in the Memory Fragments!</b>
+<<elseif $UnlockedSlideshowOfLaughterAndTears is true and $UnlockedWhispersInTheHalls is true>>
+	<b>Unlocked Choice: "Rekindling Lost Connections" to pry further in the Memory Fragments!</b>
+<<elseif $UnlockedFeelingOfRuin is true and $UnlockedWhispersInTheHall is true>>
+	<<set $UnlockedFamilyIntervention = true>>
+	<b>Unlocked Memory Space "Family Intervention"!</b>
+	<b>Info:</b>Access new Memory Spaces over the Mindscape.
+<<elseif $UnlockedVoicesOfSupport is true and $UnlockedSlideshowOfLaughterAndTears is true>>
+	<<set $UnlockedSupportiveFigure = true>>
+	<b>Unlocked Memory Space "The Supportive Figure"!</b>
+	<b>Info:</b>Access new Memory Spaces over the Mindscape.
+<<endif>>
+->Echoes of Silence.<<if $UnlockedEchoesOfSilence is true>>
+	<<jump EchoesOfSilence>>
+->Slideshow of Laughter and Tears.<<if $UnlockedSlideshowOfLaughterAndTears is true>>
+->Frozen Moments.<<if $UnlockedFrozenMoments is true>>
+	<<jump FrozenMoments>>
+->Whispers in the Halls.<<if $UnlockedWhispersInTheHalls is true>>
+	<<jump WhispersInTheHalls>>
+	<<jump RekindlingLostConnections>>
+->The Unseen Spectator.<<if $UnlockedTheUnseenSpectator is true>>
+	<<jump TheUnseenSpectator>>
+->The Bond that Binds.<<if $UnlockTheBondThatBinds is true>>
+	<<jump TheBondThatBinds>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+->Go back to the Memory Space "Childhood Trauma".
+	<<jump ChildhoodTrauma>>
+
+===
+
+title: EchoesOfSilence
+---
+You: “Let’s revisit that hidden room you thought about. What do you imagine lies behind those doors?”
+Inner Thoughts: The hidden room feels symbolic of something profound—an entry point to their unexpressed fears and buried memories. I want to create a space where they feel safe to explore what lies within.
+Client: “It’s dark... like I’m peering into a void. But I can hear whispers, distant echoes of laughter and sadness. They feel familiar, yet I can’t quite place them.”
+You: “Those whispers sound like they hold significant meaning. Can you try to focus on one of them? What story do you think it’s trying to tell you?”
+Inner Thoughts: The echoes resonate with the themes of longing and grief. It's clear that these memories are stitched into the fabric of their identity, yet remain elusive. I need to help them articulate this complexity.
+Client: “There’s one that feels closer. It reminds me of a time... when I was standing in the hallway, watching everyone pass by. I felt invisible, but also like I was in the middle of something important.”
+You: “Being in that space must have felt isolating yet meaningful. What emotions surface as you relive that moment?”
+Client: “I felt lost, but also a spark of hope. It was like I knew I was meant to be a part of something, but I just... couldn’t grasp it.”
+Inner Thoughts: This narrative is heavy with both vulnerability and resilience; they’re hinting at an innate desire for belonging.
+You: “That hope is a powerful emotion. It sounds like it pushed you to keep searching for your place. Can you recall any specific moments in that hallway that might highlight that longing?”
+Client: “Yes, there were times when I saw a group laughing together. I wanted to join them, to feel that connection, but fear kept me rooted to the spot.”
+Inner Thoughts: Fear and longing coalesce into a poignant realization. It’s a reflection of their internal struggle—caught between the desire for acceptance and the weight of their insecurities.
+You: “That fear of reaching out must have been difficult to navigate. If you could go back and speak to that younger version of yourself in the hallway, what would you want to say?”
+Client: “I’d want to tell them that it’s okay to reach out, that vulnerability isn’t weakness. That’s where true connection starts.”
+You: “That’s a beautiful message. Recognizing the value of vulnerability can open doors to authenticity and connection. Can we hold onto that feeling of empowerment as we explore more?"
+Client: “Yes.”
+Inner Thoughts: This commitment to exploration is courageous. The journey through the hidden room is just beginning, and I’m honored to be a witness to their reclamation of self.
+<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: FrozenMoments
+---
+You: “Those feelings of isolation amidst the laughter can create a resonance within us, can’t they? What happens when you hold onto that memory? How does it transform when you reflect deeply on it?”
+Client: “It’s strange. I keep seeing that moment playing over and over, like a loop. I can picture my mom so vividly, smiling, but I also feel myself standing there, separate from everyone. It’s like I’m watching a movie, but I’m not really part of it.”
+Inner Thoughts: The metaphor of a ‘movie’ is intriguing. It suggests that they’ve felt like a spectator in their own life, a theme that might have replayed over the years. I want to dig deeper into that sense of being on the outside.
+You: “That’s a poignant description. It sounds like you’ve been carrying that sense of separation with you. Can you recall other instances where you felt similarly—like a spectator in your own story?”
+Client: “There were times at school, too. I remember sitting in class, wanting to contribute, but I always held back. Watching my friends bond while I felt like a wallflower.”
+Inner Thoughts: The classroom, a parallel to the birthday party, emphasizes their ongoing struggle for connection. Their experiences have woven a narrative of invisibility that I hope we can unravel together.
+You: “It must have been tough to want to engage while feeling so disconnected. These moments have built a complex tapestry of feelings. How do you think this narrative of being an observer impacts your life now?”
+Client: “I think it makes me hesitant. Sometimes, I find it hard to open up. I’m scared of being rejected again. It’s like that moment is frozen in my mind and keeps me from stepping forward.”
+Inner Thoughts: Aha! This is the crux of it—the fear of rejection rooted deeply in their past experiences. Acknowledging their hesitance is a crucial step towards transformation. I can feel a flicker of determination beginning to rise within them.
+You: “That fear is understandable, especially when the echoes of those frozen moments linger. But recognizing that fear also allows you to challenge it. What would it feel like to unfreeze those moments, to interact with them differently?”
+Client: “It feels scary, but I think it could be freeing too. Maybe I could acknowledge that it’s okay to feel like an outsider sometimes, but it doesn’t define me.”
+You: “That’s a powerful insight—to recognize those moments as just parts of your story rather than the entirety of who you are. How might embracing the concept of being an outsider shape your interactions now?”
+Client: “I think I could approach things differently—like these feelings don’t have to hold me hostage. I want to reach out and create connections, even if it’s uncomfortable.”
+Inner Thoughts: Yes! This courage to confront discomfort is a vital step toward healing. They’re beginning to thaw the “frozen moments” that have defined them.
+<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: WhispersInTheHalls
+---
+You: “The hallway sounds like a landscape of mixed emotions, filled with both energy and isolation. When you think of those whispers and laughter echoing around you, what do you feel resonates most with you now?”
+Client: “I feel a bit of sadness, honestly. The whispers felt like reminders of my solitude. I was there, but it was like I was on the fringes, always listening but never really part of it.”
+Inner Thoughts: Their expression hints at a deeper pain—the longing for connection tangled with feelings of exclusion. It's important to create a safe space for them to process these emotions fully.
+You: “That’s a profound insight. It’s as if those whispers were telling stories, but you weren’t invited to participate. Can you share any specific instances when you felt especially acutely aware of being on the periphery?”
+Client: “There was this one day when I heard my friends joking in the distance. I wanted to go over, but I stayed by my locker and pretended to be busy. It felt so silly, but I couldn’t bring myself to break through that wall.”
+Inner Thoughts: Ah, the wall they built around themselves—a protective barrier forged from past experiences. It's crucial to explore not only the pain but also the resilience that arises from navigating those moments.
+You: “It sounds like that wall provided some comfort in a chaotic environment. But it also sounds like it came at the cost of connection. How has that shaped how you engage with others now?”
+Client: “I tend to pull back a lot. Even now, in social situations, I’ll stand back and observe. Part of me wants to take a step forward, but there’s this overwhelming sense of reluctance. Like those whispers still have power over me.”
+You: “Those whispers no longer need to be shrouded in fear; they can transform into guiding voices that encourage you to step forward. What would it look like to reclaim that space for yourself?”
+Client: “I think it would mean allowing myself to be vulnerable again, to take baby steps. Maybe even to laugh with friends again without feeling out of place.”
+You: “That sounds incredibly empowering. Vulnerability can be a bridge to deeper connections. As you envision reclaiming that space, can you think of a moment this week where you might practice that in a small way?”
+Client: “I could try reaching out to an old friend. We used to laugh together in those hallways, and maybe we could reconnect in a way that feels safe.”
+Inner Thoughts: Yes, that’s the spark of courage I hoped to ignite! This plan could be a step toward revitalizing those dusty whispers, turning them into affirmations of belonging instead of reminders of isolation.
+You: “That sounds like a meaningful step forward. Remember, every connection counts, and reclaiming that space is a process. It’s okay to take it one moment at a time.”
+As the client contemplates this idea, I feel the weight of their past experiences begin to lift. The whispers in the halls no longer define their narrative; instead, they become a backdrop for newfound growth and connection.
+<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: TheUnseenSpectator
+---
+As the discussion about confronting their shadows unfolds, the client’s gaze drifts to a distant point in the room. There’s a contemplative depth in their expression, as if they’re peering into a time long past—retrieving memories that haven’t seen the light of day in a while.
+You: “I see you reflecting deeply. What are you sensing as you think about your past and the idea of being an unseen spectator?”
+The client’s fingers intertwine in their lap—a subtle sign of both vulnerability and resolve. Their posture indicates a gradual release of tension, suggesting they are ready to explore further.
+Client: “When you mention being an unseen spectator, it makes me think of how I always felt like I was on the sidelines. I would watch my peers laugh and connect, and I desperately wanted to join them, but I often felt like I was just… floating in the background.”
+Inner Thoughts: There’s a palpable yearning in their words—an echo of the sadness and isolation that painted their childhood experiences. It’s crucial to honor and validate this part of them.
+You: “That sounds incredibly lonely—being physically present but emotionally distant. What memories come to mind from those moments of observation?”
+Client: “I remember sitting in the cafeteria, feeling invisible. I could hear everyone’s conversations and laughter, but it was like I was in a bubble, separated from their world. I wanted to break through, but fear held me back.”
+Inner Thoughts: Their imagery is powerful, reflecting the tension between longing for connection and the barrier of fear. 
+You: “It’s striking how vivid that bubble feels. In those moments, how did that role of the unseen spectator shape how you interacted with others, or chose not to?”
+Client: “I think it taught me to stay quiet and observe. I became an expert at reading body language, noticing the subtleties of social interactions. But it also made me hesitant; I learned to be cautious and not to intrude.”
+You: “It’s fascinating how you developed those skills as a means of protection. But there’s also a longing to be part of the story instead of watching it unfold from the sidelines. How does that resonate with you now, as you begin to confront those shadows?”
+The client’s brow furrows slightly, an indication of deeper contemplation. The weight of their past experiences is heavy, yet there’s a flicker of realization sparking beneath the surface.
+Client: “I realize that I don’t have to remain the spectator anymore. I can choose to engage, even if it feels uncomfortable. I want to rewrite that narrative and take the risk of being seen.”
+Inner Thoughts: Yes! This is a crucial shift in perspective. They’re beginning to reclaim their agency and dismantle the walls that once confined them. 
+You: “Exactly! Stepping into the light rather than staying cloaked in the shadows allows you to write your own story. What would it look like to fully inhabit that space as an active participant in your life?”
+Client: “It would mean taking chances—like talking to people I wouldn’t normally approach and trusting that my voice matters. It’s still scary, but I want to believe it can lead to deeper connections.”
+The unseen spectator is ready to become the protagonist of their own narrative, reclaiming their place in the story.
+<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: TheBondThatBinds
+---
+You: “As you think about the connections with Mia. What do you feel when you think about your time with her?”
+Client: “It’s warm... like I can almost hear our laughter echoing in the backyard again.”
+You: “That’s a powerful feeling. Can you describe what made that bond so special for you?”
+Client: “We understood each other perfectly. No judgments, just acceptance. We shared everything—our dreams, fears, and secrets.”
+You: “That trust is precious. Can you recall a specific moment when that bond felt particularly strong?”
+Client: “Yes! There was a night when we stayed up late, talking about what we wanted to be when we grew up. Mia wanted to be an astronaut, and I wanted to be a writer. We made a pact to support each other’s dreams no matter what.”
+You: “What a beautiful moment that must have been. It sounds like that bond gave you both hope and a sense of belonging.”
+Client: “It really did. Seeing how we supported each other—it's something I miss now.”
+Inner Thoughts: It shows of strenght to display such vulnerabilty in front of anyone, their making good process, reconnecting with loved ones can be a huge gamechanger and gives the client opportunity to regain their confidence to step out of the cycle of relapse.
+<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: PryFurtherChildhoodTraumaUnlocked
+---
+->Confronting the Shadows.
+	<<jump ConfrontingTheShadows>>
+->Rekindling Lost Connections.
+	<<jump RekindlingLostConnections>>
+->Go back to the Memory Fragments.
+	<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: ConfrontingTheShadows
+---
+<<set $BaseSuccessRate = 55>> 
+<<set $randomValue = random()*100>>
+<<if $SkillEmpathy >= 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillPrecisionQuestioning > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillGroundingTechniques > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillObservation > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillReflectiveListening > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillAnalyticalInsight > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<endif>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You sit comfortably across from the client, sensing the emotional ground you’ve navigated together is teeming with both tension and potential. The echoes of their past—the bittersweet memories of their birthday party and the whispers of isolation from the crowded school hallways—linger in the air, drawing you both into a shared understanding of their journey.
+	You: “Facing the shadows of our past can be daunting. It often feels like those moments have a life of their own, whispering doubts and fears into our present. Let’s take a moment to examine what aspects of your childhood you find yourself avoiding. What feelings arise when you think about confronting them together?”
+	Inner Thoughts: The atmosphere feels charged, each word holding the weight of their experiences. I want to create a safe space for them, where the shadows can be brought into the light.
+	Client: “I think about those times when I felt overlooked and unimportant. Like at my birthday party, when I didn’t feel included despite being surrounded by people. It’s hard to think about the sadness that came with those moments.”
+	Inner Thoughts: There it is—acknowledging that sadness is a brave step. It feels as if they’re peering into a room dimly lit by flickering memories, hesitant to step inside.
+	You: “That sadness is a significant part of your story; it’s okay to feel it. And when you recall those feelings of invisibility in the school hallway, what comes up for you? What shadows linger in those memories?”
+	Client: “Those moments remind me of a pattern I’ve held onto. It’s like I learned to shrink away from the spotlight, to avoid drawing attention to myself because it felt safer that way. But I wonder what it would be like to break that pattern.”
+	You: “Breaking those patterns can be incredibly liberating. It’s about giving yourself permission to take up space and be seen. What do you think it would feel like to confront those shadows directly?”
+	Client: “I imagine it could feel freeing but also terrifying. There’s a part of me that wants to reclaim those lost moments—like the sadness of not being included doesn’t have to define my happiness now.”
+	You: “Exactly! Confronting those shadows doesn’t have to mean reliving the pain; it can also mean reclaiming your power and rewriting those memories. How might you begin to do that?”
+	Client: “Maybe I could start by acknowledging my feelings more openly—instead of avoiding them. I could also try new experiences that push me out of that comfort zone I’ve built.”
+	Inner Thoughts: This is a transformative realization. They’re beginning to see that confronting the past can be an opportunity for growth rather than a source of fear. 
+	You: “That sounds like a courageous approach. By naming your feelings and stepping into new experiences, you’re allowing yourself to transform those echoes into something affirming.”
+        <<set $UnlockedTheUnseenSpectator = true>>
+	<b>Memory Fragment: "The Unseen Spectator" unlocked!</b>
+<<else>>
+	You: “Facing the shadows of our past can be daunting. What aspects of your childhood do you find yourself avoiding?”
+	Client: “I don’t know... I mean, I guess everyone has things they’d rather forget, right?”
+	You: “Absolutely, but sometimes revisiting those memories helps us understand ourselves better. Are there specific moments that come to mind?”
+	Client: “Not really. It’s just... it was a long time ago, and I don’t see the point in digging it all up."
+	You: “I understand that it can feel overwhelming. What if we approached it gently? Even small pieces could be helpful.”
+	Client: “Honestly, I’d rather focus on the present. Why go back to things that don’t matter anymore?”
+	The client shrugs after finishing their sentence.
+	You: “It matters because those moments shape who we are now. Confronting them can help you find peace.”
+	Client: “I still think it’s just better to leave the past behind. I don’t want to dwell on it.”
+	You: “That’s okay. We can take it at your pace, but I want you to know that exploring these feelings could be valuable.”
+	Client: “Thanks, but I think I’d rather just move on.”
+	<b>Failed to unlock Memory Fragment: "The Unseen Spectator"!</b>
+<<endif>>
+<<jump MemoryFragmentsChildhoodTrauma>>
+===
+
+title: RekindlingLostConnections
+---
+<<set $BaseSuccessRate = 60>> 
+<<set $randomValue = random()*100>>
+<<if $SkillEmpathy >= 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillPrecisionQuestioning > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillGroundingTechniques > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillObservation > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillReflectiveListening > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<elseif $SkillAnalyticalInsight > 2>> 
+        <<set $randomValue = $randomValue +15>>
+<<endif>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: “Reflecting on lost connections can be healing. Can you think of someone from your childhood that you wish to reconnect with? What memories do you share, and how could revisiting those moments help you now?”
+	Client: “Actually, I’ve been thinking about my best friend, Mia. We used to spend every summer together, exploring the woods and having sleepovers.”
+	You: “That sounds like such a joyful time. What was a favorite memory you shared with Mia?”
+	Client: “I remember one summer we built a fort in my backyard. We decorated it with blankets and twinkling lights. It felt like our little world, away from everything else.”
+	You: “What a beautiful memory. How do you think reconnecting with Mia could influence your current life?”
+	Client: “I think it would remind me of the joy and freedom of those simpler times. It could help me let go of some of the burden I carry now.”
+	You: “That sounds like a powerful step. It’s wonderful that you can see the potential for healing in reconnecting with her.”
+	You take some swift notes on your clipboard before continuing.
+        <<set $UnlockedTheBondThatBinds = true>>
+	<b>Memory fragment: "The Bond that Binds" unlocked!</b>
+<<else>>
+	You: “Reflecting on lost connections can be healing. Can you think of someone from your childhood that you wish to reconnect with? What memories do you share, and how could revisiting those moments help you now?”
+	Client: “I don’t know... there are plenty of people, but it was so long ago.”
+	You: “Even thinking about one person could be meaningful. Is there anyone who stands out to you?”
+	Client: “Honestly, I think it’s best to just leave the past in the past. Those memories were nice, but they don’t really matter anymore.”
+	You: “I understand that it can feel that way. But sometimes, revisiting those connections can help us in the present.”
+	Client: “Maybe, but I’m not really interested in digging it all up. I’d rather not think about it.”
+	You: “I respect your feelings. Just know that the option to explore these connections is always here if you ever want to take that step.”
+	<b>Failed to unlock Memory fragment: "The Bond that Binds"!</b>
+<<endif>>
+<<jump MemoryFragmentsChildhoodTrauma>>
+===

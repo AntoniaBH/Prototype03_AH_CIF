@@ -13,8 +13,8 @@
 <<declare $UnlockedMemorySpaceCycleRelapse = false>>
 <<declare $UnlockedMemorySpaceChildhoodTrauma = false>>
 <<declare $UnlockedMemorySpaceResistance = false>>
-<<declare $UnlockedSupportiveFigure = false>>
-<<declare $UnlockedFamilyIntervention = false>>
+<<declare $UnlockedMemorySpaceSupportiveFigure = false>>
+<<declare $UnlockedMemorySpaceFamilyIntervention = false>>
 <<declare $UnlockedFamilySecrets = false>>
 <<jump ContentTheAccident>>
 ===
@@ -82,7 +82,7 @@ title: TheAccident
 	->Go back.
 		<<jump TheAccident>>
 ->Go to the Memory Fragments.<<if $MemoryFragmentsTheAccidentUnlocked is true>>
-	<<jump UnlockingMemoryFragmentsTheAccident>>
+	<<jump MemoryFragmentsTheAccident>>
 ->Go to the Mindscape.
 	<<jump TheMindscape>>
 ->Go to the Safe Space.
@@ -91,8 +91,7 @@ title: TheAccident
 
 title: UnlockingMemoryFragmentsTheAccident
 ---
-<<set $BaseSuccessRate = 0>>
-<<if $AmountTrysUnlockMemoryFragmentsTheAccident >=144>>
+<<if $AmountTrysUnlockMemoryFragmentsTheAccident >=64>>
 	<<jump FailUnlockMemoryFragmentsAccident>>
 <<endif>>
 ->Deepening the Narrative.
@@ -262,6 +261,8 @@ title: UnlockingMemoryFragmentsTheAccident
 	<<else>>
 		<<jump FailedAttempt_10>>
 	<<endif>>
+->Go back to the Memory Space "The Accident".
+	<<jump TheAccident>>
 ===
 
 title: FailedAttempt_7
@@ -340,9 +341,7 @@ title: MemoryFragmentsTheAccident
 	<<jump FeelingOfRuin>>
 ->Blame on the Other Driver.<<if $UnlockedBlameOnTheOtherDriver is true>>
 	<<jump BlameOnTheOtherDriver>>
-->Safe Space.
-	<<jump TheSafeSpace>>
-->Memory Space "The Accident".
+->Go back to the Memory Space "The Accident".
 	<<jump TheAccident>>
 ===
 

@@ -1,8 +1,217 @@
 ﻿title: UnlockedCycleRelapse
 ---
+<<declare $AmountTrysUnlockMemoryFragmentsCycleRelapse = 0>>
+<<declare $UnlockedReflectionsOfRegret = false>>
+<<declare $UnlockedTheLastDrink = false>>
+<<declare $UnlockedVoicesOfSupport = false>>
+<<declare $UnlockedFosterConnections = false>>
+<<declare $MemoryFragmentsCycleRegret = false>>
+<<declare $UnlockedTheTurningPoint = false>>
+<<declare $UnlockedEmbraceTheTruth = false>>
+<<declare $UnlockedReconstructTheNarrative = false>>
+<<declare $PryFurtherCycleRegret = false>>
+<<declare $TTP1 = false>>
+<<declare $TTP2 = false>>
+<<declare $TTP3 = false>>
 The air is thick with an unspoken weight as the conversation shifts into a new chapter. The client’s posture reflects a sense of resistance, yet also an underlying vulnerability, as they brace themselves for what comes next. You take a moment to breathe, acknowledging the complexity of the journey you're about to continue together.
 You: “Alright, let’s just breathe for a second. We don’t have to rush through this. You mentioned that feeling of being overwhelmed when things started to spiral. Can you tell me a bit more about how it felt, looking back on it?”
 The client takes a slow breath, looking away as if searching for the right words.
+<<jump ContentCycleOfRegret>>
+===
+
+title: TheCycleOfRelapse
+---
+->Ask the Client further questions.
+	<<jump UnlockingMemoryFragmentsTheCycleOfRelapse>>
+->Repeat the Memory Space "The Cycle of Relapse".
+	<i>This is a repetition of the memory space "The Cycle of Relapse", what it is and what the client experienced. Do you wish to continue nontheless?</i>
+	->Continue.
+		You: “I’d like you to take a moment to revisit that memory of your relapse. Can you repeat what happened during that time?”
+		The client takes a deep breath, appearing contemplative.
+		<<jump ContentCycleOfRegret>>
+	->Cancel.
+		<<jump TheCycleOfRelapse>>
+->Go to Memory Fragments.<<if $MemoryFragmentsCycleRegret is true>>
+	<<jump MemoryFragmentsCycleRegret>>
+->Go to the Mindscape.
+	<<jump TheMindScape>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+===
+
+title: UnlockingMemoryFragmentsTheCycleOfRelapse
+---
+<<if $AmountTrysUnlockMemoryFragmentsCycleRelapse >=49>>
+	<<jump FailUnlockMemoryFragmentsCycleRelapse>>
+<<endif>>
+->Confront the Reflection.
+	<<set $BaseSuccessRate = 60>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillEmpathy >=2>>
+		<<set $randomValue = $randomValue +20>>
+	<<elseif $SkillReflectiveListening >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillObservation >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You lean forward slightly, softening your tone.
+		You: “As you look back at your past experiences with relapse, what feelings arise for you? Can you articulate some specific moments when you felt most impacted by these challenges?”
+		The client shifts in their seat, their hands clasping tightly together. They swallow hard, their eyes darting downward as their breathing hitches.
+		Client: "It’s... it’s shame, mostly. I remember this one night—after everything seemed to be going well. I’d been clean for weeks, but then... I don’t even know what happened. I felt like a failure all over again."
+		Their voice cracks, and they wipe at their eyes with the back of their hand.
+		Inner Thoughts: They’re allowing themselves to touch the core of their emotions. This moment is pivotal—it’s the connection they’ve been hesitant to make.
+		You nod, maintaining a steady and empathetic gaze.
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Empathy Skill +0.5!</b>
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+		<b>Reflective Listening Skill +0.2!</b>
+		<<set $SkillObservation = $SkillObservation +0.1>>
+		<b>Observation Skill +0.1!</b>
+		You: "That night must have been incredibly difficult. But the fact that you’re here now, reflecting on it, shows how much strength you have. It’s not about that one moment—it’s about what you choose to do next."
+		The client looks up, their face a mixture of vulnerability and determination.
+		Client: "I guess... I’ve never really let myself look at it this way before. I’ve always just tried to forget it happened."
+		You take some notes on your Clipboard before continuing and shifting your focus back on the Client.
+		<<set $BaseSuccessRate = 80>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedReflectionsOfRegret = true>>
+			<b>Memory fragment: "Reflections of Regret" unlocked!</b>
+			<<set $MemoryFragmentsCycleRegret = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Reflections of Regret "</b>
+		<<endif>>
+		<<jump MemoryFragmentsCycleRegret>>
+	<<else>>
+		<<jump FailedAttempt_11>>
+	<<endif>>
+->Revisit the Scene of the Incident.
+	<<set $BaseSuccessRate = 55>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillGroundingTechnique >=2>>
+		<<set $randomValue = $randomValue +20>>
+	<<elseif $SkillAnalyticalInsight >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillPrecisionQuestioning >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: “Let’s take a moment to ground ourselves. Can you picture the place where the incident occurred? What details do you notice about that setting? How does it make you feel to be there again?”
+		The client closes their eyes, taking a deep, shaky breath. Their hands rest on their lap, fidgeting slightly as they begin to speak.
+		Client: "It was the kitchen. There was this bright overhead light, humming softly. The counter was cluttered—leftovers I didn’t bother to put away. I remember the smell of coffee from earlier in the day, stale now."
+		Their voice falters, but they continue.
+		Client: "I was sitting on the floor. The pills were in front of me... scattered. I’d poured them out, staring at them, knowing what I was about to do but unable to stop myself. It was quiet—too quiet."
+		They open their eyes, tears forming but not falling.
+		Client: "I felt so empty, like the world had shrunk to just me and those pills. I... I didn’t want to feel anything anymore."
+		Inner Thoughts: They’re reliving it with clarity. This is a painful moment, but their willingness to explore it shows progress. I need to guide them gently through these emotions without overwhelming them.
+		<<set $SkillGroundingTechnique = $SkillGroundingTechnique +0.5>>
+		<b>Grounding Technique Skill +0.5!</b>
+		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
+		<b>Analytical Insight Skill +0.2!</b>
+		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.1>>
+		<b>Precision Questioning Skill +0.1!</b>
+		You: "Thank you for sharing this. It’s not easy to revisit such a raw moment, but you’re taking the first steps toward understanding it. What if we look at this scene together—not with judgment, but with curiosity? What do you think led you to that moment?"
+		<<set $BaseSuccessRate = 90>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedTheLastPill = true>>
+			<b>Memory fragment: "The Last Pill" unlocked!</b>
+			<<set $MemoryFragmentsCycleRegret = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Reflections of Regret "</b>
+		<<endif>>
+		<<jump MemoryFragmentsCycleRegretU>>
+	<<else>>
+		<<jump FailedAttempt_12>>
+	<<endif>>
+->Engage with the Support Network.
+	<<set $BaseSuccessRate = 70>>
+	<<set $randomValue = random()*100>>
+	<<if $SkillEmpathy >=2>>
+		<<set $randomValue = $randomValue +20>>
+	<<elseif $SkillReflectiveListening >=1.5>>
+		<<set $randomValue = $randomValue +15>>
+	<<elseif $SkillObservation >=1.2>>
+		<<set $randomValue = $randomValue +10>>
+	<<endif>>
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: “Think about the people in your life who offer support. Can you recall a time when someone really listened to you? What was their response, and how did it change how you felt about yourself?”
+		The client sits back, their eyes softening as they reflect. After a long pause, they speak, their voice quieter but more composed than before.
+		Client: "Yeah... there was a time. My sister. I remember being at my lowest, and she just sat with me. She didn’t try to fix it. She just listened... and said, ‘I hear you. You’re not alone.’ It was like... it was like I could finally breathe again."
+		Their hands rest loosely on their lap now, their body language less tense than before. The memory seems to be bringing them some comfort, though it’s also a bittersweet realization.
+		Client: "It was simple, but it meant the world. I didn’t feel so... lost anymore."
+		Inner Thoughts: This is an important breakthrough. By reflecting on past support, they’re reconnecting with the value of relationships. It’s all about rediscovering how support can help them move forward.
+		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
+		<b>Empathy Skill +0.5!</b>
+		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.2>>
+		<b>Reflective Listening Skill +0.2!</b>
+		<<set $SkillObservation = $SkillObservation +0.1>>
+		<b>Observation Skill +0.1!</b>
+		You: "That’s a crucial realization. Support is there, and you’re not alone. Let’s hold onto that feeling of being understood. It’s a strength you can call on when things feel tough."
+		<<set $BaseSuccessRate = 85>>
+		<<set $randomValue = random()*100>>		
+		<<if $randomValue >= $BaseSuccessRate>>
+			<<set $UnlockedVoicesOfSupport = true>>
+			<b>Memory fragment: "Voices of Support" unlocked!</b>
+			<<set $MemoryFragmentsCycleRegret = true>>
+		<<else>>
+			<b>Failed to unlock Memory Fragment: "Voices of Support"</b>
+		<<endif>>
+		<<jump MemoryFragmentsCycleRegret>>
+	<<else>>
+		<<jump FailedAttempt_13>>
+	<<endif>>
+->Go back to the Memory Space.
+	<<jump TheCycleOfRelapse>>		
+===
+
+title: FailedAttempt_11
+---
+You try to engage the client, your voice calm but purposeful.
+You: “As you look back at your past experiences with relapse, what feelings arise for you? Can you articulate some specific moments when you felt most impacted by these challenges?”
+The client shifts uncomfortably, their fingers drumming on their knees. They glance at you, their expression tight.
+Client: "I don’t know. I don’t really want to talk about it. What’s the point? I already know I screwed up—again and again."
+Inner Thoughts: They’re shutting down, retreating from the vulnerability this question asks of them. I’ll need to recalibrate—this might be too much for them to process right now.
+You lean back slightly, softening your posture.
+You: "I understand this might feel overwhelming. We can take it at your pace. It’s not about judging the past—it’s about understanding it."
+The client exhales sharply, shaking their head.
+Client: "I don’t think understanding’s gonna fix anything. It’s just... too much. I can’t deal with this right now."
+The tension in the room thickens, the mental doorway to the memory fragment remaining closed.
+Inner Thoughts: I’ll need to rebuild their trust and help them feel more secure before we can revisit this. Pushing further now might do more harm than good.
+You: "That’s okay. We don’t have to go there right now. Let’s focus on what feels manageable for you at this moment."
+Inner Thoughts: They weren’t ready this time, but that’s part of the process. Building trust takes patience. We’ll circle back when the time is right.
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = $AmountTrysUnlockMemoryFragmentsCycleRelapse +1>>
+<<jump TheCycleOfRelapse>>
+===
+
+title: FailedAttempt_12
+---
+You: “Let’s take a moment to ground ourselves. Can you picture the place where the incident occurred? What details do you notice about that setting? How does it make you feel to be there again?”
+The client stiffens, their breathing growing shallow. They shake their head quickly, their eyes darting around the room.
+Client: "No, I... I don’t want to go there. I can’t. It’s too much."
+They grip the edges of their chair tightly, their knuckles turning white.
+Inner Thoughts: Their anxiety is spiking—they’re not ready to confront this yet. I need to de-escalate before they completely shut down.
+You: "That’s okay. We don’t need to force this. Let’s pause for a moment and focus on the present. You’re safe here. We can come back anytime your ready again!"
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = $AmountTrysUnlockMemoryFragmentsCycleRelapse +1>>
+<<jump TheCycleOfRelapse>>
+===
+
+title: FailedAttempt_13
+---
+You: “Think about the people in your life who offer support. Can you recall a time when someone really listened to you? What was their response, and how did it change how you felt about yourself?”
+The client stiffens slightly, their gaze turning downward. They begin to fidget with their hands, biting their lip as the words seem to hang in the air.
+Client: "I don’t know. I... I can’t think of anyone who really listened. It feels like whenever I try to talk to someone, it just falls flat. People don’t really get it, you know?"
+Their eyes remain downcast, and their posture becomes more closed off. A quiet sense of frustration lingers in their words.
+Client: "Maybe I’ve never really had that... or I just don’t know how to let anyone in."
+Inner Thoughts: They’re clearly struggling with this. The concept of support feels distant or unattainable to them. I need to acknowledge their feelings without pushing too hard—this is a vulnerable topic for them.
+You: "I hear you. It can be really difficult when it feels like no one truly understands, and reaching out seems impossible. But even in these moments, you’re not alone. We can explore this together, at a pace that feels right for you."
+Their body language softens just a bit, but there’s still a lot of guardedness.
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = $AmountTrysUnlockMemoryFragmentsCycleRelapse +1>>
+<<jump TheCycleOfRelapse>>
+===
+
+title: ContentCycleOfRegret
+---
 Client: “It felt like... I was juggling everything at once, but it was too much. I kept telling myself I could handle it, but... I wasn’t doing okay.”
 You feel a small pang of empathy as their words hit close to home, a soft understanding that this was more than just a slip-up.
 You: “Yeah, I hear you. It’s easy to think we can handle everything, especially when there’s that pressure to keep it all together. When you started feeling overwhelmed, what did you do?”
@@ -41,139 +250,221 @@ You: “I like that. Keeping track, staying connected—it’s all part of creat
 As you both sit in the quiet, the weight of the conversation begins to settle in. But there’s a sense of progress too. The cycle of relapse may be far from broken, but the first cracks have appeared, and the path ahead feels just a little clearer. There’s more work to do, more layers to uncover—but for now, they’ve taken the first steps toward healing.
 <<jump TheCycleOfRelapse>>
 ===
-
-title: TheCycleOfRelapse
+ 
+title: MemoryFragmentsCycleRegret
 ---
-->Confront the Reflection.
-////	
-->Deepening the Narrative.
-	<<set $BaseSuccessRate = 65>>
-	<<set $randomValue = random()*100>>
-	<<if $SkillReflectiveListening >=1.2>>
-		<<set $randomValue = $randomValue +15>>
-	<<elseif $SkillPrecisionQuestioning >=1>>
-		<<set $randomValue = $randomValue +10>>
-	<<endif>>
-	<<if $randomValue >= $BaseSuccessRate>>
-		You:  "Can you tell me more about the accident? What do you remember about it?" 
-		The client takes a deep breath, while fidgeting nervously with their hands, before answering.
-		Client: “It was... a lot. I remember the truck suddenly stopping. I hit the brakes, but it wasn’t enough. Everything just... collapsed. The sound of the impact still rings in my ears. It’s so vivid.”
-		Inner Thoughts: They’re opening up, focusing on the details. Let’s mirror their words to help them feel understood.
-		You: “That sound—the impact. You mentioned it feels vivid. It seems like it left a strong impression on you. Can we explore that more? What comes to mind when you think about it?”   
-		<<set $SkillReflectiveListening = $SkillReflectiveListening +0.5>>
-		<b>Reflective Listening Skill +0.5!
-		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
-		<b>Reflective Listening Skill +0.2!
-		The client shoulders relax slightly and their voice seems steadier now when they speak.
-		Client: “It felt like the world stopped. I couldn’t move. The sound was deafening, but also... it was a blur. Does that make sense?”
-		You: "Yes, it does. Its a heavy experience you had to endure, its only logical to think what you experienced is not real or not understandable to anyone else."
-		Client: "That makes sense, thank you for listening to me."
-		You: "You are welcome."
-		<<set $BaseSuccessRate = 80>>
-		<<set $randomValue = random()*100>>
-		<<if $randomValue >= $BaseSuccessRate>>
-			<<set $UnlockedScreechingTires = true>>
-			<b>Memory fragment: "Screeching Tires" unlocked!</b>
-			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
-		<<else>>
-			<b>Failed to unlock Memory Fragment: "Screeching Tires"</b>
-		<<endif>>
-		<<set $BaseSuccessRate = 70>>
-		<<set $randomValue = random()*100>>
-		<<if $randomValue >= $BaseSuccessRate>>		
-		 	<<set $UnlockedSirensHaunting = true>>
-			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
-			<b>Memory fragment: "Sirens Haunting" unlocked!</b>
-		<<else>>
-			<b>Failed to unlock Memory Fragment: "Screeching Tires"</b>
-		<<endif>>
-		<<jump TheAccident>>
-	<<else>>
-		<<jump FailedAttempt_7>>
-	<<endif>>
-->Exploring Transformations.
-	<<set $BaseSuccessrate = 45>>
-	<<set $randomValue = random()*100>>
-		<<if $SkillAnalyticalInsight >=1>>
-			<<set $randomValue = $randomValue +10>>
-		<<elseif $SkillEmpathy >=1.5>>
-			<<set $randomValue = $randomValue +20>>
-		<<endif>>
-	<<if $randomValue >= $BaseSuccessRate>>
-			You: "What do you mean by ‘downhill’? Can you elaborate on what changed after the accident?" 
-		The Clients brows furrow as they think, their hands fiddling with the edge of their shirt.
-		Client: “After the accident... I just couldn’t keep up. Work was a mess. My relationships... fell apart. It was like everything that was holding me together came undone.”
-		Inner Thoughts: They’re describing a cascade of issues. Let’s focus on uncovering the root causes to identify patterns or triggers.
-		You: “It sounds like the accident set off a chain reaction. If you think back, was there a specific moment where things started feeling out of control?”
-		<<set $SkillAnalyticalInsight = $SkillAnalyticalInsight +0.2>>
-		<b>Analytical Insight Skill +0.2!
-		<<set $SkillEmpathy = $SkillEmpathy +0.5>>
-		<b>Analytical Insight Skill +0.5!
-		A faint nod comes from the client, and their voice becomes quieter.
-		Client: “Yeah... after my boss said I wasn’t meeting expectations. That was the first real blow. I couldn’t sleep after that. It’s like I was failing everywhere.”
-		<<set $BaseSuccessRate = 50>>
-		<<set $randomValue = random()*100>>
-		<<if $randomValue >= $BaseSuccessRate>>
-			<<set $UnlockedJobLoss = true>>
-			<b>Memory fragment: "Job Loss" unlocked!</b>
-			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
-		<<else>>
-			<b>Failed to unlock Memory Fragment: "Job Loss"</b>
-		<<endif>>
-		<<set $BaseSuccessRate = 40>>
-		<<set $randomValue = random()*100>>		
-		<<if $randomValue >= $BaseSuccessRate>>
-			<<set $UnlockedSocialIsolation = true>>
-			<b>Memory fragment: "Social Isolation" unlocked!</b>
-			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
-		<<else>>
-			<b>Failed to unlock Memory Fragment: "Social Isolation"</b>
-		<<endif>>
-		<<jump TheAccident>>
-	<<else>>
-		<<jump FailedAttempt_8>>
-	<<endif>>
-->Unraveling the Context.
-	<<set $BaseSuccessRate = 60>>
-	<<set $randomValue = random()*100>>
-	<<if $SkillObservation >=1.5>>
-		<<set $randomValue = $randomValue +15>>
-	<<elseif $SkillPrecisionQuestioning >=1.2>>
-		<<set $randomValue = $randomValue +10>>
-	<<endif>>
-	<<if $randomValue >= $BaseSuccessRate>>
-		You: "I noticed earlier you mentioned feeling uneasy when talking about the accident. Can you help me understand why that moment stands out?"
-		Client: “It’s just... the way the light hit the road. I still see it in my dreams. It was raining, but the road looked dry—like a trap.”
-		Inner Thoughts: They’ve fixated on specific sensory details. This could be tied to their emotional processing. Let’s carefully explore this further.
-		You: "That image seems really vivid for you. Do you think there’s something about that moment that made it stick in your mind?"
-		<<set $SkillObservation = $SkillObservation +0.5>>
-		<b>Observation Skill +0.5!
-		<<set $SkillPrecisionQuestioning = $SkillPrecisionQuestioning +0.2>>
-		<b>Precision Questioning Skill +0.2!
-		Client: “It was the moment I realized... I couldn’t stop. No matter what I did, it was already too late.” 
-		<<set $BaseSuccessRate = 55>>
-		<<set $randomValue = random()*100>>
-		<<if $randomValue >= $BaseSuccessRate>>
-			<<set $UnlockedRushingToMeetAFriend  = true>>
-			<b>Memory fragment: "Rushing to meet a Friend" unlocked!</b>
-			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
-		<<else>>
-			<b>Failed to unlock Memory Fragment: "Rushing to meet a Friend"</b>
-		<<endif>>
-		<<set $BaseSuccessRate = 50>>
-		<<set $randomValue = random()*100>>		
-		<<if $randomValue >= $BaseSuccessRate>>
-			<<set $UnlockedArgumentWithPartner  = true>>
-			<b>Memory fragment: "Argument with Partner" unlocked!</b>
-			<<set $MemoryFragmentsTheAccidentUnlocked = true>>
-		<<else>>
-			<b>Failed to unlock Memory Fragment: "Argument with a Partner"</b>
-		<<endif>>
-		<<jump TheAccident>>
-	<<else>>
-		<<jump FailedAttempt_9>>
-	<<endif>>
-//////
+<<if $TTP1 is true and $TTP2 is true and $TTP3 is true>>
+	<<set $UnlockedTheTurningPoint = true>>
+	<b>Unlocked Memory Fragment "The Turning Point"!</b>
+<<elseif $UnlockedVoicesOfSupport is true and $UnlockedSlideshowOfLaughterAndTears is true>>
+	<<set $UnlockedMemorySpaceSupportiveFigure = true>>
+	<b>Unlocked Memory Space "The Supportive Figure"!</b>
+	<b>Info:</b>Access new Memory Spaces over the Mindscape.
+<<elseif $UnlockedFeelingOfRuin is true and $UnlockedWhispersInTheHall is true>>
+	<<set $UnlockedMemorySpaceFamilyIntervention = true>>
+	<b>Unlocked Memory Space "Family Intervention"!</b>
+	<b>Info:</b>Access new Memory Spaces over the Mindscape.
+<<elseif $UnlockedEmbraceTheTruth is true>>
+	<b>Unlocked Choice: "Embrace the Truth" to pry further in the Memory Fragments!</b>
+<<elseif $UnlockedReconstructTheNarrative is true>>
+	<b>Unlocked Choice: "Reconstruct the Narrative" to pry further in the Memory Fragments!</b>
+<<elseif $UnlockedFosterConnections is true>>
+	<b>Unlocked Choice: "Foster Connections" to pry further in the Memory Fragments!</b>
+<<endif>>
+->Reflections of Regret.<<if $UnlockedReflectionsOfRegret is true>>
+	<<jump ReflectionsOfRegret>>
+->The last Pill.<<if $UnlockedTheLastPill is true>>
+	<<jump TheLastPill>>
+->Voices of Support.<<if $UnlockedVoicesOfSupport is true>>
+	<<jump VoicesOfSupport>>
+->The Turning Point.<<if $UnlockedTheTurningPoint is true>>
+	<<jump TheTurningPoint>>
+->Pry further.<<if $PryFurtherCycleRegret is true>>
+	<<jump PryFurtherCycleRegret>>
+->Go to the Safe Space.
+	<<jump TheSafeSpace>>
+->Go back to the Memory Space "The Cylce of Relapse".
+	<<jump TheCycleOfRelapse>>
 ===
 
-title:
+title: ReflectionsOfRegret
+---
+You: “Let’s take a deeper look at those moments that you wish had gone differently. What decisions or actions do you regret most? What would you have done if you could go back?”
+The client’s face darkens as the words echo in the air, and they hesitate before speaking. There’s a distant look in their eyes, as if they’re seeing the events unfold in front of them once again.
+Client: “I think the biggest regret is how I let everything spiral after the accident. I was in so much pain, physically and emotionally... but I didn’t reach out. I kept pushing people away. I should’ve been more honest. Maybe I wouldn’t have hurt so many people along the way.”
+Their voice cracks, and you can see the vulnerability in their eyes as the realization washes over them.
+Client: “I could’ve been different. But I wasn’t... and now it’s too late to fix it.”
+Inner Thoughts: The client’s regret is palpable. It’s something they’ve been carrying for a long time, and it’s clearly a burden. But there's a chance for them to confront it head-on now. This could be the turning point we need to unlock the next part of their healing journey.
+You: “It’s understandable to feel that way—regret, especially when we think about the moments we could have changed. But part of healing is learning to accept those regrets, to understand that they don’t define who you are now. If you could find a way to embrace that truth, how do you think that might change things for you moving forward?”
+The client takes a deep breath, their shoulders relaxing slightly as they consider the possibility. Their fingers twitch at their sides, like they’re trying to release some of the tension they've been holding.
+<<set $BaseSuccessRate = 55>>
+<<set $randomValue = random()*100>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: “It’s not easy, but I believe you can learn to embrace the truth of your journey. Your mistakes don’t define you, but they can help shape who you are becoming. We can work through this together.”
+	The client nods slowly, a sense of understanding beginning to settle in their posture. The weight of their regret is still there, but now there's a flicker of hope—perhaps for the first time in a long while.
+	<<set $UnlockedEmbraceTheTruth = true>>
+	<b>New Choice Unlocked: "Embrace the Truth"</b>>
+	<<jump MemoryFragmentsCycleRegret>>
+<<else>>
+	<<jump FailedAttempt_14>>
+<<endif>>
+===
+
+title: TheLastPill
+---
+You: “Can you remember the moment when you decided to take that last pill? What was going through your mind at that time? Did you feel like you had no other options, or was it a moment of choice?”
+The client’s expression changes subtly—eyes narrowing, lips pressing together as if they’re already anticipating the pain of the memory. They remain silent for a long moment, the tension in the room palpable as they gather their thoughts.
+Client: “I remember feeling so numb… like everything was spinning out of control, and that pill was the only thing that could stop it. I told myself it would be the last time. I’d get my life back together. But in that moment, I wasn’t thinking about the consequences.”
+Their voice falters, and you can see a flicker of shame in their eyes as they continue.
+Client: “I didn’t want to face everything. The pain was just… too much. It was easier to numb it all than to deal with the mess I’d created.”
+Inner Thoughts: The client is grappling with the aftermath of their decision. It’s a painful place for them to revisit, but it’s important to confront this moment, to help them see the larger story of their life beyond this single choice.
+You: “It sounds like that moment was a culmination of everything you were feeling—overwhelmed, helpless, and searching for relief. But now, here we are. You’ve made it this far. If you could rewrite that moment, what would you change about the way you approached it?”
+The client looks down at their hands, twisting them anxiously. For a brief moment, they seem lost in their thoughts, as if grappling with the weight of the question.
+<<set $BaseSuccessRate = 60>>
+<<set $randomValue = random()*100>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: “That moment doesn’t have to define you. If you can see it as part of your story, not as an end but as a chapter, you’ll be able to move forward differently. Let’s work on reconstructing that narrative together.”
+	The client seems to consider this new perspective, their gaze softening. There’s a sense of cautious hope in their eyes, as if they’re beginning to believe that they can, indeed, change how they view their past.
+	<<set $UnlockedReconstructTheNarrative = true>>
+	<b>New Choice Unlocked: "Reconstruct the Narrative"</b>>
+	<<jump MemoryFragmentsCycleRegret>>
+<<else>>
+	<<jump FailedAttempt_15>>
+<<endif>>
+===
+
+title: VoicesOfSupport
+---
+You: “Think about the people in your life who offer support. Can you recall a time when someone really listened to you? What was their response, and how did it change how you felt about yourself?”
+The client’s eyes wander to the side, lost in thought as they consider the question. There’s a brief, almost imperceptible flicker of recognition, and they begin to speak, hesitant at first.
+Client: “I remember my sister... She was always there for me, even when I didn’t deserve it. There were nights when I was so high, and she just sat there with me, no judgment. It’s like... she saw something in me that I couldn’t see in myself.”
+Their voice breaks slightly as they continue.
+Client: “I pushed her away so many times. But when I let her in, when I let myself lean on her, I... I felt like maybe I could be something more than what I’ve become.”
+Inner Thoughts: The client is speaking about the healing power of connection. This is a pivotal moment—acknowledging the support in their life can help shift the way they view their own worth. We need to help them explore these connections further.
+You: “It sounds like your sister’s support has meant a great deal to you. How did it feel to let her in, to allow yourself to be vulnerable? And are there others in your life who have offered this kind of understanding?”
+The client shifts, their gaze now more focused as they process the question. The vulnerability is still there, but so is the longing for more connection, more trust.
+Client: “Yeah, there’s a few others... My best friend, sometimes. But I don’t know, it’s hard to let anyone in completely. I always feel like I’ll just end up pushing them away again.”
+<<set $BaseSuccessRate = 45>>
+<<set $randomValue = random()*100>>
+<<if $randomValue >= $BaseSuccessRate>>
+	You: “I understand how difficult it can be to trust others, but you’ve already shown that you can. Let’s explore how we can nurture those relationships and build a stronger support network for you, one step at a time.”
+	The client looks up at you, the smallest glimmer of hope appearing in their eyes. They’re not ready to fully embrace their support system yet, but this conversation has opened a door—a door that may lead to a deeper, more trusting connection with others.
+	<<set $UnlockedFosterConnections = true>>
+	<b>New Choice Unlocked: "Foster Connections"</b>>
+	<<jump MemoryFragmentsCycleRegret>>	
+<<else>>
+	<<jump FailedAttempt_16>>
+<<endif>>
+===
+
+title: PryFurtherCycleRegret
+---
+->Embrace the Truth.<<if $UnlockedEmbraceTheTruth is true>>
+	You: “Facing our truths can be challenging. What truths about yourself or your experiences are you most afraid to acknowledge? Let’s explore those feelings together.”
+	The client hesitates, their eyes flicking downward as they struggle with the weight of the question. There is an emotional tension in the air, palpable but unspoken, as if the very notion of confronting these truths makes them want to retreat. However, the therapist's steady voice provides a semblance of support.
+	Client: “I... I’ve been lying to myself for so long. I’ve told myself I’m okay. I told myself I don’t need anyone. But the truth is... I’ve been running from myself. From the pain. I’m scared of what will happen if I face it. Scared that I’ll break.”
+	The vulnerability is evident, but the fear of confronting those truths is almost as overpowering as the truth itself.
+	Inner Thoughts: The client is acknowledging something important, but it’s clear they’re not ready to fully embrace it yet. This moment is a pivotal one, but whether they move forward will depend on their willingness to confront the truth itself. I must guide them gently.
+	<<set $BaseSuccessRate = 55>> 
+	<<set $randomValue = random()*100>> 
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: “I know it’s difficult, but you’ve just taken a huge step. Acknowledging the truth is a powerful first step in healing. We don’t have to face everything all at once, but this moment can be the beginning of something new. Let’s move forward together, one step at a time.”
+		The client nods slowly, a flicker of relief crossing their face as if a weight has been lifted—just a little. They’re still afraid, but this acknowledgment of their truth opens a door, no matter how small, toward healing.
+		<b>Succeded in embracing the truth!</b>		
+		<<set $TTP1 = true>>
+	<<else>>
+		You: “It’s okay to be scared. Facing the truth is never easy, especially when it’s something so painful. We can take our time with this. We’ll continue to explore this when you're ready, no pressure.”
+		The client looks down again, the weight of their emotions still heavy. They’re not yet ready to confront this truth, but the seed has been planted. This moment wasn’t a failure—it’s simply a sign that more work is needed before they can fully face it.
+		<b>Failed to succeed in embracing the truth.</b>
+	<<endif>>
+	<<jump PryFurtherCycleRegret>>
+->Reconstruct the Narrative.<<if $UnlockReconstructTheNarrative is true>>
+	You: “When you think about your journey, what new perspectives do you have? If you could rewrite your story, what parts would you change, and how might that reflect your growth?”
+	The client stares at the ground for a long time before looking up, a deep, contemplative expression settling over their face. They start speaking, though their voice shakes slightly as if unsure of how to approach the idea of rewriting their past.
+	Client: “If I could change things... maybe I would’ve tried harder to get clean. Maybe I wouldn’t have kept running from my problems. I guess I could’ve leaned on people more, but I didn’t. I kept pushing them away.”
+	They fall silent, their words carrying the weight of regret but also the realization that there were missed opportunities for change.
+	Inner Thoughts: The client is reflecting on their past mistakes, but also on what they might have done differently. This is an important turning point—they’re starting to rewrite their story in a way that allows room for growth and healing.
+	<<set $BaseSuccessRate = 60>> 
+	<<set $randomValue = random()*100>> 
+	<<if $randomValue >= $BaseSuccessRate>>
+		You: “It’s not about erasing the past—it’s about understanding it, learning from it, and using that knowledge to move forward. You’re not defined by your mistakes; you’re defined by how you rise from them.”
+		The client looks up, a glimmer of hope in their eyes. They seem to understand that they have the power to reshape their story, even if only a little. This newfound perspective is a significant step in their journey toward healing.
+		<b>Succeded in reconstucting the narrative!</b>
+        	<<set $TTP2 = true>>
+		<<jump PryFurtherCycleRegret>>
+	<<else>>
+		You: “It’s okay if you’re not ready to change your perspective just yet. It’s a big step, and it takes time. We’ll work through this together, whenever you feel ready.”
+		The client looks down, unsure of whether they can truly change their narrative. But the therapist’s reassurance helps them feel less alone in their struggle. They may not be ready to rewrite their story, but they are beginning to understand that this possibility exists.
+		<b>Failed to reconstruct the narrative.</b>
+		<<jump PryFurtherCycleRegret>>
+	<<endif>>
+->Foster Connections.<<if $UnlockedFosterConnections is true>>
+	You: “Building connections is vital for healing. Can you share a time when sharing your experience with someone created a bond? How did that interaction affect your sense of belonging?”
+	The client shifts in their seat, visibly thinking about the question. They seem hesitant at first, the memory not quite easy to access. But then their expression softens, and they begin to speak, their voice quieter but filled with an earnest vulnerability.
+	Client: “I remember talking to my sister after everything fell apart... She was there when no one else was. I didn’t know how much I needed her until that moment. She listened, really listened, and for the first time in so long, I felt like I mattered. It was small, but it felt like... maybe I could be a part of something again.”
+	There’s a trace of emotion in their voice as they recount the connection. It’s clear that, for a brief moment, they felt a sense of belonging, a bond that was once missing.
+	Inner thoughts: This is a powerful moment for the client. They’re recognizing the value of emotional connections and the impact it can have on their healing process. This is the kind of moment that shows real progress.
+	<<set $BaseSuccessRate = 45>> 
+	<<set $randomValue = random()*100>> 
+	<<if $randomValue >= $BaseSuccessRate>>
+        	You: “That moment with your sister sounds incredibly important. It’s amazing how sharing our stories with others can create such powerful bonds. You’re not alone in this journey—there are people who care, who want to listen. That’s the foundation for real healing, and you’ve made an important step.”
+		The client seems to relax a bit, the weight of their emotions lessened by this recognition of connection. There’s a sense of gratitude in their expression as they reflect on the moment.
+		<b>Succeded in fostering connections!</b>
+		<<set $TTP3 = true>>
+		<<jump PryFurtherCycleRegret>>
+	<<else>>
+		You: “I understand that it can be difficult to think of those moments, especially when it feels like you've been alone for so long. But I want you to know that connection is still possible. Even if it doesn’t feel like it now, the potential for healing through relationships is there. We can work on building that together, at your own pace.”
+		The client looks down, the weight of isolation still present. However, the therapist’s words offer a glimmer of hope, suggesting that the possibility of connection is something they can work towards, even if they’re not ready to fully embrace it yet.
+		<b>Failed to foster connections.</b>
+		<<jump PryFurtherCycleRegret>>
+	<<endif>>
+->Go back to the Memory Fragments.
+	You: “If you’re not ready to talk more about these Memorys right now, that’s okay. We can return to the memory fragments. We’ll explore these memories at your own pace.”
+	This gives the client space to step away from the current conversation and allows for a more gentle transition back to the deeper reflections.
+	<<jump MemoryFragmentsCycleRegret>>
+===
+
+title: TheTurningPoint
+---
+The room grows quieter, the air thick with the weight of unspoken truths. The client’s posture shifts again, as though something deeper, something long buried, is about to rise to the surface. Their eyes flicker briefly, and a slight tremble runs through their hands.
+You: “You’ve mentioned before that there was a moment when everything began to change. Can you tell me about the turning point? The moment when things felt like they might start getting better, even if just a little?”
+There is a pause. The client’s face tightens, their gaze distant as they begin to speak, their voice faltering but carrying a rawness that can’t be ignored.
+Client: “I remember that day... It was after the relapse. The fight with my sister. She... she told me she couldn’t do it anymore. She couldn’t keep watching me destroy myself. And for the first time, I realized she wasn’t just mad at me. She was scared... scared of losing me.”
+Their breath hitches, and for a moment, they seem to break eye contact, retreating into the depths of the memory. You give them space, allowing the pause to hang in the air, inviting them to continue.
+Client: “That’s when I saw it—really saw it. I wasn’t just hurting myself. I was hurting the people I loved. It wasn’t just about the addiction or the pain. It was about everything I was pushing away... all the people who tried to reach me.”
+The client’s voice is steadier now, the words coming with a clarity that seems to come from deep within. They take a long, slow breath before continuing.
+Client: “I don’t know why it took so long for me to see it, but that’s when I knew I had to change. For them. For me. For all the years I wasted...”
+You watch them carefully, observing how the client’s expression shifts. There’s a quiet intensity in their eyes now, as though a part of them is finally willing to accept what has always been true—their own role in their healing, and the love and support they’ve been blind to for so long.
+Inner Thoughts: This is the breakthrough. The moment the client realizes the cost of their actions wasn’t just on them—it was on everyone they loved. The understanding that change is possible, that it’s not just about addiction, but about mending broken relationships... This is the turning point, the moment of clarity. It’s not the end, but it’s a beginning.
+You: “That moment of realization... it’s powerful. Acknowledging how our actions affect those we love is often the hardest part of healing. But it’s also what creates the potential for real change. You’re starting to see the bigger picture now. And that’s what will make the difference.”
+The client seems to process these words, their gaze softer, perhaps even a bit more hopeful. There’s a subtle shift in their demeanor—something more open, less guarded. Though the road ahead is still long, this moment is a critical step toward true healing.
+Before moving on, you take some quick notes and then turn back to the client.
+<<jump MemoryFragmentsCycleRegretUnlocked>>
+===
+
+title: FailedAttempt_14
+---
+You: “Regret can be a heavy burden. But remember, it’s never too late to start looking at it differently. We can revisit this when you’re ready.”
+The client falls silent, their gaze lowered, as if retreating back into their regret once more. It’s clear they’re not yet ready to confront it fully, but there’s a sense of unfinished business in the air.
+<b>Failed to unlock new choice: "Embrace the Truth"</b>
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = $AmountTrysUnlockMemoryFragmentsCycleRelapse +1>>
+<<jump MemoryFragmentsCycleRegretUnlocked>>
+===
+
+title: FailedAttempt_15
+---
+You: “I understand this is difficult. It’s not easy to look back on moments like this. But we can revisit this when you’re ready. You don’t have to do it all at once.”
+The client remains quiet for a while, their body language withdrawn as they retreat into the discomfort of their decision. It’s clear they’re not yet prepared to reconstruct the narrative, but this conversation will stay with them, a seed planted for future reflection.
+<b>Failed to unlock new choice: "Reconstruct the Narrative"</b>
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = $AmountTrysUnlockMemoryFragmentsCycleRelapse  +1>>
+<<jump MemoryFragmentsCycleRegretUnlocked>>
+===
+
+title: FailedAttempt_16
+---
+You: “It’s okay. These things take time. It’s not always easy to let people in, especially after you’ve been hurt. But just acknowledging these connections is a step forward. We’ll continue to explore this together when you’re ready.”
+The client nods slightly, but their expression doesn’t change much. They still feel the pull of isolation, hesitant to reach out even though they know that connection is key to healing. This conversation, while not a breakthrough, plants the seed for future growth.
+<b>Failed to unlock new choice: "Foster Connections"</b>
+<<set $AmountTrysUnlockMemoryFragmentsCycleRelapse = $AmountTrysUnlockMemoryFragmentsCycleRelapse +1>>
+<<jump MemoryFragmentsCycleRegretUnlocked>>
+===
